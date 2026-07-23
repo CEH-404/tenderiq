@@ -155,7 +155,7 @@ class HTMLPipeline {
 
     }
 
-  async execute(url) {
+  async execute(url, options = {}) {
 
     if (!this.initialized) {
         await this.initialize();
@@ -174,7 +174,9 @@ class HTMLPipeline {
 
         this.paginationNavigator.currentPage = 1;
 
-        await this.navigationManager.goto(pageId, url);
+        await this.navigationManager.goto(pageId, url, {
+            timeout: options.timeout
+        });
 
         const html = await this.htmlExtractor.extract(pageId);
         const text = await this.textExtractor.extract(pageId);

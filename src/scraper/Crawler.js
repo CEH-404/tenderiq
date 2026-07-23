@@ -42,9 +42,13 @@ class Crawler {
 
     }
 
-    async crawl(startUrl) {
+    async crawl(startUrl, options = {}) {
 
         logger.info("Crawler Started.");
+
+        this.scrapeOptions = {
+            timeout: options.timeout
+        };
 
         this.stats.startTime = Date.now();
 
@@ -110,7 +114,8 @@ class Crawler {
 
                 const knowledge =
                     await this.framework.scrape(
-                        currentUrl
+                        currentUrl,
+                        this.scrapeOptions
                     );
 
                 if (knowledge) {
@@ -195,7 +200,6 @@ class Crawler {
             stats: this.getStats()
 
         };
-        return this.pageKnowledge;
 
     }
 

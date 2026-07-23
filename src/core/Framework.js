@@ -51,7 +51,7 @@ class Framework {
 
     }
 
-    async scrape(url) {
+    async scrape(url, options = {}) {
 
         const resource =
 
@@ -61,7 +61,7 @@ class Framework {
 
             case ResourceType.HTML:
 
-                return await this.htmlPipeline.execute(url);
+                return await this.htmlPipeline.execute(url, options);
 
             case ResourceType.PDF:
 
@@ -125,41 +125,38 @@ class Framework {
 
         }
 
-        const pages =
-            await this.crawler.crawl(options.url);
-
-        const websiteKnowledge =
-            KnowledgeMerger.merge(
-
-        pages.map(
-            page => page.knowledge
-        )
-
-    );
-
-await this.jsonExporter.export(
-    websiteKnowledge
-);
-
-return websiteKnowledge;
-
     }
 
     async crawl(options) {
 
-    const result =
-    await this.crawler.crawl(options.url);
+        if (options.maxPages !== undefined) {
+            this.crawler.maxPages = options.maxPages;
+        }
 
-await this.jsonExporter.export(result);
+        if (options.maxDepth !== undefined) {
+            this.crawler.maxDepth = options.maxDepth;
+        }
 
-// Export only table data
-await this.tableDataExporter.export(
-    result.knowledge
-);
+        const result =
+            await this.crawler.crawl(options.url, {
+                timeout: options.timeout
+            });
 
-return result;
+        const jsonExport = await this.jsonExporter.export(result);
 
-}
+        // Export only table data
+        await this.tableDataExporter.export(
+            result.knowledge
+        );
+
+        return {
+            ...result,
+            export: {
+                jsonFilename: jsonExport.filename
+            }
+        };
+
+    }
 
     async shutdown() {
 

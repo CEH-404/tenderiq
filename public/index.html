@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Website Scraper</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+    <div class="page">
+
+        <section id="hero" class="hero">
+            <div class="hero-glow" aria-hidden="true"></div>
+
+            <span class="hero-badge">⚡ Playwright-powered</span>
+
+            <h1>Scrape Any Website in Seconds</h1>
+
+            <p>Configure a crawl, extract structured data, and export straight to Excel or JSON.</p>
+
+            <button type="button" id="start-btn" class="btn-cta">Start New Scrape →</button>
+        </section>
+
+        <main id="scrape-page" class="card" hidden>
+
+            <button type="button" id="back-btn" class="btn-back">← Back</button>
+
+            <h2 class="page-title">Configure Your Scrape</h2>
+
+            <form id="scrape-form" novalidate>
+
+                <div id="form-error" class="form-error" hidden></div>
+
+                <div class="field">
+                    <label for="url">Website URL <span class="required">*</span></label>
+                    <input
+                        type="url"
+                        id="url"
+                        name="url"
+                        placeholder="https://example.com"
+                        autocomplete="off"
+                        required
+                    />
+                    <p class="error-message" id="url-error"></p>
+                </div>
+
+                <div class="field-row">
+
+                    <div class="field">
+                        <label for="timeout">Timeout (ms)</label>
+                        <input
+                            type="number"
+                            id="timeout"
+                            name="timeout"
+                            placeholder="30000"
+                            min="1"
+                        />
+                        <p class="error-message" id="timeout-error"></p>
+                    </div>
+
+                    <div class="field">
+                        <label for="maxPages">Maximum Pages <span class="required">*</span></label>
+                        <input
+                            type="number"
+                            id="maxPages"
+                            name="maxPages"
+                            placeholder="100"
+                            min="1"
+                            max="500"
+                            required
+                        />
+                        <p class="error-message" id="maxPages-error"></p>
+                    </div>
+
+                    <div class="field">
+                        <label for="maxDepth">Crawl Depth <span class="required">*</span></label>
+                        <input
+                            type="number"
+                            id="maxDepth"
+                            name="maxDepth"
+                            placeholder="3"
+                            min="0"
+                            max="10"
+                            required
+                        />
+                        <p class="error-message" id="maxDepth-error"></p>
+                    </div>
+
+                </div>
+
+                <button type="submit" id="submit-btn" disabled>
+                    <span class="btn-label">Start Scraping</span>
+                    <span class="spinner" hidden></span>
+                </button>
+
+            </form>
+
+            <section id="results" class="results" hidden>
+
+                <h2>Scrape Complete</h2>
+
+                <dl class="stats">
+                    <div>
+                        <dt>Pages Scraped</dt>
+                        <dd id="stat-pages">-</dd>
+                    </div>
+                    <div>
+                        <dt>Duration</dt>
+                        <dd id="stat-duration">-</dd>
+                    </div>
+                    <div>
+                        <dt>Errors</dt>
+                        <dd id="stat-errors">-</dd>
+                    </div>
+                </dl>
+
+                <div class="downloads">
+                    <a id="download-excel" class="btn btn-secondary" href="#" download>Download Excel</a>
+                    <a id="download-json" class="btn btn-secondary" href="#" download>Download JSON</a>
+                </div>
+
+                <button type="button" id="reset-btn" class="btn-reset">Scrape Another Site</button>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

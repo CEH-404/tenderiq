@@ -4015,3 +4015,305 @@ Call log:
 }
 [2026-07-22T12:20:52.869Z] [SUCCESS] Browser closed successfully.
 [2026-07-22T12:20:52.870Z] [SUCCESS] HTML Pipeline Shutdown.
+[2026-07-22T14:35:03.908Z] [INFO] Initializing HTML Pipeline...
+[2026-07-22T14:35:03.912Z] [INFO] Launching chromium browser...
+[2026-07-22T14:35:03.930Z] [ERROR] browserType.launch: Executable doesn't exist at C:\Users\DELL 5590\AppData\Local\ms-playwright\chromium_headless_shell-1228\chrome-headless-shell-win64\chrome-headless-shell.exe
+╔════════════════════════════════════════════════════════════╗
+║ Looks like Playwright was just installed or updated.       ║
+║ Please run the following command to download new browsers: ║
+║                                                            ║
+║     npx playwright install                                 ║
+║                                                            ║
+║ <3 Playwright Team                                         ║
+╚════════════════════════════════════════════════════════════╝
+[2026-07-22T14:48:53.430Z] [INFO] Initializing HTML Pipeline...
+[2026-07-22T14:48:53.432Z] [INFO] Launching chromium browser...
+[2026-07-22T14:48:53.448Z] [ERROR] browserType.launch: Executable doesn't exist at C:\Users\DELL 5590\AppData\Local\ms-playwright\chromium_headless_shell-1228\chrome-headless-shell-win64\chrome-headless-shell.exe
+╔════════════════════════════════════════════════════════════╗
+║ Looks like Playwright was just installed or updated.       ║
+║ Please run the following command to download new browsers: ║
+║                                                            ║
+║     npx playwright install                                 ║
+║                                                            ║
+║ <3 Playwright Team                                         ║
+╚════════════════════════════════════════════════════════════╝
+[2026-07-22T14:49:56.858Z] [INFO] Initializing HTML Pipeline...
+[2026-07-22T14:49:56.860Z] [INFO] Launching chromium browser...
+[2026-07-22T14:49:56.875Z] [ERROR] browserType.launch: Executable doesn't exist at C:\Users\DELL 5590\AppData\Local\ms-playwright\chromium_headless_shell-1228\chrome-headless-shell-win64\chrome-headless-shell.exe
+╔════════════════════════════════════════════════════════════╗
+║ Looks like Playwright was just installed or updated.       ║
+║ Please run the following command to download new browsers: ║
+║                                                            ║
+║     npx playwright install                                 ║
+║                                                            ║
+║ <3 Playwright Team                                         ║
+╚════════════════════════════════════════════════════════════╝
+[2026-07-22T14:50:47.343Z] [INFO] Initializing HTML Pipeline...
+[2026-07-22T14:50:47.344Z] [INFO] Launching chromium browser...
+[2026-07-22T14:50:47.360Z] [ERROR] browserType.launch: Executable doesn't exist at C:\Users\DELL 5590\AppData\Local\ms-playwright\chromium_headless_shell-1228\chrome-headless-shell-win64\chrome-headless-shell.exe
+╔════════════════════════════════════════════════════════════╗
+║ Looks like Playwright was just installed or updated.       ║
+║ Please run the following command to download new browsers: ║
+║                                                            ║
+║     npx playwright install                                 ║
+║                                                            ║
+║ <3 Playwright Team                                         ║
+╚════════════════════════════════════════════════════════════╝
+[2026-07-22T14:58:20.262Z] [INFO] Initializing HTML Pipeline...
+[2026-07-22T14:58:20.264Z] [INFO] Launching chromium browser...
+[2026-07-22T14:58:21.323Z] [SUCCESS] chromium launched successfully.
+[2026-07-22T14:58:21.325Z] [SUCCESS] HTML Pipeline Ready.
+[2026-07-22T14:58:21.329Z] [INFO] Crawler Started.
+[2026-07-22T14:58:21.340Z] [INFO] Visiting https://eproc.punjab.gov.pk/ActiveTenders.aspx | Depth 0
+[2026-07-22T14:58:22.534Z] [SUCCESS] Context Created: c68e8de4-f57d-4f78-81b4-d5554f2d00f9
+[2026-07-22T14:58:22.654Z] [SUCCESS] Page Created: 41ec5c44-d3d7-4b01-8186-7442fabbfc26
+[2026-07-22T14:58:22.655Z] [INFO] Navigating to https://eproc.punjab.gov.pk/ActiveTenders.aspx
+[2026-07-22T14:58:27.459Z] [SUCCESS] Navigation Complete
+[2026-07-22T14:58:27.460Z] [INFO] Extracting complete HTML...
+[2026-07-22T14:58:27.488Z] [SUCCESS] HTML extracted successfully.
+[2026-07-22T14:58:27.490Z] [INFO] Extracting page text...
+[2026-07-22T14:58:27.504Z] [SUCCESS] Text extracted successfully.
+[2026-07-22T14:58:27.505Z] [INFO] Extracting links...
+[2026-07-22T14:58:27.567Z] [SUCCESS] 219 links extracted.
+[2026-07-22T14:58:27.568Z] [INFO] Extracting metadata...
+[2026-07-22T14:58:27.576Z] [SUCCESS] Metadata extracted successfully.
+[2026-07-22T14:58:32.591Z] [INFO] Analyzing pagination...
+[2026-07-22T14:58:32.600Z] [SUCCESS] Pagination analysis completed.
+[2026-07-22T14:58:35.146Z] [INFO] Moved 1 -> 2
+[2026-07-22T14:58:37.703Z] [INFO] Moved 2 -> 3
+[2026-07-22T14:58:40.494Z] [INFO] Moved 3 -> 4
+[2026-07-22T14:58:42.935Z] [INFO] Moved 4 -> 5
+[2026-07-22T14:58:45.435Z] [INFO] Moved 5 -> 6
+[2026-07-22T14:58:47.019Z] [INFO] Extracting grid items...
+[2026-07-22T14:58:47.023Z] [SUCCESS] 0 grid item(s) extracted.
+[2026-07-22T14:58:47.028Z] [INFO] Analyzing page...
+[2026-07-22T14:58:47.069Z] [SUCCESS] Page analysis completed.
+[2026-07-22T14:58:47.935Z] [SUCCESS] Page Closed: 41ec5c44-d3d7-4b01-8186-7442fabbfc26
+[2026-07-22T14:58:47.943Z] [SUCCESS] Context Closed: c68e8de4-f57d-4f78-81b4-d5554f2d00f9
+[2026-07-22T14:58:47.945Z] [SUCCESS] Crawler Finished (1 pages).
+[2026-07-22T14:58:47.946Z] [INFO] {
+  "pagesVisited": 1,
+  "htmlPages": 1,
+  "errors": 0,
+  "resources": 0,
+  "startTime": 1784732301340,
+  "endTime": 1784732327945,
+  "duration": "26.61s"
+}
+[2026-07-22T14:58:50.240Z] [SUCCESS] Browser closed successfully.
+[2026-07-22T14:58:50.241Z] [SUCCESS] HTML Pipeline Shutdown.
+[2026-07-23T05:56:16.442Z] [INFO] Initializing HTML Pipeline...
+[2026-07-23T05:56:16.444Z] [INFO] Launching chromium browser...
+[2026-07-23T05:56:18.732Z] [SUCCESS] chromium launched successfully.
+[2026-07-23T05:56:18.745Z] [SUCCESS] HTML Pipeline Ready.
+[2026-07-23T05:56:18.747Z] [INFO] Crawler Started.
+[2026-07-23T05:56:18.751Z] [INFO] Visiting https://eproc.punjab.gov.pk/ActiveTenders.aspx | Depth 0
+[2026-07-23T05:56:20.106Z] [SUCCESS] Context Created: 5e7cff40-ef06-4fcf-b522-3304ef371ae7
+[2026-07-23T05:56:20.465Z] [SUCCESS] Page Created: 124fbbed-ca42-421a-9afb-a370882f9eb2
+[2026-07-23T05:56:20.466Z] [INFO] Navigating to https://eproc.punjab.gov.pk/ActiveTenders.aspx
+[2026-07-23T05:56:26.508Z] [SUCCESS] Navigation Complete
+[2026-07-23T05:56:26.509Z] [INFO] Extracting complete HTML...
+[2026-07-23T05:56:26.548Z] [SUCCESS] HTML extracted successfully.
+[2026-07-23T05:56:26.548Z] [INFO] Extracting page text...
+[2026-07-23T05:56:26.564Z] [SUCCESS] Text extracted successfully.
+[2026-07-23T05:56:26.565Z] [INFO] Extracting links...
+[2026-07-23T05:56:26.650Z] [SUCCESS] 220 links extracted.
+[2026-07-23T05:56:26.651Z] [INFO] Extracting metadata...
+[2026-07-23T05:56:26.656Z] [SUCCESS] Metadata extracted successfully.
+[2026-07-23T05:56:31.662Z] [INFO] Analyzing pagination...
+[2026-07-23T05:56:31.677Z] [SUCCESS] Pagination analysis completed.
+[2026-07-23T05:56:34.608Z] [INFO] Moved 1 -> 2
+[2026-07-23T05:56:37.257Z] [INFO] Moved 2 -> 3
+[2026-07-23T05:56:39.800Z] [INFO] Moved 3 -> 4
+[2026-07-23T05:56:42.370Z] [INFO] Moved 4 -> 5
+[2026-07-23T05:56:44.844Z] [INFO] Moved 5 -> 6
+[2026-07-23T05:56:46.461Z] [INFO] Extracting grid items...
+[2026-07-23T05:56:46.465Z] [SUCCESS] 0 grid item(s) extracted.
+[2026-07-23T05:56:46.471Z] [INFO] Analyzing page...
+[2026-07-23T05:56:46.513Z] [SUCCESS] Page analysis completed.
+[2026-07-23T05:56:47.436Z] [SUCCESS] Page Closed: 124fbbed-ca42-421a-9afb-a370882f9eb2
+[2026-07-23T05:56:47.455Z] [SUCCESS] Context Closed: 5e7cff40-ef06-4fcf-b522-3304ef371ae7
+[2026-07-23T05:56:47.456Z] [SUCCESS] Crawler Finished (1 pages).
+[2026-07-23T05:56:47.456Z] [INFO] {
+  "pagesVisited": 1,
+  "htmlPages": 1,
+  "errors": 0,
+  "resources": 0,
+  "startTime": 1784786178750,
+  "endTime": 1784786207456,
+  "duration": "28.71s"
+}
+[2026-07-23T05:56:49.437Z] [SUCCESS] Browser closed successfully.
+[2026-07-23T05:56:49.438Z] [SUCCESS] HTML Pipeline Shutdown.
+[2026-07-23T06:54:33.937Z] [INFO] Initializing HTML Pipeline...
+[2026-07-23T06:54:33.939Z] [INFO] Launching chromium browser...
+[2026-07-23T06:54:34.144Z] [SUCCESS] chromium launched successfully.
+[2026-07-23T06:54:34.146Z] [SUCCESS] HTML Pipeline Ready.
+[2026-07-23T06:54:34.148Z] [INFO] Crawler Started.
+[2026-07-23T06:54:34.150Z] [INFO] Visiting https://example.com/ | Depth 0
+[2026-07-23T06:54:34.660Z] [SUCCESS] Context Created: b20949a9-7197-427b-b60b-f484871de212
+[2026-07-23T06:54:34.817Z] [SUCCESS] Page Created: 5e01df2d-e7db-4574-bda2-66c63bbaf9e6
+[2026-07-23T06:54:34.817Z] [INFO] Navigating to https://example.com/
+[2026-07-23T06:54:38.525Z] [SUCCESS] Navigation Complete
+[2026-07-23T06:54:38.526Z] [INFO] Extracting complete HTML...
+[2026-07-23T06:54:38.545Z] [SUCCESS] HTML extracted successfully.
+[2026-07-23T06:54:38.546Z] [INFO] Extracting page text...
+[2026-07-23T06:54:38.559Z] [SUCCESS] Text extracted successfully.
+[2026-07-23T06:54:38.560Z] [INFO] Extracting links...
+[2026-07-23T06:54:38.627Z] [SUCCESS] 1 links extracted.
+[2026-07-23T06:54:38.630Z] [INFO] Extracting metadata...
+[2026-07-23T06:54:38.651Z] [SUCCESS] Metadata extracted successfully.
+[2026-07-23T06:54:43.656Z] [INFO] Analyzing pagination...
+[2026-07-23T06:54:43.667Z] [SUCCESS] Pagination analysis completed.
+[2026-07-23T06:55:13.686Z] [SUCCESS] Page Closed: 5e01df2d-e7db-4574-bda2-66c63bbaf9e6
+[2026-07-23T06:55:13.703Z] [SUCCESS] Context Closed: b20949a9-7197-427b-b60b-f484871de212
+[2026-07-23T06:55:13.705Z] [ERROR] page.waitForSelector: Timeout 30000ms exceeded.
+Call log:
+[2m  - waiting for locator('table') to be visible[22m
+
+    at HTMLPipeline.execute (D:\Anas\anas-dev\scraper\enterprise-website-scraper\src\pipelines\HTMLPipeline.js:195:24)
+    at async Framework.scrape (D:\Anas\anas-dev\scraper\enterprise-website-scraper\src\core\Framework.js:64:24)
+    at async Crawler.crawl (D:\Anas\anas-dev\scraper\enterprise-website-scraper\src\scraper\Crawler.js:116:21)
+    at async Framework.crawl (D:\Anas\anas-dev\scraper\enterprise-website-scraper\src\core\Framework.js:141:13)
+    at async file:///D:/Anas/anas-dev/scraper/enterprise-website-scraper/src/index.js:23:16
+[2026-07-23T06:55:13.705Z] [SUCCESS] Crawler Finished (0 pages).
+[2026-07-23T06:55:13.706Z] [INFO] {
+  "pagesVisited": 0,
+  "htmlPages": 0,
+  "errors": 1,
+  "resources": 0,
+  "startTime": 1784789674150,
+  "endTime": 1784789713705,
+  "duration": "39.55s"
+}
+[2026-07-23T06:55:13.811Z] [SUCCESS] Browser closed successfully.
+[2026-07-23T06:55:13.812Z] [SUCCESS] HTML Pipeline Shutdown.
+[2026-07-23T07:01:10.839Z] [INFO] Initializing HTML Pipeline...
+[2026-07-23T07:01:10.841Z] [INFO] Launching chromium browser...
+[2026-07-23T07:01:10.958Z] [SUCCESS] chromium launched successfully.
+[2026-07-23T07:01:10.961Z] [SUCCESS] HTML Pipeline Ready.
+[2026-07-23T07:01:10.963Z] [INFO] Crawler Started.
+[2026-07-23T07:01:10.964Z] [INFO] Visiting https://eproc.punjab.gov.pk/activetenders.aspx | Depth 0
+[2026-07-23T07:01:13.926Z] [SUCCESS] Context Created: 99b56d78-a991-4410-82c9-4f2f0ce11bef
+[2026-07-23T07:01:14.018Z] [SUCCESS] Page Created: 2a0e7022-42e9-4786-8737-d5fcf116099d
+[2026-07-23T07:01:14.018Z] [INFO] Navigating to https://eproc.punjab.gov.pk/activetenders.aspx
+[2026-07-23T07:01:16.376Z] [SUCCESS] Navigation Complete
+[2026-07-23T07:01:16.377Z] [INFO] Extracting complete HTML...
+[2026-07-23T07:01:16.409Z] [SUCCESS] HTML extracted successfully.
+[2026-07-23T07:01:16.410Z] [INFO] Extracting page text...
+[2026-07-23T07:01:16.424Z] [SUCCESS] Text extracted successfully.
+[2026-07-23T07:01:16.425Z] [INFO] Extracting links...
+[2026-07-23T07:01:16.484Z] [SUCCESS] 220 links extracted.
+[2026-07-23T07:01:16.485Z] [INFO] Extracting metadata...
+[2026-07-23T07:01:16.491Z] [SUCCESS] Metadata extracted successfully.
+[2026-07-23T07:01:21.498Z] [INFO] Analyzing pagination...
+[2026-07-23T07:01:21.510Z] [SUCCESS] Pagination analysis completed.
+[2026-07-23T07:01:24.378Z] [INFO] Moved 1 -> 2
+[2026-07-23T07:01:26.922Z] [INFO] Moved 2 -> 3
+[2026-07-23T07:01:29.743Z] [INFO] Moved 3 -> 4
+[2026-07-23T07:01:32.462Z] [INFO] Moved 4 -> 5
+[2026-07-23T07:01:35.048Z] [INFO] Moved 5 -> 6
+[2026-07-23T07:01:36.652Z] [INFO] Extracting grid items...
+[2026-07-23T07:01:36.655Z] [SUCCESS] 0 grid item(s) extracted.
+[2026-07-23T07:01:36.659Z] [INFO] Analyzing page...
+[2026-07-23T07:01:36.698Z] [SUCCESS] Page analysis completed.
+[2026-07-23T07:01:37.732Z] [SUCCESS] Page Closed: 2a0e7022-42e9-4786-8737-d5fcf116099d
+[2026-07-23T07:01:37.739Z] [SUCCESS] Context Closed: 99b56d78-a991-4410-82c9-4f2f0ce11bef
+[2026-07-23T07:01:37.740Z] [SUCCESS] Crawler Finished (1 pages).
+[2026-07-23T07:01:37.741Z] [INFO] {
+  "pagesVisited": 1,
+  "htmlPages": 1,
+  "errors": 0,
+  "resources": 0,
+  "startTime": 1784790070964,
+  "endTime": 1784790097740,
+  "duration": "26.78s"
+}
+[2026-07-23T07:01:39.962Z] [SUCCESS] Browser closed successfully.
+[2026-07-23T07:01:39.965Z] [SUCCESS] HTML Pipeline Shutdown.
+[2026-07-23T07:06:09.518Z] [INFO] Initializing HTML Pipeline...
+[2026-07-23T07:06:09.519Z] [INFO] Launching chromium browser...
+[2026-07-23T07:06:09.645Z] [SUCCESS] chromium launched successfully.
+[2026-07-23T07:06:09.647Z] [SUCCESS] HTML Pipeline Ready.
+[2026-07-23T07:06:09.648Z] [INFO] Crawler Started.
+[2026-07-23T07:06:09.649Z] [INFO] Visiting https://eproc.punjab.gov.pk/avctivetenders.aspx | Depth 0
+[2026-07-23T07:06:10.662Z] [SUCCESS] Context Created: 5c89fdf1-5891-4816-b3b3-220317b3d83d
+[2026-07-23T07:06:10.746Z] [SUCCESS] Page Created: deb3d390-4eef-40d7-8f95-e24c7fa05b8a
+[2026-07-23T07:06:10.747Z] [INFO] Navigating to https://eproc.punjab.gov.pk/avctivetenders.aspx
+[2026-07-23T07:06:12.256Z] [SUCCESS] Navigation Complete
+[2026-07-23T07:06:12.257Z] [INFO] Extracting complete HTML...
+[2026-07-23T07:06:12.266Z] [SUCCESS] HTML extracted successfully.
+[2026-07-23T07:06:12.266Z] [INFO] Extracting page text...
+[2026-07-23T07:06:12.275Z] [SUCCESS] Text extracted successfully.
+[2026-07-23T07:06:12.276Z] [INFO] Extracting links...
+[2026-07-23T07:06:12.303Z] [SUCCESS] 0 links extracted.
+[2026-07-23T07:06:12.304Z] [INFO] Extracting metadata...
+[2026-07-23T07:06:12.309Z] [SUCCESS] Metadata extracted successfully.
+[2026-07-23T07:06:17.327Z] [INFO] Analyzing pagination...
+[2026-07-23T07:06:17.331Z] [SUCCESS] Pagination analysis completed.
+[2026-07-23T07:06:47.357Z] [SUCCESS] Page Closed: deb3d390-4eef-40d7-8f95-e24c7fa05b8a
+[2026-07-23T07:06:47.363Z] [SUCCESS] Context Closed: 5c89fdf1-5891-4816-b3b3-220317b3d83d
+[2026-07-23T07:06:47.364Z] [ERROR] page.waitForSelector: Timeout 30000ms exceeded.
+Call log:
+[2m  - waiting for locator('table') to be visible[22m
+
+    at HTMLPipeline.execute (D:\Anas\anas-dev\scraper\enterprise-website-scraper\src\pipelines\HTMLPipeline.js:195:24)
+    at async Framework.scrape (D:\Anas\anas-dev\scraper\enterprise-website-scraper\src\core\Framework.js:64:24)
+    at async Crawler.crawl (D:\Anas\anas-dev\scraper\enterprise-website-scraper\src\scraper\Crawler.js:116:21)
+    at async Framework.crawl (D:\Anas\anas-dev\scraper\enterprise-website-scraper\src\core\Framework.js:141:13)
+    at async file:///D:/Anas/anas-dev/scraper/enterprise-website-scraper/server.js:87:24
+[2026-07-23T07:06:47.365Z] [SUCCESS] Crawler Finished (0 pages).
+[2026-07-23T07:06:47.365Z] [INFO] {
+  "pagesVisited": 0,
+  "htmlPages": 0,
+  "errors": 1,
+  "resources": 0,
+  "startTime": 1784790369649,
+  "endTime": 1784790407365,
+  "duration": "37.72s"
+}
+[2026-07-23T07:06:47.485Z] [SUCCESS] Browser closed successfully.
+[2026-07-23T07:06:47.486Z] [SUCCESS] HTML Pipeline Shutdown.
+[2026-07-23T07:11:28.895Z] [INFO] Initializing HTML Pipeline...
+[2026-07-23T07:11:28.895Z] [INFO] Launching chromium browser...
+[2026-07-23T07:11:29.006Z] [SUCCESS] chromium launched successfully.
+[2026-07-23T07:11:29.007Z] [SUCCESS] HTML Pipeline Ready.
+[2026-07-23T07:11:29.007Z] [INFO] Crawler Started.
+[2026-07-23T07:11:29.008Z] [INFO] Visiting https://eproc.punjab.gov.pk/ActiveTenders.aspx | Depth 0
+[2026-07-23T07:11:30.175Z] [SUCCESS] Context Created: 530f65b0-0147-49e9-b7f9-6ad0cedb4688
+[2026-07-23T07:11:30.256Z] [SUCCESS] Page Created: 0c2c4e83-a1d7-42e6-b6a9-7e790735f719
+[2026-07-23T07:11:30.256Z] [INFO] Navigating to https://eproc.punjab.gov.pk/ActiveTenders.aspx
+[2026-07-23T07:11:32.612Z] [SUCCESS] Navigation Complete
+[2026-07-23T07:11:32.612Z] [INFO] Extracting complete HTML...
+[2026-07-23T07:11:32.638Z] [SUCCESS] HTML extracted successfully.
+[2026-07-23T07:11:32.639Z] [INFO] Extracting page text...
+[2026-07-23T07:11:32.646Z] [SUCCESS] Text extracted successfully.
+[2026-07-23T07:11:32.647Z] [INFO] Extracting links...
+[2026-07-23T07:11:32.701Z] [SUCCESS] 220 links extracted.
+[2026-07-23T07:11:32.702Z] [INFO] Extracting metadata...
+[2026-07-23T07:11:32.706Z] [SUCCESS] Metadata extracted successfully.
+[2026-07-23T07:11:37.716Z] [INFO] Analyzing pagination...
+[2026-07-23T07:11:37.722Z] [SUCCESS] Pagination analysis completed.
+[2026-07-23T07:11:40.398Z] [INFO] Moved 1 -> 2
+[2026-07-23T07:11:42.974Z] [INFO] Moved 2 -> 3
+[2026-07-23T07:11:45.548Z] [INFO] Moved 3 -> 4
+[2026-07-23T07:11:48.116Z] [INFO] Moved 4 -> 5
+[2026-07-23T07:11:50.596Z] [INFO] Moved 5 -> 6
+[2026-07-23T07:11:52.201Z] [INFO] Extracting grid items...
+[2026-07-23T07:11:52.205Z] [SUCCESS] 0 grid item(s) extracted.
+[2026-07-23T07:11:52.210Z] [INFO] Analyzing page...
+[2026-07-23T07:11:52.254Z] [SUCCESS] Page analysis completed.
+[2026-07-23T07:11:53.317Z] [SUCCESS] Page Closed: 0c2c4e83-a1d7-42e6-b6a9-7e790735f719
+[2026-07-23T07:11:53.323Z] [SUCCESS] Context Closed: 530f65b0-0147-49e9-b7f9-6ad0cedb4688
+[2026-07-23T07:11:53.324Z] [SUCCESS] Crawler Finished (1 pages).
+[2026-07-23T07:11:53.325Z] [INFO] {
+  "pagesVisited": 1,
+  "htmlPages": 1,
+  "errors": 0,
+  "resources": 0,
+  "startTime": 1784790689008,
+  "endTime": 1784790713324,
+  "duration": "24.32s"
+}
+[2026-07-23T07:11:53.538Z] [SUCCESS] Browser closed successfully.
+[2026-07-23T07:11:53.539Z] [SUCCESS] HTML Pipeline Shutdown.
