@@ -1,0 +1,22 @@
+{
+  "watch": [
+    "server.js",
+    "src"
+  ],
+  "ignore": [
+    "outputs/**",
+    "output/**",
+    "downloads/**",
+    "logs/**",
+    "screenshots/**",
+    "temp/**",
+    "data/**",
+    "test-results/**",
+    "tests/**",
+    "docs/**",
+    "examples/**",
+    "plugins/**",
+    "node_modules/**"
+  ],
+  "ext": "js,json"
+}

@@ -1,151 +1,141 @@
+import logger from "../logger/logger.js";
+
 class CommerceExtractor {
 
-    async extract(page) {
+    constructor(pageManager) {
+        this.pageManager = pageManager;
+    }
 
-        return await page.evaluate(() => {
+    async extract(pageId, strategy = null) {
 
-            const getText = (selector) => {
-                const el = document.querySelector(selector);
-                return el ? el.textContent.trim() : null;
-            };
+        if (strategy && strategy.commerce === false) {
+            return [];
+        }
 
-            const getAttribute = (selector, attribute) => {
-                const el = document.querySelector(selector);
-                return el ? el.getAttribute(attribute) : null;
-            };
+        logger.info("Extracting commerce data...");
 
-            // ---------- Product Name ----------
+        const page = this.pageManager.get(pageId);
 
-            const productName =
-                getText("h1") ||
-                getAttribute("meta[property='og:title']", "content") ||
-                document.title;
+        if (!page) {
+            throw new Error(`Page not found: ${pageId}`);
+        }
 
-            // ---------- Price ----------
+        const products = await page.evaluate(() => {
 
-            const priceSelectors = [
-                "[itemprop='price']",
-                ".price",
-                ".product-price",
-                ".sale-price",
-                ".current-price",
-                ".woocommerce-Price-amount",
-                ".price-item"
+            // Universal product selectors
+            const selectors = [
+
+                // Shopify
+                ".product",
+                ".product-card",
+                ".product-item",
+                ".grid-product",
+
+                // WooCommerce
+                ".woocommerce-loop-product",
+                ".product-small",
+                ".type-product",
+
+                // Elementor
+                ".elementor-product",
+                ".elementor-post",
+
+                // Generic
+                "[class*=product]",
+                "[class*=Product]",
+                "[class*=card]",
+                "[data-product-id]",
+                "[itemtype*='Product']"
+
             ];
 
-            let price = null;
+            const elements = [];
+            const seen = new Set();
 
-            for (const selector of priceSelectors) {
+            selectors.forEach(selector => {
 
-                price = getText(selector);
+                document.querySelectorAll(selector).forEach(el => {
 
-                if (price) break;
-            }
+                    if (!seen.has(el)) {
 
-            // ---------- Currency ----------
+                        seen.add(el);
+                        elements.push(el);
 
-            const currency =
-                getAttribute("[itemprop='priceCurrency']", "content") ||
-                getText(".currency") ||
-                null;
+                    }
 
-            // ---------- SKU ----------
+                });
 
-            const sku =
-                getText("[itemprop='sku']") ||
-                getText(".sku") ||
-                null;
+            });
 
-            // ---------- Brand ----------
+            return elements.map(el => {
 
-            const brand =
-                getText("[itemprop='brand']") ||
-                getText(".brand") ||
-                null;
+                const text = el.innerText || "";
 
-            // ---------- Availability ----------
+                const title =
+                    el.querySelector(
+                        "h1,h2,h3,h4,h5,.title,.product-title,[itemprop='name']"
+                    )?.innerText.trim() || "";
 
-            const availability =
-                getText("[itemprop='availability']") ||
-                getText(".stock") ||
-                null;
+                const description =
+                    el.querySelector(
+                        "p,.description,.product-description,[itemprop='description']"
+                    )?.innerText.trim() || "";
 
-            // ---------- Description ----------
+                const image =
+                    el.querySelector("img")?.src || "";
 
-            const description =
-                getAttribute(
-                    "meta[name='description']",
-                    "content"
-                ) ||
-                getText(".description") ||
-                getText(".product-description");
+                const url =
+                    el.querySelector("a")?.href || "";
 
-            // ---------- Images ----------
+                const priceNode =
+                    el.querySelector(
+                        ".price,.woocommerce-Price-amount,[itemprop='price'],.money"
+                    );
 
-            const images = [
+                const price =
+                    priceNode?.innerText.trim() ||
+                    text.match(/(?:Rs\.?|PKR|\$|€|£|₹)\s?[\d,.]+/i)?.[0] ||
+                    "";
 
-                ...document.querySelectorAll("img")
+                const availability =
+                    /in stock/i.test(text)
+                        ? "In Stock"
+                        : /out of stock/i.test(text)
+                        ? "Out of Stock"
+                        : "";
 
-            ]
-                .map(img => img.src)
-                .filter(Boolean);
+                const addToCart =
+                    !![...el.querySelectorAll("button,a,input")]
+                        .find(node =>
+                            /add to cart|buy now|purchase|order/i
+                                .test(node.innerText || "")
+                        );
 
-            // ---------- Add To Cart ----------
+                return {
 
-            const hasAddToCart =
+                    title,
+                    description,
+                    price,
+                    image,
+                    url,
+                    availability,
+                    addToCart
 
-                !!document.querySelector(
+                };
 
-                    "button[name='add-to-cart'],\
-                     button.add-to-cart,\
-                     .single_add_to_cart_button,\
-                     form[action*='cart']"
-
-                );
-
-            // ---------- Categories ----------
-
-            const categories = [
-
-                ...document.querySelectorAll(
-
-                    ".product-category,\
-                     .posted_in a,\
-                     nav.breadcrumb a"
-
-                )
-
-            ]
-
-                .map(el => el.textContent.trim())
-
-                .filter(Boolean);
-
-            return {
-
-                productName,
-
-                price,
-
-                currency,
-
-                sku,
-
-                brand,
-
-                availability,
-
-                description,
-
-                hasAddToCart,
-
-                categories,
-
-                images
-
-            };
+            }).filter(product =>
+                product.title ||
+                product.price ||
+                product.image
+            );
 
         });
+
+        logger.success(
+            `${products.length} commerce item(s) extracted.`
+        );
+
+        return products;
 
     }
 

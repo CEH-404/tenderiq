@@ -1,0 +1,184 @@
+{
+  "metadata": {
+    "cleanerVersion": "3.0.0",
+    "processedAt": "2026-08-11T12:38:59.991Z",
+    "statistics": {
+      "rawTables": 96,
+      "rawRows": 3508,
+      "tablesRemoved": 40,
+      "duplicatesRemoved": 2049,
+      "emptyRowsRemoved": 140,
+      "invalidRecordsRemoved": 148,
+      "finalRecords": 671,
+      "efficiency": "19.1%",
+      "errorCount": 0
+    },
+    "pipelineVersion": "4.0.0",
+    "generatedBy": "gemini-3-flash-preview",
+    "generatedAt": "2026-08-11T12:39:12.348Z",
+    "ai": {
+      "batchSize": 100,
+      "totalBatches": 1,
+      "successfulBatches": 1,
+      "failedBatches": 0,
+      "inputTenders": 5,
+      "outputTenders": 5,
+      "quarantinedTenders": 0,
+      "droppedTenders": 0,
+      "processedAt": "2026-08-11T12:39:12.348Z"
+    }
+  },
+  "failedBatches": [],
+  "tenders": [
+    {
+      "summary": "Corrigendum for annual repair works managed by the Highway Division in Attock.",
+      "category": "Civil Works",
+      "procurement": {
+        "title": "Corrigendum",
+        "name": "Annual Repair (View Tender Detail)",
+        "type": "Work"
+      },
+      "organization": {
+        "department": "Executive Engineer Highway Division Attock",
+        "city": "Attock",
+        "province": "Punjab"
+      },
+      "dates": {
+        "publish": "2026-08-11",
+        "close": "2026-08-17"
+      },
+      "links": {
+        "page": "https://eproc.punjab.gov.pk/activetenders.aspx",
+        "detail": null
+      },
+      "ai": {
+        "relevance": 0.8,
+        "tags": [
+          "repair",
+          "highway",
+          "maintenance"
+        ]
+      }
+    },
+    {
+      "summary": "Corrigendum for a framework agreement to purchase LP medicines and other supplies for THQ Hospital, Haroonabad.",
+      "category": "Medical Supplies",
+      "procurement": {
+        "title": "Corrigendum",
+        "name": "FRAMEWORK AGREEMENT FOR PURCHASE OF LP Medicines & Others (View Tender Detail)",
+        "type": "Goods"
+      },
+      "organization": {
+        "department": "THQ Hospital, Haroonabad",
+        "city": "Haroonabad",
+        "province": "Punjab"
+      },
+      "dates": {
+        "publish": "2026-08-11",
+        "close": "2026-08-21"
+      },
+      "links": {
+        "page": "https://eproc.punjab.gov.pk/activetenders.aspx",
+        "detail": null
+      },
+      "ai": {
+        "relevance": 0.9,
+        "tags": [
+          "medicine",
+          "healthcare",
+          "pharmaceuticals"
+        ]
+      }
+    },
+    {
+      "summary": "Framework contract for the local purchase of medicines and medical devices on a day-to-day basis for THQ Hospital, Kot Addu.",
+      "category": "Medical Supplies",
+      "procurement": {
+        "title": "Tender Notice",
+        "name": "Frame Work Contract, Local Purchase of Medicines/Medical Devices (Day-to-Day)",
+        "type": "Goods"
+      },
+      "organization": {
+        "department": "THQ Hospital, Kot Addu",
+        "city": "Kot Addu",
+        "province": "Punjab"
+      },
+      "dates": {
+        "publish": "2026-08-11",
+        "close": "2026-08-29"
+      },
+      "links": {
+        "page": "https://eproc.punjab.gov.pk/activetenders.aspx",
+        "detail": null
+      },
+      "ai": {
+        "relevance": 0.9,
+        "tags": [
+          "medical devices",
+          "hospital supply",
+          "framework contract"
+        ]
+      }
+    },
+    {
+      "summary": "Supply of 22-inch R.C.C. manhole covers for the Municipal Committee of Shujabad, Multan.",
+      "category": "Infrastructure",
+      "procurement": {
+        "title": "Tender Notice",
+        "name": "Providing R.C.C. Manhole Covers 22\" i/d Municipal Committee Shujabad",
+        "type": "Work"
+      },
+      "organization": {
+        "department": "Municipal Committee Shujabad Multan",
+        "city": "Multan",
+        "province": "Punjab"
+      },
+      "dates": {
+        "publish": "2026-08-11",
+        "close": "2026-08-26"
+      },
+      "links": {
+        "page": "https://eproc.punjab.gov.pk/activetenders.aspx",
+        "detail": null
+      },
+      "ai": {
+        "relevance": 0.7,
+        "tags": [
+          "sanitation",
+          "construction",
+          "rcc"
+        ]
+      }
+    },
+    {
+      "summary": "Procurement of uniforms for Baba Guru Nanak University located in Nankana Sahib.",
+      "category": "Apparel",
+      "procurement": {
+        "title": "Tender Notice",
+        "name": "Purchase of Uniforms",
+        "type": "Goods"
+      },
+      "organization": {
+        "department": "Baba Guru Nanak University, Nankana Sahib",
+        "city": "Nankana Sahib",
+        "province": "Punjab"
+      },
+      "dates": {
+        "publish": "2026-08-11",
+        "close": "2026-08-26"
+      },
+      "links": {
+        "page": "https://eproc.punjab.gov.pk/activetenders.aspx",
+        "detail": null
+      },
+      "ai": {
+        "relevance": 0.85,
+        "tags": [
+          "uniforms",
+          "clothing",
+          "education"
+        ]
+      }
+    }
+  ]
+}

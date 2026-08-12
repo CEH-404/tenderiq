@@ -1,0 +1,194 @@
+{
+  "metadata": {
+    "cleanerVersion": "3.0.0",
+    "processedAt": "2026-08-11T08:51:28.945Z",
+    "statistics": {
+      "rawTables": 94,
+      "rawRows": 3451,
+      "tablesRemoved": 35,
+      "duplicatesRemoved": 2007,
+      "emptyRowsRemoved": 123,
+      "invalidRecordsRemoved": 140,
+      "finalRecords": 658,
+      "efficiency": "19.1%",
+      "errorCount": 0
+    },
+    "pipelineVersion": "4.0.0",
+    "generatedBy": "gemini-3-flash-preview",
+    "generatedAt": "2026-08-11T08:51:42.021Z",
+    "ai": {
+      "batchSize": 100,
+      "totalBatches": 1,
+      "successfulBatches": 1,
+      "failedBatches": 0,
+      "inputTenders": 5,
+      "outputTenders": 5,
+      "quarantinedTenders": 0,
+      "droppedTenders": 0,
+      "processedAt": "2026-08-11T08:51:42.021Z"
+    }
+  },
+  "failedBatches": [],
+  "tenders": [
+    {
+      "summary": "Corrigendum for a framework agreement regarding the purchase of LP medicines and other items for THQ Hospital, Haroonabad.",
+      "category": "Medical Supplies",
+      "procurement": {
+        "title": "Corrigendum",
+        "name": "FRAMEWORK AGREEMENT FOR PURCHASE OF LP Medicines & Others",
+        "type": "Goods",
+        "id": null
+      },
+      "organization": {
+        "name": "THQ Hospital",
+        "department": "THQ Hospital, Haroonabad",
+        "city": "Haroonabad",
+        "province": "Punjab"
+      },
+      "dates": {
+        "published": "2026-08-11",
+        "closing": "2026-08-21"
+      },
+      "links": {
+        "page": "https://eproc.punjab.gov.pk/activetenders.aspx",
+        "documents": null
+      },
+      "ai": {
+        "relevanceScore": null,
+        "tags": [
+          "Medicines",
+          "Healthcare",
+          "Framework Agreement"
+        ]
+      }
+    },
+    {
+      "summary": "Framework contract for the day-to-day local purchase of medicines and medical devices for THQ Hospital, Kot Addu.",
+      "category": "Medical Supplies",
+      "procurement": {
+        "title": "Tender Notice",
+        "name": "Frame Work Contract, Local Purchase of Medicines/Medical Devices (Day-to-Day)",
+        "type": "Goods",
+        "id": null
+      },
+      "organization": {
+        "name": "THQ Hospital",
+        "department": "THQ Hospital, Kot Addu",
+        "city": "Kot Addu",
+        "province": "Punjab"
+      },
+      "dates": {
+        "published": "2026-08-11",
+        "closing": "2026-08-29"
+      },
+      "links": {
+        "page": "https://eproc.punjab.gov.pk/activetenders.aspx",
+        "documents": null
+      },
+      "ai": {
+        "relevanceScore": null,
+        "tags": [
+          "Medicines",
+          "Medical Devices",
+          "Local Purchase"
+        ]
+      }
+    },
+    {
+      "summary": "Procurement of 22-inch R.C.C. manhole covers for the Municipal Committee Shujabad in Multan.",
+      "category": "Civil Works",
+      "procurement": {
+        "title": "Tender Notice",
+        "name": "Providing R.C.C. Manhole Covers 22\" i/d Municipal Committee Shujabad",
+        "type": "Work",
+        "id": null
+      },
+      "organization": {
+        "name": "Municipal Committee Shujabad",
+        "department": "Municipal Committee Shujabad Multan",
+        "city": "Shujabad",
+        "province": "Punjab"
+      },
+      "dates": {
+        "published": "2026-08-11",
+        "closing": "2026-08-26"
+      },
+      "links": {
+        "page": "https://eproc.punjab.gov.pk/activetenders.aspx",
+        "documents": null
+      },
+      "ai": {
+        "relevanceScore": null,
+        "tags": [
+          "Manhole Covers",
+          "RCC",
+          "Infrastructure"
+        ]
+      }
+    },
+    {
+      "summary": "Tender for the purchase of uniforms for Baba Guru Nanak University located in Nankana Sahib.",
+      "category": "Apparel",
+      "procurement": {
+        "title": "Tender Notice",
+        "name": "Purchase of Uniforms",
+        "type": "Goods",
+        "id": null
+      },
+      "organization": {
+        "name": "Baba Guru Nanak University",
+        "department": "Baba Guru Nanak University, Nankana Sahib",
+        "city": "Nankana Sahib",
+        "province": "Punjab"
+      },
+      "dates": {
+        "published": "2026-08-11",
+        "closing": "2026-08-26"
+      },
+      "links": {
+        "page": "https://eproc.punjab.gov.pk/activetenders.aspx",
+        "documents": null
+      },
+      "ai": {
+        "relevanceScore": null,
+        "tags": [
+          "Uniforms",
+          "Clothing",
+          "Education"
+        ]
+      }
+    },
+    {
+      "summary": "Rehabilitation project for the Neuro Ortho Block at Aziz Bhatti Shaheed Teaching Hospital in Gujrat.",
+      "category": "Construction",
+      "procurement": {
+        "title": "Tender Notice",
+        "name": "Rehabilitation of Neuro Ortho Block at Aziz Bhatti Shaheed Teaching Hospital, Gujrat.",
+        "type": "Work",
+        "id": null
+      },
+      "organization": {
+        "name": "Provincial Buildings Division",
+        "department": "Provincial Buildings Division Gujrat",
+        "city": "Gujrat",
+        "province": "Punjab"
+      },
+      "dates": {
+        "published": "2026-08-11",
+        "closing": "2026-08-27"
+      },
+      "links": {
+        "page": "https://eproc.punjab.gov.pk/activetenders.aspx",
+        "documents": null
+      },
+      "ai": {
+        "relevanceScore": null,
+        "tags": [
+          "Rehabilitation",
+          "Hospital Construction",
+          "Civil Works"
+        ]
+      }
+    }
+  ]
+}

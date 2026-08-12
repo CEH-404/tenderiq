@@ -194,8 +194,9 @@ form.addEventListener("submit", async event => {
         const excelLink = document.getElementById("download-excel");
         const jsonLink = document.getElementById("download-json");
 
-        if (data.excelAvailable) {
-            excelLink.href = "/api/download/excel";
+        if (data.excelFilename) {
+            excelLink.href =
+                `/api/download/excel/${encodeURIComponent(data.excelFilename)}`;
             excelLink.removeAttribute("aria-disabled");
         } else {
             excelLink.href = "#";

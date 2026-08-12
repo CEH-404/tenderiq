@@ -1,0 +1,25 @@
+{
+  "page": {
+    "type": "unknown",
+    "confidence": 0
+  },
+  "metadata": {},
+  "company": null,
+  "commerce": null,
+  "faq": [],
+  "tables": [],
+  "tableData": [],
+  "grids": [],
+  "gridData": [],
+  "links": [],
+  "resources": {},
+  "extraction": {},
+  "summary": {
+    "links": 0,
+    "tables": 0,
+    "grids": 0,
+    "faq": 0,
+    "hasCommerce": false,
+    "hasCompany": false
+  }
+}

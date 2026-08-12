@@ -1,0 +1,228 @@
+{
+  "metadata": {
+    "cleanerVersion": "3.0.0",
+    "processedAt": "2026-08-10T10:36:44.467Z",
+    "statistics": {
+      "rawTables": 96,
+      "rawRows": 3464,
+      "tablesRemoved": 35,
+      "duplicatesRemoved": 2016,
+      "emptyRowsRemoved": 123,
+      "invalidRecordsRemoved": 136,
+      "finalRecords": 661,
+      "efficiency": "19.1%",
+      "errorCount": 0
+    },
+    "pipelineVersion": "4.0.0",
+    "generatedBy": "gemini-3.5-flash-lite",
+    "generatedAt": "2026-08-10T10:36:51.231Z",
+    "ai": {
+      "batchSize": 100,
+      "totalBatches": 1,
+      "successfulBatches": 1,
+      "failedBatches": 0,
+      "inputTenders": 5,
+      "outputTenders": 5,
+      "quarantinedTenders": 0,
+      "droppedTenders": 0,
+      "processedAt": "2026-08-10T10:36:51.231Z"
+    }
+  },
+  "failedBatches": [],
+  "tenders": [
+    {
+      "summary": "Corrigendum for the conservation of historical monuments in District Attock, Mandi Bahauddin, Lahore Railway Station, Taxila Railway Station, and other locations.",
+      "category": "Works",
+      "procurement": {
+        "title": "Corrigendum",
+        "referenceNumber": null,
+        "tenderNumber": null,
+        "type": "Work",
+        "description": "Conservation of Historical Monuments of District Attock (Behram ki Baradari and Attock Tomb) Monuments of 2nd Anglo Sikh War District Mindi Bahu Din Lahore Railway Station Taxila Railway Station Fatim"
+      },
+      "organization": {
+        "name": "Directorate General of Archaeology",
+        "department": "Directorate General of Archaeology",
+        "city": "Lahore",
+        "province": "Punjab",
+        "country": "Pakistan"
+      },
+      "dates": {
+        "publishDate": "2026-08-10",
+        "closeDate": "2026-08-12",
+        "openingDate": null
+      },
+      "links": {
+        "pageUrl": "https://eproc.punjab.gov.pk/activetenders.aspx",
+        "documentUrl": null
+      },
+      "ai": {
+        "estimatedValue": null,
+        "currency": "PKR",
+        "urgency": "High",
+        "keywords": [
+          "Conservation",
+          "Historical Monuments",
+          "Attock",
+          "Lahore Railway Station",
+          "Taxila"
+        ]
+      }
+    },
+    {
+      "summary": "Procurement of LN2 containers, AI accessories, and chemicals for the Research Centre for Conservation of Indigenous Breeds (RCCIB) in Jhang.",
+      "category": "Goods",
+      "procurement": {
+        "title": "Tender Notice",
+        "referenceNumber": null,
+        "tenderNumber": null,
+        "type": "Goods",
+        "description": "LN2 CONTAINERS, AI Accessories and Chemicals"
+      },
+      "organization": {
+        "name": "Research Centre for Conservation of Indigenous Breeds (RCCIB), Jhang",
+        "department": "Research Centre for Conservation of Indigenous Breeds (RCCIB)",
+        "city": "Jhang",
+        "province": "Punjab",
+        "country": "Pakistan"
+      },
+      "dates": {
+        "publishDate": "2026-08-10",
+        "closeDate": "2026-08-29",
+        "openingDate": null
+      },
+      "links": {
+        "pageUrl": "https://eproc.punjab.gov.pk/activetenders.aspx",
+        "documentUrl": null
+      },
+      "ai": {
+        "estimatedValue": null,
+        "currency": "PKR",
+        "urgency": "Medium",
+        "keywords": [
+          "LN2 Containers",
+          "AI Accessories",
+          "Chemicals",
+          "RCCIB",
+          "Jhang"
+        ]
+      }
+    },
+    {
+      "summary": "Procurement of goods and services for District Council Sahiwal through a framework contract for the fiscal year 2026-27.",
+      "category": "Services",
+      "procurement": {
+        "title": "Tender Notice",
+        "referenceNumber": null,
+        "tenderNumber": null,
+        "type": "Services",
+        "description": "PROCUREMENT OF GOODS AND SERVICES FOR DISTRICT COUNCIL SAHIWAL THROUGH FRAMEWORK CONTRACT FOR FY-2026-27"
+      },
+      "organization": {
+        "name": "Municipal Committee, Chichawatni",
+        "department": "Municipal Committee",
+        "city": "Chichawatni",
+        "province": "Punjab",
+        "country": "Pakistan"
+      },
+      "dates": {
+        "publishDate": "2026-08-10",
+        "closeDate": "2026-08-26",
+        "openingDate": null
+      },
+      "links": {
+        "pageUrl": "https://eproc.punjab.gov.pk/activetenders.aspx",
+        "documentUrl": null
+      },
+      "ai": {
+        "estimatedValue": null,
+        "currency": "PKR",
+        "urgency": "Medium",
+        "keywords": [
+          "Framework Contract",
+          "District Council Sahiwal",
+          "Goods and Services",
+          "Chichawatni"
+        ]
+      }
+    },
+    {
+      "summary": "Supply of IT equipment (laptops) and installation of an RO plant for the Research Centre for Conservation of Indigenous Breeds (RCCIB) in Jhang.",
+      "category": "Goods",
+      "procurement": {
+        "title": "Tender Notice",
+        "referenceNumber": null,
+        "tenderNumber": null,
+        "type": "Goods",
+        "description": "IT EQUIPMENT (LAPTOPS) AND INSTALLATION OF RO PLANT"
+      },
+      "organization": {
+        "name": "Research Centre for Conservation of Indigenous Breeds (RCCIB), Jhang",
+        "department": "Research Centre for Conservation of Indigenous Breeds (RCCIB)",
+        "city": "Jhang",
+        "province": "Punjab",
+        "country": "Pakistan"
+      },
+      "dates": {
+        "publishDate": "2026-08-10",
+        "closeDate": "2026-08-27",
+        "openingDate": null
+      },
+      "links": {
+        "pageUrl": "https://eproc.punjab.gov.pk/activetenders.aspx",
+        "documentUrl": null
+      },
+      "ai": {
+        "estimatedValue": null,
+        "currency": "PKR",
+        "urgency": "Medium",
+        "keywords": [
+          "IT Equipment",
+          "Laptops",
+          "RO Plant",
+          "Installation",
+          "RCCIB"
+        ]
+      }
+    },
+    {
+      "summary": "Purchase of dental items and materials for the year 2026-27 for the Pharmacy Department at Sir Ganga Ram Hospital, Lahore.",
+      "category": "Goods",
+      "procurement": {
+        "title": "Tender Notice",
+        "referenceNumber": null,
+        "tenderNumber": null,
+        "type": "Goods",
+        "description": "Tender for Purchase of Dental Items / Materials for the year 2026-27"
+      },
+      "organization": {
+        "name": "Sir Ganga Ram Hospital, Pharmacy Department, Lahore",
+        "department": "Pharmacy Department",
+        "city": "Lahore",
+        "province": "Punjab",
+        "country": "Pakistan"
+      },
+      "dates": {
+        "publishDate": "2026-08-10",
+        "closeDate": "2026-08-26",
+        "openingDate": null
+      },
+      "links": {
+        "pageUrl": "https://eproc.punjab.gov.pk/activetenders.aspx",
+        "documentUrl": null
+      },
+      "ai": {
+        "estimatedValue": null,
+        "currency": "PKR",
+        "urgency": "Medium",
+        "keywords": [
+          "Dental Items",
+          "Dental Materials",
+          "Sir Ganga Ram Hospital",
+          "Pharmacy",
+          "Lahore"
+        ]
+      }
+    }
+  ]
+}

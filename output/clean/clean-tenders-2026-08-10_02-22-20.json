@@ -1,0 +1,19 @@
+{
+  "metadata": {
+    "cleanerVersion": "3.0.0",
+    "processedAt": "2026-08-09T21:22:20.155Z",
+    "statistics": {
+      "rawTables": 0,
+      "rawRows": 0,
+      "tablesRemoved": 0,
+      "duplicatesRemoved": 0,
+      "emptyRowsRemoved": 0,
+      "invalidRecordsRemoved": 0,
+      "finalRecords": 0,
+      "efficiency": "0%",
+      "errorCount": 0
+    }
+  },
+  "errors": [],
+  "tenders": []
+}

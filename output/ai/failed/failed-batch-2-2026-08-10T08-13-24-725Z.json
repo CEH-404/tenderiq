@@ -1,0 +1,1009 @@
+{
+  "batchNumber": 2,
+  "totalBatches": 7,
+  "batchSize": 100,
+  "failedAt": "2026-08-10T08:13:24.725Z",
+  "error": "{\"error\":{\"code\":404,\"message\":\"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use a newer model for the latest features and improvements.\",\"status\":\"NOT_FOUND\"}}",
+  "tenders": [
+    {
+      "procurementTitle": "Tender Notice",
+      "procurementName": "Hirig of Security Services",
+      "type": "Services",
+      "publishDate": "2026-08-07",
+      "closeDate": "2026-08-27",
+      "department": "Board of Intermediate and Secondary Education, Rawalpindi",
+      "pageUrl": "https://eproc.punjab.gov.pk/activetenders.aspx",
+      "pageTitle": "PPRA SERVICES PORTAL :: Active Procurement"
+    },
+    {
+      "procurementTitle": "Tender Notice",
+      "procurementName": "Hiring of Contractor for Renovation of Pull DAT DG Khan BRANCH",
+      "type": "Services",
+      "publishDate": "2026-08-07",
+      "closeDate": "2026-08-24",
+      "department": "The Bank of Punjab",
+      "pageUrl": "https://eproc.punjab.gov.pk/activetenders.aspx",
+      "pageTitle": "PPRA SERVICES PORTAL :: Active Procurement"
+    },
+    {
+      "procurementTitle": "Tender Notice",
+      "procurementName": "“RESTORATION WORK OF DEAD FOUNTAINS OF PAIN BAGH",
+      "type": "Work",
+      "publishDate": "2026-08-07",
+      "closeDate": "2026-08-24",
+      "department": "Walled City",
+      "pageUrl": "https://eproc.punjab.gov.pk/activetenders.aspx",
+      "pageTitle": "PPRA SERVICES PORTAL :: Active Procurement"
+    },
+    {
+      "procurementTitle": "Tender Notice",
+      "procurementName": "(OS-01/2026-27) PROVISION OF OFFICE SUPPLIES (HEAD OFFICE, LAHORE)",
+      "type": "Goods",
+      "publishDate": "2026-08-07",
+      "closeDate": "2026-08-24",
+      "department": "Punjab Thermal Power (Pvt) Limited, Lahore",
+      "pageUrl": "https://eproc.punjab.gov.pk/activetenders.aspx",
+      "pageTitle": "PPRA SERVICES PORTAL :: Active Procurement"
+    },
+    {
+      "procurementTitle": "Tender Notice",
+      "procurementName": "Purcahse of Furniture & Fixture, IT Equipments & Lab Equipments for Maryam Nawaz Sharif Medical College Mianwali through SMC Sargodha",
+      "type": "Goods",
+      "publishDate": "2026-08-07",
+      "closeDate": "2026-08-27",
+      "department": "Sargodha Medical College",
+      "pageUrl": "https://eproc.punjab.gov.pk/activetenders.aspx",
+      "pageTitle": "PPRA SERVICES PORTAL :: Active Procurement"
+    },
+    {
+      "procurementTitle": "Tender Notice",
+      "procurementName": "CONSTRUCTION OF JANAZGHA AT UC-KAHNA, NA-123 LAHORE 2. REHABILITATION IMPROVEMENT OF ROAD SEWERAGE / PCC UC-247 KAHNA NOU NA-123 PP-158 LAHORE G-I",
+      "type": "Work",
+      "publishDate": "2026-08-07",
+      "closeDate": "2026-08-24",
+      "department": "Traffic Engineering and Transport Planning Agency",
+      "pageUrl": "https://eproc.punjab.gov.pk/activetenders.aspx",
+      "pageTitle": "PPRA SERVICES PORTAL :: Active Procurement"
+    },
+    {
+      "procurementTitle": "Tender Notice",
+      "procurementName": "REHABILITATION / IMPROVEMENT OF ROAD / SEWERAGE / PCC UC-247 KAHNA NOU NA-123, PP-158, LAHORE (GROUP-II)",
+      "type": "Work",
+      "publishDate": "2026-08-07",
+      "closeDate": "2026-08-24",
+      "department": "Traffic Engineering and Transport Planning Agency",
+      "pageUrl": "https://eproc.punjab.gov.pk/activetenders.aspx",
+      "pageTitle": "PPRA SERVICES PORTAL :: Active Procurement"
+    },
+    {
+      "procurementTitle": "Tender Notice",
+      "procurementName": "DIFFERENT ELECTRIC Items with Installation Tender No. 01/2026-27 (TURNKEY BASIS)",
+      "type": "Goods",
+      "publishDate": "2026-08-07",
+      "closeDate": "2026-08-24",
+      "department": "Government Sadiq College Women University Bahawalpur",
+      "pageUrl": "https://eproc.punjab.gov.pk/activetenders.aspx",
+      "pageTitle": "PPRA SERVICES PORTAL :: Active Procurement"
+    },
+    {
+      "procurementTitle": "Tender Notice",
+      "procurementName": "Supply of plants including loading / unloading at site & carriage etc. Purchase of healthy Plants in Earthen Pots/Grow Bags (18’’Pot Size in Earthern Pots/Grow Bags) of different Species for Multan t",
+      "type": "Goods",
+      "publishDate": "2026-08-07",
+      "closeDate": "2026-08-26",
+      "department": "Divisional Forest Officer, Multan",
+      "pageUrl": "https://eproc.punjab.gov.pk/activetenders.aspx",
+      "pageTitle": "PPRA SERVICES PORTAL :: Active Procurement"
+    },
+    {
+      "procurementTitle": "Tender Notice",
+      "procurementName": "Procurement of Student Uniform GSEC Mian Channu",
+      "type": "Goods",
+      "publishDate": "2026-08-07",
+      "closeDate": "2026-08-24",
+      "department": "Govt. Special Education Centre Mian Channu",
+      "pageUrl": "https://eproc.punjab.gov.pk/activetenders.aspx",
+      "pageTitle": "PPRA SERVICES PORTAL :: Active Procurement"
+    },
+    {
+      "procurementTitle": "Tender Notice",
+      "procurementName": "MD WASA Rahim Yar Khan",
+      "type": "Work",
+      "publishDate": "2026-08-07",
+      "closeDate": "2026-08-26",
+      "department": "Water and Sanitation Agency, Rahim Yar Khan",
+      "pageUrl": "https://eproc.punjab.gov.pk/activetenders.aspx",
+      "pageTitle": "PPRA SERVICES PORTAL :: Active Procurement"
+    },
+    {
+      "procurementTitle": "Tender Notice",
+      "procurementName": "FRAMEWORK CONTRACT REGARDING THE PROCUREMENT OF STATIONERY ITEMS, GENERAL STORE` ITEMS, PLANT & MACHINERY, FURNITURE ITEMS, PARKING SHED ETC. FOR DISTRICT HEALTH AUTHORITY JHANG.",
+      "type": "Goods",
+      "publishDate": "2026-08-07",
+      "closeDate": "2026-08-24",
+      "department": "Executive District Officer Jhang",
+      "pageUrl": "https://eproc.punjab.gov.pk/activetenders.aspx",
+      "pageTitle": "PPRA SERVICES PORTAL :: Active Procurement"
+    },
+    {
+      "procurementTitle": "Tender Notice",
+      "procurementName": "Procurement of Repair Maintenance & Goods",
+      "type": "Goods",
+      "publishDate": "2026-08-07",
+      "closeDate": "2026-08-24",
+      "department": "Housing Urban Development & Public Health Engineering Department",
+      "pageUrl": "https://eproc.punjab.gov.pk/activetenders.aspx",
+      "pageTitle": "PPRA SERVICES PORTAL :: Active Procurement"
+    },
+    {
+      "procurementTitle": "Tender Notice",
+      "procurementName": "ANNUAL Framework Contract of General store items for Financial year 2026-2027",
+      "type": "Goods",
+      "publishDate": "2026-08-07",
+      "closeDate": "2026-08-24",
+      "department": "DHQ Teaching Hospital, Gujranwala",
+      "pageUrl": "https://eproc.punjab.gov.pk/activetenders.aspx",
+      "pageTitle": "PPRA SERVICES PORTAL :: Active Procurement"
+    },
+    {
+      "procurementTitle": "Corrigendum",
+      "procurementName": "14th Aug.2026 arrangement and 12 Rabi-Ul-Awwal2026 (View Tender Detail)",
+      "type": "Goods",
+      "publishDate": "2026-08-06",
+      "closeDate": "2026-08-13",
+      "department": "Municipal corporation, bahawalpur",
+      "pageUrl": "https://eproc.punjab.gov.pk/activetenders.aspx",
+      "pageTitle": "PPRA SERVICES PORTAL :: Active Procurement"
+    },
+    {
+      "procurementTitle": "Tender Notice",
+      "procurementName": "Purchase of Uniforms of Special Students",
+      "type": "Goods",
+      "publishDate": "2026-08-06",
+      "closeDate": "2026-08-24",
+      "department": "Govt. Boys Secondary School of Special Education for Hearing Impaired Khanewal",
+      "pageUrl": "https://eproc.punjab.gov.pk/activetenders.aspx",
+      "pageTitle": "PPRA SERVICES PORTAL :: Active Procurement"
+    },
+    {
+      "procurementTitle": "Sales/Auction/Disposal",
+      "procurementName": "Auction Canteen",
+      "type": "Services",
+      "publishDate": "2026-08-06",
+      "closeDate": "2026-08-22",
+      "department": "Workers Welfare School Boys, Chawinda, Sialkot",
+      "pageUrl": "https://eproc.punjab.gov.pk/activetenders.aspx",
+      "pageTitle": "PPRA SERVICES PORTAL :: Active Procurement"
+    },
+    {
+      "procurementTitle": "Tender Notice",
+      "procurementName": "Landscape Development of TDCP Resort, Dharabi Lake, District ChakwaL",
+      "type": "Work",
+      "publishDate": "2026-08-06",
+      "closeDate": "2026-08-24",
+      "department": "Tourism and Resort Development",
+      "pageUrl": "https://eproc.punjab.gov.pk/activetenders.aspx",
+      "pageTitle": "PPRA SERVICES PORTAL :: Active Procurement"
+    },
+    {
+      "procurementTitle": "Tender Notice",
+      "procurementName": "DEVELOPMENT SCHEMES IN THE AREA OF DISTRICT COUNCIL SAHIWAL",
+      "type": "Work",
+      "publishDate": "2026-08-06",
+      "closeDate": "2026-08-22",
+      "department": "Municipal Committee, Chichawatni",
+      "pageUrl": "https://eproc.punjab.gov.pk/activetenders.aspx",
+      "pageTitle": "PPRA SERVICES PORTAL :: Active Procurement"
+    },
+    {
+      "procurementTitle": "Tender Notice",
+      "procurementName": "PROCUREMENT OF HOSTEL UTILTIES & JANITORIAL ITEMS",
+      "type": "Goods",
+      "publishDate": "2026-08-06",
+      "closeDate": "2026-08-24",
+      "department": "Daanish School (Boys) Harnoli, Mianwali",
+      "pageUrl": "https://eproc.punjab.gov.pk/activetenders.aspx",
+      "pageTitle": "PPRA SERVICES PORTAL :: Active Procurement"
+    },
+    {
+      "procurementTitle": "Tender Notice",
+      "procurementName": "Provision of Three (3) Dental Units at Allied Hospital-I, Faisalabad (FY 2026-27)",
+      "type": "Goods",
+      "publishDate": "2026-08-06",
+      "closeDate": "2026-08-22",
+      "department": "Allied Hospital, Faisalabad",
+      "pageUrl": "https://eproc.punjab.gov.pk/activetenders.aspx",
+      "pageTitle": "PPRA SERVICES PORTAL :: Active Procurement"
+    },
+    {
+      "procurementTitle": "Tender Notice",
+      "procurementName": "Procurement of Mattresses for the financial year 2026-2027",
+      "type": "Goods",
+      "publishDate": "2026-08-06",
+      "closeDate": "2026-08-21",
+      "department": "Inspector General Prison",
+      "pageUrl": "https://eproc.punjab.gov.pk/activetenders.aspx",
+      "pageTitle": "PPRA SERVICES PORTAL :: Active Procurement"
+    },
+    {
+      "procurementTitle": "Tender Notice",
+      "procurementName": "Farmer Training",
+      "type": "Services",
+      "publishDate": "2026-08-06",
+      "closeDate": "2026-08-24",
+      "department": "Research Centre for Conservation of Indigenous Breeds (RCCIB), Jhang",
+      "pageUrl": "https://eproc.punjab.gov.pk/activetenders.aspx",
+      "pageTitle": "PPRA SERVICES PORTAL :: Active Procurement"
+    },
+    {
+      "procurementTitle": "Tender Notice",
+      "procurementName": "Canteen Tender",
+      "type": "Services",
+      "publishDate": "2026-08-06",
+      "closeDate": "2026-08-22",
+      "department": "Quaid-E-Azam Public High School Boys, Sialkot",
+      "pageUrl": "https://eproc.punjab.gov.pk/activetenders.aspx",
+      "pageTitle": "PPRA SERVICES PORTAL :: Active Procurement"
+    },
+    {
+      "procurementTitle": "Tender Notice",
+      "procurementName": "PROVIDING/LAYING TUFF TILE JAMAL CHOWK DISTRICT COUNCIL PAKPATTAN",
+      "type": "Work",
+      "publishDate": "2026-08-06",
+      "closeDate": "2026-08-22",
+      "department": "District Council, Pakpattan",
+      "pageUrl": "https://eproc.punjab.gov.pk/activetenders.aspx",
+      "pageTitle": "PPRA SERVICES PORTAL :: Active Procurement"
+    },
+    {
+      "procurementTitle": "Tender Notice",
+      "procurementName": "Tender Regarding Dualization of New-Lahore-Road from Narowal City to Gujjar Chowk (Narang) includes Re-alignment, along with Rehabilitation of the Existing Road (Phase-I) “Section 0.00 to 10.30, Lengt",
+      "type": "Work",
+      "publishDate": "2026-08-06",
+      "closeDate": "2026-08-27",
+      "department": "Executive Engineer Highway Division Narowal",
+      "pageUrl": "https://eproc.punjab.gov.pk/activetenders.aspx",
+      "pageTitle": "PPRA SERVICES PORTAL :: Active Procurement"
+    },
+    {
+      "procurementTitle": "Tender Notice",
+      "procurementName": "Executive Engineer",
+      "type": "Work",
+      "publishDate": "2026-08-06",
+      "closeDate": "2026-08-26",
+      "department": "Executive Engineer, Highway Mechanical Division, Lahore",
+      "pageUrl": "https://eproc.punjab.gov.pk/activetenders.aspx",
+      "pageTitle": "PPRA SERVICES PORTAL :: Active Procurement"
+    },
+    {
+      "procurementTitle": "Tender Notice",
+      "procurementName": "WASA, LAHORE, XEN (O&M-I) NISHTER TOWN.",
+      "type": "Work",
+      "publishDate": "2026-08-06",
+      "closeDate": "2026-08-24",
+      "department": "Water and Sanitation Agency Lahore",
+      "pageUrl": "https://eproc.punjab.gov.pk/activetenders.aspx",
+      "pageTitle": "PPRA SERVICES PORTAL :: Active Procurement"
+    },
+    {
+      "procurementTitle": "Tender Notice",
+      "procurementName": "PROVIDING & FIXING OF SAFETY NETS INSIDE MANHOLES IN JURISDICTION OF DISTRICT COUNCIL SAHIWAL",
+      "type": "Work",
+      "publishDate": "2026-08-06",
+      "closeDate": "2026-08-22",
+      "department": "Municipal Committee, Chichawatni",
+      "pageUrl": "https://eproc.punjab.gov.pk/activetenders.aspx",
+      "pageTitle": "PPRA SERVICES PORTAL :: Active Procurement"
+    },
+    {
+      "procurementTitle": "Sales/Auction/Disposal",
+      "procurementName": "AUCTION OF PARKING STAND FINANCIAL YEAR 2026-2027",
+      "type": "Services",
+      "publishDate": "2026-08-06",
+      "closeDate": "2026-08-22",
+      "department": "GHAQ DHQ Hospital Sahiwal",
+      "pageUrl": "https://eproc.punjab.gov.pk/activetenders.aspx",
+      "pageTitle": "PPRA SERVICES PORTAL :: Active Procurement"
+    },
+    {
+      "procurementTitle": "Tender Notice",
+      "procurementName": "Purchase of Answer Sheets & Envelopes",
+      "type": "Goods",
+      "publishDate": "2026-08-06",
+      "closeDate": "2026-08-27",
+      "department": "Muhammad Nawaz Shareef University of Agriculture",
+      "pageUrl": "https://eproc.punjab.gov.pk/activetenders.aspx",
+      "pageTitle": "PPRA SERVICES PORTAL :: Active Procurement"
+    },
+    {
+      "procurementTitle": "Tender Notice",
+      "procurementName": "Contract framework for purchase of medicine for FY 2026-2027",
+      "type": "Goods",
+      "publishDate": "2026-08-06",
+      "closeDate": "2026-08-22",
+      "department": "Govt. Eye Cum General Hospital, Gojra",
+      "pageUrl": "https://eproc.punjab.gov.pk/activetenders.aspx",
+      "pageTitle": "PPRA SERVICES PORTAL :: Active Procurement"
+    },
+    {
+      "procurementTitle": "Tender Notice",
+      "procurementName": "PROCUREMENT OF WRO SYSTEM FOR DIALYSIS UNIT FOR SSH SARGODHA FOR F.Y 2026-27 THROUGH PUNJAB E-PROCUREMENT SYSTEM",
+      "type": "Goods",
+      "publishDate": "2026-08-06",
+      "closeDate": "2026-08-24",
+      "department": "Labor and Human Resource",
+      "pageUrl": "https://eproc.punjab.gov.pk/activetenders.aspx",
+      "pageTitle": "PPRA SERVICES PORTAL :: Active Procurement"
+    },
+    {
+      "procurementTitle": "Tender Notice",
+      "procurementName": "Tender Notice",
+      "type": "Work",
+      "publishDate": "2026-08-06",
+      "closeDate": "2026-08-25",
+      "department": "Municipal Committee, Zafarwal",
+      "pageUrl": "https://eproc.punjab.gov.pk/activetenders.aspx",
+      "pageTitle": "PPRA SERVICES PORTAL :: Active Procurement"
+    },
+    {
+      "procurementTitle": "Tender Notice",
+      "procurementName": "Purchase of Machinery and Equipment",
+      "type": "Goods",
+      "publishDate": "2026-08-06",
+      "closeDate": "2026-08-25",
+      "department": "Govt. Vocational Training Institute (Women) Talagang",
+      "pageUrl": "https://eproc.punjab.gov.pk/activetenders.aspx",
+      "pageTitle": "PPRA SERVICES PORTAL :: Active Procurement"
+    },
+    {
+      "procurementTitle": "Tender Notice",
+      "procurementName": "Executive Engineer Building Division No.1 Rawalpindi.",
+      "type": "Work",
+      "publishDate": "2026-08-06",
+      "closeDate": "2026-08-22",
+      "department": "Executive Engineer, Buildings Division No.1, Rawalpindi",
+      "pageUrl": "https://eproc.punjab.gov.pk/activetenders.aspx",
+      "pageTitle": "PPRA SERVICES PORTAL :: Active Procurement"
+    },
+    {
+      "procurementTitle": "Tender Notice",
+      "procurementName": "Tender Notice",
+      "type": "Work",
+      "publishDate": "2026-08-06",
+      "closeDate": "2026-08-22",
+      "department": "Municipal Corporation, Rawalpindi",
+      "pageUrl": "https://eproc.punjab.gov.pk/activetenders.aspx",
+      "pageTitle": "PPRA SERVICES PORTAL :: Active Procurement"
+    },
+    {
+      "procurementTitle": "Tender Notice",
+      "procurementName": "Tender for Pathology Lab Kits and Regents for the F.Y.2026-27 JIC, Lahore",
+      "type": "Goods",
+      "publishDate": "2026-08-06",
+      "closeDate": "2026-08-26",
+      "department": "Punjab Institute of Cardiology, Lahore",
+      "pageUrl": "https://eproc.punjab.gov.pk/activetenders.aspx",
+      "pageTitle": "PPRA SERVICES PORTAL :: Active Procurement"
+    },
+    {
+      "procurementTitle": "Tender Notice",
+      "procurementName": "Procurement of Cleaning,Janitorial & Hostel Items in respect of Punjab Daanish School (Boys & Girls) DG Khan, Fazilpur, Mailsi and Taunsa",
+      "type": "Goods",
+      "publishDate": "2026-08-06",
+      "closeDate": "2026-08-24",
+      "department": "Punjab Daanish School Boys, Dera Ghazi Khan",
+      "pageUrl": "https://eproc.punjab.gov.pk/activetenders.aspx",
+      "pageTitle": "PPRA SERVICES PORTAL :: Active Procurement"
+    },
+    {
+      "procurementTitle": "Tender Notice",
+      "procurementName": "PROCUREMENT OF IT HARDWARE / IT EQUIPMENT FOR TECHNOLOGY ADVANCEMENT PROGRAM FOR INFORMATION AND CULTURE PUNJAB PROJECT (ITOPS - 05)",
+      "type": "Goods",
+      "publishDate": "2026-08-06",
+      "closeDate": "2026-08-21",
+      "department": "Punjab Information Technology Board",
+      "pageUrl": "https://eproc.punjab.gov.pk/activetenders.aspx",
+      "pageTitle": "PPRA SERVICES PORTAL :: Active Procurement"
+    },
+    {
+      "procurementTitle": "Tender Notice",
+      "procurementName": "Purchase of Uniforms",
+      "type": "Goods",
+      "publishDate": "2026-08-06",
+      "closeDate": "2026-08-21",
+      "department": "Govt. Special Education Centre Kabirwala Khanewal",
+      "pageUrl": "https://eproc.punjab.gov.pk/activetenders.aspx",
+      "pageTitle": "PPRA SERVICES PORTAL :: Active Procurement"
+    },
+    {
+      "procurementTitle": "Tender Notice",
+      "procurementName": "Hiring of Security Services 2026-27",
+      "type": "Services",
+      "publishDate": "2026-08-06",
+      "closeDate": "2026-08-21",
+      "department": "Planning and Development Department (South Punjab)",
+      "pageUrl": "https://eproc.punjab.gov.pk/activetenders.aspx",
+      "pageTitle": "PPRA SERVICES PORTAL :: Active Procurement"
+    },
+    {
+      "procurementTitle": "Corrigendum",
+      "procurementName": "PROCUREMENT OF EMR CLOUD SERVICE FOR (18) PKLI FILTER CLINICS, PRO-171-2026 (View Tender Detail)",
+      "type": "Services",
+      "publishDate": "2026-08-06",
+      "closeDate": "2026-08-20",
+      "department": "Pakistan Kidney Liver Institute and Research Center Trust",
+      "pageUrl": "https://eproc.punjab.gov.pk/activetenders.aspx",
+      "pageTitle": "PPRA SERVICES PORTAL :: Active Procurement"
+    },
+    {
+      "procurementTitle": "Tender Notice",
+      "procurementName": "PURCHASE OF GOODS & SERVICES, DISTRICT OFFICE, CTD RAHIMYAR KHAN",
+      "type": "Goods",
+      "publishDate": "2026-08-06",
+      "closeDate": "2026-08-21",
+      "department": "Counter Terrorism Department, Rahimyar Khan",
+      "pageUrl": "https://eproc.punjab.gov.pk/activetenders.aspx",
+      "pageTitle": "PPRA SERVICES PORTAL :: Active Procurement"
+    },
+    {
+      "procurementTitle": "Tender Notice",
+      "procurementName": "PROCUREMENT OF RAW MATERIAL",
+      "type": "Goods",
+      "publishDate": "2026-08-06",
+      "closeDate": "2026-08-21",
+      "department": "Central Jail, Faisalabad",
+      "pageUrl": "https://eproc.punjab.gov.pk/activetenders.aspx",
+      "pageTitle": "PPRA SERVICES PORTAL :: Active Procurement"
+    },
+    {
+      "procurementTitle": "Corrigendum",
+      "procurementName": "CORRIGENDUM PURCHASE OF HARDWARE, IT EQUIPMENT, PLANT & MACHINERY AND FURNITURE & FIXTURE (View Tender Detail)",
+      "type": "Goods",
+      "publishDate": "2026-08-06",
+      "closeDate": "2026-08-21",
+      "department": "Inspectorate of Treasuries and Accounts Finance Department",
+      "pageUrl": "https://eproc.punjab.gov.pk/activetenders.aspx",
+      "pageTitle": "PPRA SERVICES PORTAL :: Active Procurement"
+    },
+    {
+      "procurementTitle": "Tender Notice",
+      "procurementName": "TENDER FOR THE SUPPLY AND INSTALLATION OF ALUMINUM DOUBLE DOORS AT PKLI FILTER CLINICS DIRECTORATE,",
+      "type": "Work",
+      "publishDate": "2026-08-06",
+      "closeDate": "2026-08-21",
+      "department": "Pakistan Kidney Liver Institute and Research Center Trust",
+      "pageUrl": "https://eproc.punjab.gov.pk/activetenders.aspx",
+      "pageTitle": "PPRA SERVICES PORTAL :: Active Procurement"
+    },
+    {
+      "procurementTitle": "Corrigendum",
+      "procurementName": "Purchase of Uniforms (View Tender Detail)",
+      "type": "Goods",
+      "publishDate": "2026-08-06",
+      "closeDate": "2026-08-21",
+      "department": "Govt. Special Education Centre Kabirwala Khanewal",
+      "pageUrl": "https://eproc.punjab.gov.pk/activetenders.aspx",
+      "pageTitle": "PPRA SERVICES PORTAL :: Active Procurement"
+    },
+    {
+      "procurementTitle": "Tender Notice",
+      "procurementName": "Annual Frame work contract Municipal Committee Khaenwal",
+      "type": "Work",
+      "publishDate": "2026-08-06",
+      "closeDate": "2026-08-21",
+      "department": "Municipal Committee, Khanewal",
+      "pageUrl": "https://eproc.punjab.gov.pk/activetenders.aspx",
+      "pageTitle": "PPRA SERVICES PORTAL :: Active Procurement"
+    },
+    {
+      "procurementTitle": "Tender Notice",
+      "procurementName": "Procurement of Miscellenouse & Goods Items",
+      "type": "Goods",
+      "publishDate": "2026-08-06",
+      "closeDate": "2026-08-21",
+      "department": "Price Control & Commodities Management Department",
+      "pageUrl": "https://eproc.punjab.gov.pk/activetenders.aspx",
+      "pageTitle": "PPRA SERVICES PORTAL :: Active Procurement"
+    },
+    {
+      "procurementTitle": "Corrigendum",
+      "procurementName": "PROCUREMENT OF EQUIPMENT FOR THE IMPLEMENTATION OF THE BLACK SOLDIER FLY COMPOSTING PILOT PROJECT AT LWMC (View Tender Detail)",
+      "type": "Goods",
+      "publishDate": "2026-08-05",
+      "closeDate": "2026-08-13",
+      "department": "Lahore Waste Management Company",
+      "pageUrl": "https://eproc.punjab.gov.pk/activetenders.aspx",
+      "pageTitle": "PPRA SERVICES PORTAL :: Active Procurement"
+    },
+    {
+      "procurementTitle": "Corrigendum",
+      "procurementName": "1. Up-Raising of Damage Manhols & Fixing of Missing Manhole Covers & Frames at Various Places WASA Vehari 2. Installation of Manhole Safety Mesh in Sewerage Manholes under Jurisdiction of WASA Vehari. (View Tender Detail)",
+      "type": "Work",
+      "publishDate": "2026-08-05",
+      "closeDate": "2026-08-13",
+      "department": "Water and Sanitation Agency (WASA), Vehari",
+      "pageUrl": "https://eproc.punjab.gov.pk/activetenders.aspx",
+      "pageTitle": "PPRA SERVICES PORTAL :: Active Procurement"
+    },
+    {
+      "procurementTitle": "Tender Notice",
+      "procurementName": "PROCUREMENT OF GOODS/ HIRING OF SERVICES THROUGH FRAME WORK CONTRACT OF DISTRICT OFFICE CTD RAJANPUR FOR FINANCIAL 2026-27",
+      "type": "Goods",
+      "publishDate": "2026-08-05",
+      "closeDate": "2026-08-20",
+      "department": "Counter Terrorism Department (CTD), Rajanpur",
+      "pageUrl": "https://eproc.punjab.gov.pk/activetenders.aspx",
+      "pageTitle": "PPRA SERVICES PORTAL :: Active Procurement"
+    },
+    {
+      "procurementTitle": "Tender Notice",
+      "procurementName": "Laying of tuff tile darbar mahal road",
+      "type": "Work",
+      "publishDate": "2026-08-05",
+      "closeDate": "2026-08-20",
+      "department": "Municipal corporation, bahawalpur",
+      "pageUrl": "https://eproc.punjab.gov.pk/activetenders.aspx",
+      "pageTitle": "PPRA SERVICES PORTAL :: Active Procurement"
+    },
+    {
+      "procurementTitle": "Tender Notice",
+      "procurementName": "PROCUREMENT OF PRINTING ITEMS FOR (18) PKLI FILTER CLINICS, PRO-163-2026",
+      "type": "Goods",
+      "publishDate": "2026-08-05",
+      "closeDate": "2026-08-20",
+      "department": "Pakistan Kidney Liver Institute and Research Center Trust",
+      "pageUrl": "https://eproc.punjab.gov.pk/activetenders.aspx",
+      "pageTitle": "PPRA SERVICES PORTAL :: Active Procurement"
+    },
+    {
+      "procurementTitle": "Sales/Auction/Disposal",
+      "procurementName": "Auction of Photocopy Shop (UE, Jauharabad Campus)",
+      "type": "Services",
+      "publishDate": "2026-08-05",
+      "closeDate": "2026-08-19",
+      "department": "University of Education",
+      "pageUrl": "https://eproc.punjab.gov.pk/activetenders.aspx",
+      "pageTitle": "PPRA SERVICES PORTAL :: Active Procurement"
+    },
+    {
+      "procurementTitle": "Tender Notice",
+      "procurementName": "Extraction and Cottonization of Flax Crop Biomass and Fibers",
+      "type": "Goods",
+      "publishDate": "2026-08-05",
+      "closeDate": "2026-08-20",
+      "department": "University of Agriculture Faisalabad",
+      "pageUrl": "https://eproc.punjab.gov.pk/activetenders.aspx",
+      "pageTitle": "PPRA SERVICES PORTAL :: Active Procurement"
+    },
+    {
+      "procurementTitle": "Tender Notice",
+      "procurementName": "Registration of Vendors for local purchase of medicines and medical devices etc. on day to day basis through online PITB portal, Gujranwala Teaching Hospital Gujranwala",
+      "type": "Services",
+      "publishDate": "2026-08-05",
+      "closeDate": "2026-08-20",
+      "department": "DHQ Teaching Hospital, Gujranwala",
+      "pageUrl": "https://eproc.punjab.gov.pk/activetenders.aspx",
+      "pageTitle": "PPRA SERVICES PORTAL :: Active Procurement"
+    },
+    {
+      "procurementTitle": "Tender Notice",
+      "procurementName": "Walk in Registration of Vendors for purchase of medicines and medical devices etc. through limited/petty purchase through quotation on online ep-punjab), Gujranwala Teaching Hospital Gujranwala",
+      "type": "Services",
+      "publishDate": "2026-08-05",
+      "closeDate": "2026-08-20",
+      "department": "DHQ Teaching Hospital, Gujranwala",
+      "pageUrl": "https://eproc.punjab.gov.pk/activetenders.aspx",
+      "pageTitle": "PPRA SERVICES PORTAL :: Active Procurement"
+    },
+    {
+      "procurementTitle": "Quotations",
+      "procurementName": "Municipal Committee Mamunkanjan",
+      "type": "Services",
+      "publishDate": "2026-08-05",
+      "closeDate": "2026-08-20",
+      "department": "Municipal Committee, Mamunkanjan",
+      "pageUrl": "https://eproc.punjab.gov.pk/activetenders.aspx",
+      "pageTitle": "PPRA SERVICES PORTAL :: Active Procurement"
+    },
+    {
+      "procurementTitle": "Tender Notice",
+      "procurementName": "E-Tender Notice",
+      "type": "Work",
+      "publishDate": "2026-08-05",
+      "closeDate": "2026-08-21",
+      "department": "Water and Sanitation Agency Rawalpindi",
+      "pageUrl": "https://eproc.punjab.gov.pk/activetenders.aspx",
+      "pageTitle": "PPRA SERVICES PORTAL :: Active Procurement"
+    },
+    {
+      "procurementTitle": "Tender Notice",
+      "procurementName": "PROCUREMENT OF EMR CLOUD SERVICE FOR (18) PKLI FILTER CLINICS, PRO-171-2026",
+      "type": "Services",
+      "publishDate": "2026-08-05",
+      "closeDate": "2026-08-20",
+      "department": "Pakistan Kidney Liver Institute and Research Center Trust",
+      "pageUrl": "https://eproc.punjab.gov.pk/activetenders.aspx",
+      "pageTitle": "PPRA SERVICES PORTAL :: Active Procurement"
+    },
+    {
+      "procurementTitle": "Tender Notice",
+      "procurementName": "Social Security Hospital Shahdara",
+      "type": "Goods",
+      "publishDate": "2026-08-05",
+      "closeDate": "2026-08-21",
+      "department": "Labor and Human Resource",
+      "pageUrl": "https://eproc.punjab.gov.pk/activetenders.aspx",
+      "pageTitle": "PPRA SERVICES PORTAL :: Active Procurement"
+    },
+    {
+      "procurementTitle": "Tender Notice",
+      "procurementName": "Local Purchase of Medicines and Surgical & Disposable items",
+      "type": "Goods",
+      "publishDate": "2026-08-05",
+      "closeDate": "2026-08-21",
+      "department": "Rural Health Center / GMH Tanda",
+      "pageUrl": "https://eproc.punjab.gov.pk/activetenders.aspx",
+      "pageTitle": "PPRA SERVICES PORTAL :: Active Procurement"
+    },
+    {
+      "procurementTitle": "Tender Notice",
+      "procurementName": "Auction of Canteen",
+      "type": "Services",
+      "publishDate": "2026-08-05",
+      "closeDate": "2026-08-21",
+      "department": "Workers Welfare Higher Secondary School (Girls), Muzaffargarh",
+      "pageUrl": "https://eproc.punjab.gov.pk/activetenders.aspx",
+      "pageTitle": "PPRA SERVICES PORTAL :: Active Procurement"
+    },
+    {
+      "procurementTitle": "Tender Notice",
+      "procurementName": "Bulk Procurement of Miscellaneous Items for Various Departments, Building Material for Residence Tower & Building Material for Office Building for the F.Y. 2026-27",
+      "type": "Goods",
+      "publishDate": "2026-08-05",
+      "closeDate": "2026-08-20",
+      "department": "Ch. Pervaiz Elahi Institute of Cardiology, Multan",
+      "pageUrl": "https://eproc.punjab.gov.pk/activetenders.aspx",
+      "pageTitle": "PPRA SERVICES PORTAL :: Active Procurement"
+    },
+    {
+      "procurementTitle": "Corrigendum",
+      "procurementName": "Corrigendum against TENDER NOTICE CANTEEN OPERATION CONTRACT (2026–2027) (View Tender Detail)",
+      "type": "Services",
+      "publishDate": "2026-08-05",
+      "closeDate": "2026-08-20",
+      "department": "Government College Women University Faisalabad",
+      "pageUrl": "https://eproc.punjab.gov.pk/activetenders.aspx",
+      "pageTitle": "PPRA SERVICES PORTAL :: Active Procurement"
+    },
+    {
+      "procurementTitle": "Tender Notice",
+      "procurementName": "canteen tender",
+      "type": "Services",
+      "publishDate": "2026-08-05",
+      "closeDate": "2026-08-21",
+      "department": "Quaid-e-Azam Public H/S School, Girls Sialkot",
+      "pageUrl": "https://eproc.punjab.gov.pk/activetenders.aspx",
+      "pageTitle": "PPRA SERVICES PORTAL :: Active Procurement"
+    },
+    {
+      "procurementTitle": "Tender Notice",
+      "procurementName": "Supply and Installation of 11kV Underground Network Including 11kV Ring Main Units Pad-Mounted Transformers / Kiosk Substations, Medium Voltage Cables and Low Voltage Network Including Distribution Bo",
+      "type": "Work",
+      "publishDate": "2026-08-05",
+      "closeDate": "2026-08-20",
+      "department": "Information Technology University ITU",
+      "pageUrl": "https://eproc.punjab.gov.pk/activetenders.aspx",
+      "pageTitle": "PPRA SERVICES PORTAL :: Active Procurement"
+    },
+    {
+      "procurementTitle": "Tender Notice",
+      "procurementName": "Purchase of Laboratory Items, Dental Items, General Store Items, Printing, Stationary, X-ray Films & Chemical, Bedding & Clothing",
+      "type": "Goods",
+      "publishDate": "2026-08-05",
+      "closeDate": "2026-08-21",
+      "department": "Rural Health Center / GMH Tanda",
+      "pageUrl": "https://eproc.punjab.gov.pk/activetenders.aspx",
+      "pageTitle": "PPRA SERVICES PORTAL :: Active Procurement"
+    },
+    {
+      "procurementTitle": "Tender Notice",
+      "procurementName": "Supply of Plants for Plantation for cattle markets of PCMMDC ( Model cattle market Lahore )",
+      "type": "Goods",
+      "publishDate": "2026-08-05",
+      "closeDate": "2026-08-21",
+      "department": "Parks and Horticulture Authority Lahore",
+      "pageUrl": "https://eproc.punjab.gov.pk/activetenders.aspx",
+      "pageTitle": "PPRA SERVICES PORTAL :: Active Procurement"
+    },
+    {
+      "procurementTitle": "Tender Notice",
+      "procurementName": "Purchase of IKAR Lab 3 and Vocalilse & Biomatric & Fauxdio Detector with Computer Workstation System",
+      "type": "Goods",
+      "publishDate": "2026-08-05",
+      "closeDate": "2026-08-20",
+      "department": "Director (A&F), Forensic Science Agency, Lahore",
+      "pageUrl": "https://eproc.punjab.gov.pk/activetenders.aspx",
+      "pageTitle": "PPRA SERVICES PORTAL :: Active Procurement"
+    },
+    {
+      "procurementTitle": "Quotations",
+      "procurementName": "Quotation Notice Eid Milad Ul Nabi 2026",
+      "type": "Services",
+      "publishDate": "2026-08-05",
+      "closeDate": "2026-08-20",
+      "department": "Tehsil Council, Bahawalpur Saddar",
+      "pageUrl": "https://eproc.punjab.gov.pk/activetenders.aspx",
+      "pageTitle": "PPRA SERVICES PORTAL :: Active Procurement"
+    },
+    {
+      "procurementTitle": "Sales/Auction/Disposal",
+      "procurementName": "Auction Notice",
+      "type": "Services",
+      "publishDate": "2026-08-05",
+      "closeDate": "2026-08-20",
+      "department": "University of Agriculture Faisalabad",
+      "pageUrl": "https://eproc.punjab.gov.pk/activetenders.aspx",
+      "pageTitle": "PPRA SERVICES PORTAL :: Active Procurement"
+    },
+    {
+      "procurementTitle": "Corrigendum",
+      "procurementName": "PROCUREMENT OF SOFTWARE LICENSES (IT-01/2025-26) (View Tender Detail)",
+      "type": "Services",
+      "publishDate": "2026-08-05",
+      "closeDate": "2026-08-19",
+      "department": "Quaid-e-Azam Thermal Power PVT Limited",
+      "pageUrl": "https://eproc.punjab.gov.pk/activetenders.aspx",
+      "pageTitle": "PPRA SERVICES PORTAL :: Active Procurement"
+    },
+    {
+      "procurementTitle": "Tender Notice",
+      "procurementName": "Procurement of Different items for THQ Hospital Kamalia.",
+      "type": "Goods",
+      "publishDate": "2026-08-05",
+      "closeDate": "2026-08-20",
+      "department": "THQ Hospital, Kamalia",
+      "pageUrl": "https://eproc.punjab.gov.pk/activetenders.aspx",
+      "pageTitle": "PPRA SERVICES PORTAL :: Active Procurement"
+    },
+    {
+      "procurementTitle": "Tender Notice",
+      "procurementName": "PROCUREMENT OF PURCHASED & HIRING OF ARTICLES, FOR ARRANGEMENTS OF RABIULAWAL 2026, MC OKARA",
+      "type": "Goods",
+      "publishDate": "2026-08-05",
+      "closeDate": "2026-08-20",
+      "department": "Municipal Committee, Okara",
+      "pageUrl": "https://eproc.punjab.gov.pk/activetenders.aspx",
+      "pageTitle": "PPRA SERVICES PORTAL :: Active Procurement"
+    },
+    {
+      "procurementTitle": "Tender Notice",
+      "procurementName": "PURCHASE OF LAPTOP",
+      "type": "Goods",
+      "publishDate": "2026-08-05",
+      "closeDate": "2026-08-20",
+      "department": "University of the Jhang",
+      "pageUrl": "https://eproc.punjab.gov.pk/activetenders.aspx",
+      "pageTitle": "PPRA SERVICES PORTAL :: Active Procurement"
+    },
+    {
+      "procurementTitle": "Corrigendum",
+      "procurementName": "Procurement of Comprehensive Group Health Insurance Services IFP NO. 37-RLNG-POWER PLANT (HEALTH INSURANCE SERVICES) (View Tender Detail)",
+      "type": "Services",
+      "publishDate": "2026-08-05",
+      "closeDate": "2026-08-19",
+      "department": "Quaid-e-Azam Thermal Power PVT Limited",
+      "pageUrl": "https://eproc.punjab.gov.pk/activetenders.aspx",
+      "pageTitle": "PPRA SERVICES PORTAL :: Active Procurement"
+    },
+    {
+      "procurementTitle": "Tender Notice",
+      "procurementName": "IMPROVEMENT OF GREEN BELT NEAR POLICE CHOWKI DINA",
+      "type": "Work",
+      "publishDate": "2026-08-05",
+      "closeDate": "2026-08-21",
+      "department": "Municipal Committee, Dina",
+      "pageUrl": "https://eproc.punjab.gov.pk/activetenders.aspx",
+      "pageTitle": "PPRA SERVICES PORTAL :: Active Procurement"
+    },
+    {
+      "procurementTitle": "Tender Notice",
+      "procurementName": "purchase of uniform for special students of gsec lodhran",
+      "type": "Goods",
+      "publishDate": "2026-08-05",
+      "closeDate": "2026-08-20",
+      "department": "Govt. Special Education Centre Lodhran",
+      "pageUrl": "https://eproc.punjab.gov.pk/activetenders.aspx",
+      "pageTitle": "PPRA SERVICES PORTAL :: Active Procurement"
+    },
+    {
+      "procurementTitle": "Sales/Auction/Disposal",
+      "procurementName": "Auction Of Canteen",
+      "type": "Services",
+      "publishDate": "2026-08-05",
+      "closeDate": "2026-08-20",
+      "department": "THQ Hospital, Haroonabad",
+      "pageUrl": "https://eproc.punjab.gov.pk/activetenders.aspx",
+      "pageTitle": "PPRA SERVICES PORTAL :: Active Procurement"
+    },
+    {
+      "procurementTitle": "Tender Notice",
+      "procurementName": "Purchase of Fertilizers",
+      "type": "Goods",
+      "publishDate": "2026-08-05",
+      "closeDate": "2026-08-20",
+      "department": "Vegetable Research Institute Faisalabad",
+      "pageUrl": "https://eproc.punjab.gov.pk/activetenders.aspx",
+      "pageTitle": "PPRA SERVICES PORTAL :: Active Procurement"
+    },
+    {
+      "procurementTitle": "Tender Notice",
+      "procurementName": "FRAMEWORK AGREEMENT FOR PURCHASE OF LP Medicines & Others",
+      "type": "Goods",
+      "publishDate": "2026-08-05",
+      "closeDate": "2026-08-21",
+      "department": "THQ Hospital, Haroonabad",
+      "pageUrl": "https://eproc.punjab.gov.pk/activetenders.aspx",
+      "pageTitle": "PPRA SERVICES PORTAL :: Active Procurement"
+    },
+    {
+      "procurementTitle": "Tender Notice",
+      "procurementName": "Outsourcing of Cafeteria Services at University of Rasul",
+      "type": "Services",
+      "publishDate": "2026-08-05",
+      "closeDate": "2026-08-21",
+      "department": "Punjab University of Technology Rasul District Mandi Bahauddin",
+      "pageUrl": "https://eproc.punjab.gov.pk/activetenders.aspx",
+      "pageTitle": "PPRA SERVICES PORTAL :: Active Procurement"
+    },
+    {
+      "procurementTitle": "Corrigendum",
+      "procurementName": "CMSD (View Tender Detail)",
+      "type": "Goods",
+      "publishDate": "2026-08-05",
+      "closeDate": "2026-08-20",
+      "department": "PESSI, Central Medical Store Depott, Lahore",
+      "pageUrl": "https://eproc.punjab.gov.pk/activetenders.aspx",
+      "pageTitle": "PPRA SERVICES PORTAL :: Active Procurement"
+    },
+    {
+      "procurementTitle": "Tender Notice",
+      "procurementName": "Arrangements Regarding Eid Milad ul Nabi (S.A.W) 12 Rabi ul Awal 2026 by Municipal Committee Jhelum.",
+      "type": "Services",
+      "publishDate": "2026-08-05",
+      "closeDate": "2026-08-21",
+      "department": "Municipal Committee Jhelum",
+      "pageUrl": "https://eproc.punjab.gov.pk/activetenders.aspx",
+      "pageTitle": "PPRA SERVICES PORTAL :: Active Procurement"
+    },
+    {
+      "procurementTitle": "Sales/Auction/Disposal",
+      "procurementName": "Auction Tender for Canteen and Other Thal University Bhakkar",
+      "type": "Services",
+      "publishDate": "2026-08-05",
+      "closeDate": "2026-08-20",
+      "department": "Thal University Bhakkar",
+      "pageUrl": "https://eproc.punjab.gov.pk/activetenders.aspx",
+      "pageTitle": "PPRA SERVICES PORTAL :: Active Procurement"
+    },
+    {
+      "procurementTitle": "Tender Notice",
+      "procurementName": "Providing and Fixing Manhole Covers & Frames, MC APE",
+      "type": "Work",
+      "publishDate": "2026-08-05",
+      "closeDate": "2026-08-21",
+      "department": "Municipal Committee, Ahmed Pur East",
+      "pageUrl": "https://eproc.punjab.gov.pk/activetenders.aspx",
+      "pageTitle": "PPRA SERVICES PORTAL :: Active Procurement"
+    },
+    {
+      "procurementTitle": "Tender Notice",
+      "procurementName": "Purchase of Uniform for Students 2026-27",
+      "type": "Goods",
+      "publishDate": "2026-08-05",
+      "closeDate": "2026-08-21",
+      "department": "Govt. Special Education Centre Secondary Level Dunyapur Lodhran",
+      "pageUrl": "https://eproc.punjab.gov.pk/activetenders.aspx",
+      "pageTitle": "PPRA SERVICES PORTAL :: Active Procurement"
+    },
+    {
+      "procurementTitle": "Tender Notice",
+      "procurementName": "Purchase of Uniform for Slow Learners students",
+      "type": "Goods",
+      "publishDate": "2026-08-05",
+      "closeDate": "2026-08-20",
+      "department": "Govt. Institute for Slow Learners Lodhran",
+      "pageUrl": "https://eproc.punjab.gov.pk/activetenders.aspx",
+      "pageTitle": "PPRA SERVICES PORTAL :: Active Procurement"
+    },
+    {
+      "procurementTitle": "Tender Notice",
+      "procurementName": "Purchase of Special Students Uniform",
+      "type": "Goods",
+      "publishDate": "2026-08-05",
+      "closeDate": "2026-08-20",
+      "department": "Govt. Special Education Centre Kehror Pacca Lodhran",
+      "pageUrl": "https://eproc.punjab.gov.pk/activetenders.aspx",
+      "pageTitle": "PPRA SERVICES PORTAL :: Active Procurement"
+    },
+    {
+      "procurementTitle": "Tender Notice",
+      "procurementName": "Tender for Procurement of Goods / Repair and Services under Framework Contract for the Financial Year 2026-27 of Crime Control Department Bahawalpur Region.",
+      "type": "Goods",
+      "publishDate": "2026-08-05",
+      "closeDate": "2026-08-20",
+      "department": "Crime Control Department, Bahawalpur Region",
+      "pageUrl": "https://eproc.punjab.gov.pk/activetenders.aspx",
+      "pageTitle": "PPRA SERVICES PORTAL :: Active Procurement"
+    },
+    {
+      "procurementTitle": "Tender Notice",
+      "procurementName": "Supply of Spare Parts for Old Air Conditioners (1-16 Ton) during the Summer Season (FY 2026-27)",
+      "type": "Goods",
+      "publishDate": "2026-08-05",
+      "closeDate": "2026-08-22",
+      "department": "Allied Hospital, Faisalabad",
+      "pageUrl": "https://eproc.punjab.gov.pk/activetenders.aspx",
+      "pageTitle": "PPRA SERVICES PORTAL :: Active Procurement"
+    },
+    {
+      "procurementTitle": "Tender Notice",
+      "procurementName": "TENDER NOTICE",
+      "type": "Goods",
+      "publishDate": "2026-08-05",
+      "closeDate": "2026-09-01",
+      "department": "Regional Police Officer, Multan.",
+      "pageUrl": "https://eproc.punjab.gov.pk/activetenders.aspx",
+      "pageTitle": "PPRA SERVICES PORTAL :: Active Procurement"
+    },
+    {
+      "procurementTitle": "Tender Notice",
+      "procurementName": "Local Purchase of Medicine (M-20) 2026-27",
+      "type": "Goods",
+      "publishDate": "2026-08-05",
+      "closeDate": "2026-08-22",
+      "department": "Punjab Employee Social Security Hospital Sahiwal",
+      "pageUrl": "https://eproc.punjab.gov.pk/activetenders.aspx",
+      "pageTitle": "PPRA SERVICES PORTAL :: Active Procurement"
+    },
+    {
+      "procurementTitle": "Tender Notice",
+      "procurementName": "Annual Framework Contract for Financial Year 2026-27 Municipal Committee Nankana Sahib",
+      "type": "Services",
+      "publishDate": "2026-08-05",
+      "closeDate": "2026-08-22",
+      "department": "Municipal Committee, Nankana Sahib",
+      "pageUrl": "https://eproc.punjab.gov.pk/activetenders.aspx",
+      "pageTitle": "PPRA SERVICES PORTAL :: Active Procurement"
+    },
+    {
+      "procurementTitle": "Sales/Auction/Disposal",
+      "procurementName": "AUCTION OF CANTEEN (2026-27)",
+      "type": "Services",
+      "publishDate": "2026-08-05",
+      "closeDate": "2026-08-22",
+      "department": "Workers Welfare Higher Secondary School (Girls, Peoples Colony, Gujranwala",
+      "pageUrl": "https://eproc.punjab.gov.pk/activetenders.aspx",
+      "pageTitle": "PPRA SERVICES PORTAL :: Active Procurement"
+    },
+    {
+      "procurementTitle": "Tender Notice",
+      "procurementName": "Procurement of LP Medicine & Surgical/Disposable,Dialysis,X-Ray Films & Radiology Accessories, Pathology/Laboratory Materials,Dental Items,Printing Material,Medical Gases",
+      "type": "Goods",
+      "publishDate": "2026-08-05",
+      "closeDate": "2026-08-27",
+      "department": "THQ Hospital, Jand",
+      "pageUrl": "https://eproc.punjab.gov.pk/activetenders.aspx",
+      "pageTitle": "PPRA SERVICES PORTAL :: Active Procurement"
+    },
+    {
+      "procurementTitle": "Tender Notice",
+      "procurementName": "TENDER FOR PROCUREMENT OF IP TELEPHONE EXCHANGE AND IP PHONES FOR NEWLY CONSTRUCTED PEF HEAD OFFICE BUILDING",
+      "type": "Goods",
+      "publishDate": "2026-08-05",
+      "closeDate": "2026-08-26",
+      "department": "Punjab Education Foundation",
+      "pageUrl": "https://eproc.punjab.gov.pk/activetenders.aspx",
+      "pageTitle": "PPRA SERVICES PORTAL :: Active Procurement"
+    }
+  ]
+}

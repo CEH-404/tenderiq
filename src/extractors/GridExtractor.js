@@ -8,110 +8,117 @@ class GridExtractor {
 
     }
 
-    async extract(pageId) {
+async extract(pageId, strategy = null) {
 
-        logger.info("Extracting grid items...");
+    if (strategy && strategy.grids === false) {
+        return [];
+    }
 
-        const page = this.pageManager.get(pageId);
+    logger.info("Extracting grid items...");
 
-        if (!page) {
+    const page = this.pageManager.get(pageId);
 
-            throw new Error(`Page not found: ${pageId}`);
+    if (!page) {
+        throw new Error(`Page not found: ${pageId}`);
+    }
 
-        }
+    const grids = await page.evaluate(() => {
 
-        const grids = await page.evaluate(() => {
+        const selectors = [
 
-            const selectors = [
+            ".product",
+            ".products .product",
+            ".product-card",
+            ".product-item",
 
-                ".product",
-                ".products .product",
-                ".product-card",
-                ".product-item",
+            ".card",
+            ".listing",
+            ".listing-item",
 
-                ".card",
-                ".listing",
-                ".listing-item",
+            ".grid-item",
+            ".grid > *",
 
-                ".grid-item",
-                ".grid > *",
+            ".tender",
+            ".tender-item",
 
-                ".tender",
-                ".tender-item",
+            "[class*='product']",
+            "[class*='card']",
+            "[class*='listing']",
+            "[class*='grid']"
 
-                "[class*='product']",
-                "[class*='card']",
-                "[class*='listing']",
-                "[class*='grid']"
+        ];
 
-            ];
+        const results = [];
+        const seen = new Set();
 
-            const results = [];
+        for (const selector of selectors) {
 
-            const seen = new Set();
+            const elements = document.querySelectorAll(selector);
 
-            for (const selector of selectors) {
+            if (elements.length < 2)
+                continue;
 
-                const elements = document.querySelectorAll(selector);
+            elements.forEach(element => {
 
-                if (elements.length < 2) {
+                const title =
+                    element.querySelector("h1,h2,h3,h4,.title")
+                        ?.innerText.trim() || "";
 
-                    continue;
+                const description =
+                    element.querySelector("p,.description")
+                        ?.innerText.trim() || "";
+
+                const text =
+                    element.innerText?.trim() || "";
+
+                const price =
+                    text.match(/[$€£₹]|PKR|Rs|USD/i)
+                        ? text
+                        : "";
+
+                const link =
+                    element.querySelector("a")?.href || "";
+
+                const image =
+                    element.querySelector("img")?.src || "";
+
+                const key = `${title}-${link}`;
+
+                if (!seen.has(key) && (text || link)) {
+
+                    seen.add(key);
+
+                    results.push({
+
+                        title,
+
+                        description,
+
+                        text,
+
+                        price,
+
+                        image,
+
+                        link
+
+                    });
 
                 }
 
-                elements.forEach(element => {
+            });
 
-                    const text = element.innerText?.trim() || "";
+        }
 
-                    const link =
-                        element.querySelector("a")?.href || null;
+        return results;
 
-                    const image =
-                        element.querySelector("img")?.src || null;
+    });
 
-                    const key =
-                        `${text}-${link}`;
+    logger.success(`${grids.length} grid item(s) extracted.`);
 
-                    if (
+    return grids;
 
-                        !seen.has(key) &&
-
-                        (text || link)
-
-                    ) {
-
-                        seen.add(key);
-
-                        results.push({
-
-                            text,
-
-                            link,
-
-                            image
-
-                        });
-
-                    }
-
-                });
-
-            }
-
-            return results;
-
-        });
-
-        logger.success(
-
-            `${grids.length} grid item(s) extracted.`
-
-        );
-
-        return grids;
-
-    }
+}
 
 }
 

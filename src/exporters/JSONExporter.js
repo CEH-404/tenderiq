@@ -3,7 +3,7 @@ import path from "path";
 
 class JSONExporter {
 
-    constructor(outputDirectory = "./output") {
+    constructor(outputDirectory = "./output/raw") {
 
         this.outputDirectory = outputDirectory;
 
@@ -12,9 +12,7 @@ class JSONExporter {
     async export(data, filename = null) {
 
         await fs.mkdir(this.outputDirectory, {
-
             recursive: true
-
         });
 
         if (!filename) {
@@ -22,9 +20,7 @@ class JSONExporter {
             const now = new Date();
 
             filename = `scrape-${
-
                 now.getFullYear()
-
             }-${
                 String(now.getMonth() + 1).padStart(2, "0")
             }-${
@@ -40,31 +36,20 @@ class JSONExporter {
         }
 
         const filePath = path.join(
-
             this.outputDirectory,
-
             filename
-
         );
 
         await fs.writeFile(
-
             filePath,
-
             JSON.stringify(data, null, 2),
-
             "utf8"
-
         );
 
         return {
-
             success: true,
-
             path: filePath,
-
             filename
-
         };
 
     }

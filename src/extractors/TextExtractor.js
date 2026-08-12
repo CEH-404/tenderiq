@@ -1,101 +1,62 @@
-import fs from "fs/promises";
 import logger from "../logger/logger.js";
 
 class TextExtractor {
 
     constructor(pageManager) {
-
         this.pageManager = pageManager;
-
     }
 
-    async extract(pageId) {
+    async extract(pageId, strategy = null) {
 
-        logger.info("Extracting page text...");
+        if (strategy && strategy.text === false) {
+            return {};
+        }
+
+        logger.info("Extracting text...");
 
         const page = this.pageManager.get(pageId);
 
         if (!page) {
-
             throw new Error(`Page not found: ${pageId}`);
-
         }
 
-        const data = await page.evaluate(() => {
+        const text = await page.evaluate(() => {
 
-            const clean = (value) =>
-                value ? value.trim().replace(/\s+/g, " ") : "";
+            const normalize = str =>
+                (str || "")
+                    .replace(/\s+/g, " ")
+                    .trim();
 
-            const getArray = (selector) =>
-                [...document.querySelectorAll(selector)]
-                    .map(el => clean(el.innerText))
-                    .filter(Boolean);
+            const body = normalize(document.body.innerText);
 
             return {
 
-                title:
-                    clean(document.title),
+                title: document.title,
 
-                h1:
-                    getArray("h1"),
+                text: body,
 
-                h2:
-                    getArray("h2"),
-
-                h3:
-                    getArray("h3"),
+                wordCount:
+                    body.length
+                        ? body.split(/\s+/).length
+                        : 0,
 
                 paragraphs:
-                    getArray("p"),
+                    [...document.querySelectorAll("p")]
+                        .map(p => normalize(p.innerText))
+                        .filter(Boolean),
 
-                lists:
-                    getArray("li"),
-
-                blockquotes:
-                    getArray("blockquote"),
-
-                code:
-                    getArray("pre"),
-
-                article:
-
-                    clean(
-
-                        document.querySelector("article")?.innerText ||
-
-                        ""
-
-                    ),
-
-                body:
-
-                    clean(document.body.innerText)
+                headings:
+                    [...document.querySelectorAll("h1,h2,h3,h4,h5,h6")]
+                        .map(h => normalize(h.innerText))
+                        .filter(Boolean)
 
             };
 
         });
 
-        logger.success("Text extracted successfully.");
+        logger.success("Text extracted.");
 
-        return data;
-
-    }
-
-    async save(pageId, filePath) {
-
-        const text = await this.extract(pageId);
-
-        await fs.writeFile(
-
-            filePath,
-
-            JSON.stringify(text, null, 4),
-
-            "utf8"
-
-        );
-
-        logger.success(`Text saved to ${filePath}`);
+        return text;
 
     }
 

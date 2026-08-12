@@ -1,0 +1,164 @@
+{
+  "metadata": {
+    "cleanerVersion": "3.0.0",
+    "processedAt": "2026-08-10T06:04:52.097Z",
+    "statistics": {
+      "rawTables": 96,
+      "rawRows": 3488,
+      "tablesRemoved": 35,
+      "duplicatesRemoved": 2017,
+      "emptyRowsRemoved": 123,
+      "invalidRecordsRemoved": 140,
+      "finalRecords": 657,
+      "efficiency": "18.8%",
+      "errorCount": 0
+    },
+    "pipelineVersion": "4.0.0",
+    "generatedBy": "gemini-3-flash-preview",
+    "generatedAt": "2026-08-10T10:21:59.825Z",
+    "ai": {
+      "batchSize": 100,
+      "totalBatches": 1,
+      "successfulBatches": 1,
+      "failedBatches": 0,
+      "inputTenders": 5,
+      "outputTenders": 5,
+      "quarantinedTenders": 0,
+      "droppedTenders": 0,
+      "processedAt": "2026-08-10T10:21:59.825Z"
+    }
+  },
+  "failedBatches": [],
+  "tenders": [
+    {
+      "summary": "Procurement of LN2 containers, AI accessories, and chemicals for the Research Centre for Conservation of Indigenous Breeds in Jhang.",
+      "category": "Laboratory & Chemicals",
+      "procurement": {
+        "title": "Tender Notice",
+        "name": "LN2 CONTAINERS, AI Accessories and Chemicals",
+        "type": "Goods"
+      },
+      "organization": {
+        "department": "Research Centre for Conservation of Indigenous Breeds (RCCIB), Jhang",
+        "city": "Jhang",
+        "province": "Punjab"
+      },
+      "dates": {
+        "published": "2026-08-10",
+        "closing": "2026-08-29"
+      },
+      "links": {
+        "page": "https://eproc.punjab.gov.pk/activetenders.aspx",
+        "portal": "PPRA SERVICES PORTAL :: Active Procurement"
+      },
+      "ai": {
+        "relevance": 0.85,
+        "confidence": 0.95
+      }
+    },
+    {
+      "summary": "Corrigendum for the procurement of support and janitorial staff services for the Punjab Public Private Partnership Authority under a framework agreement.",
+      "category": "Manpower & Janitorial Services",
+      "procurement": {
+        "title": "Corrigendum",
+        "name": "CORRIGENDUM PROCUREMENT OF SUPPORT STAFF AND JANITORIAL STAFF SERVICES FOR PUNJAB PUBLIC PRIVATE PARTNERSHIP AUTHORITY (P4A) UNDER FRAMEWORK AGREEMENT (View Tender Detail)",
+        "type": "Services"
+      },
+      "organization": {
+        "department": "Punjab Public Private Partnership Authority",
+        "city": null,
+        "province": "Punjab"
+      },
+      "dates": {
+        "published": "2026-08-09",
+        "closing": "2026-08-13"
+      },
+      "links": {
+        "page": "https://eproc.punjab.gov.pk/activetenders.aspx",
+        "portal": "PPRA SERVICES PORTAL :: Active Procurement"
+      },
+      "ai": {
+        "relevance": 0.8,
+        "confidence": 0.9
+      }
+    },
+    {
+      "summary": "Framework contract for purchasing LP medicines, SSP medicines, and bedding clothing items for DHQ Hospital Rajanpur for the financial year 2026-27.",
+      "category": "Medical & Healthcare",
+      "procurement": {
+        "title": "Tender Notice",
+        "name": "FRAMEWORK CONTRACT FOR THE PURCHASE OF LP MEDICINES, SSP MEDICINES AND BEDDING CLOTHING ITEMS FOR THE FINANCIAL YEAR 2026-27 AT DHQ HOSPITAL RAJANPUR THROUGH ONLINE SYSTEM",
+        "type": "Goods"
+      },
+      "organization": {
+        "department": "DHQ Hospital, Rajanpur",
+        "city": "Rajanpur",
+        "province": "Punjab"
+      },
+      "dates": {
+        "published": "2026-08-09",
+        "closing": "2026-08-25"
+      },
+      "links": {
+        "page": "https://eproc.punjab.gov.pk/activetenders.aspx",
+        "portal": "PPRA SERVICES PORTAL :: Active Procurement"
+      },
+      "ai": {
+        "relevance": 0.9,
+        "confidence": 0.98
+      }
+    },
+    {
+      "summary": "Procurement of generator sets for the Strategic Planning & Implementation Unit of the Environment Protection Department in Lahore.",
+      "category": "Electrical & Power",
+      "procurement": {
+        "title": "Tender Notice",
+        "name": "PROCUREMENT OF GENERATOR SETS",
+        "type": "Goods"
+      },
+      "organization": {
+        "department": "Strategic Planning & Implementation Unit Environment Protection Department Lahore.",
+        "city": "Lahore",
+        "province": "Punjab"
+      },
+      "dates": {
+        "published": "2026-08-09",
+        "closing": "2026-08-26"
+      },
+      "links": {
+        "page": "https://eproc.punjab.gov.pk/activetenders.aspx",
+        "portal": "PPRA SERVICES PORTAL :: Active Procurement"
+      },
+      "ai": {
+        "relevance": 0.88,
+        "confidence": 0.96
+      }
+    },
+    {
+      "summary": "Installation of automatic door closing systems in 14 university buses at Khawaja Fareed University of Engineering and Information Technology, Rahim Yar Khan.",
+      "category": "Engineering & Maintenance",
+      "procurement": {
+        "title": "Tender Notice",
+        "name": "Misc.-360 Installation of Automatic Doors Closing System in 14 Buses of University at KFUEIT RYK",
+        "type": "Services"
+      },
+      "organization": {
+        "department": "Khawaja Fareed university of Engineering and Information Technology, Rahim Yar Khan.",
+        "city": "Rahim Yar Khan",
+        "province": "Punjab"
+      },
+      "dates": {
+        "published": "2026-08-09",
+        "closing": "2026-08-27"
+      },
+      "links": {
+        "page": "https://eproc.punjab.gov.pk/activetenders.aspx",
+        "portal": "PPRA SERVICES PORTAL :: Active Procurement"
+      },
+      "ai": {
+        "relevance": 0.82,
+        "confidence": 0.94
+      }
+    }
+  ]
+}

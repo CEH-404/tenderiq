@@ -1,257 +1,66 @@
-import TableDatasetBuilder from "../tables/TableDatasetBuilder.js";
-import WebsiteTypeDetector from "./WebsiteTypeDetector.js";
-import SchemaValidator from "./SchemaValidator.js";
-
 class WebsiteKnowledgeBuilder {
 
-    static build(data = {}) {
+    static build(raw = {}) {
 
-        const websiteType =
-            WebsiteTypeDetector.detect(data);
-
-        const documents =
-            this.extractDocuments(data.links);
-
-        const images =
-            this.extractImages(data);
-
-        const tables =
-            this.buildTables(data.tables);
-
-        const knowledge = {
-
-            // =====================================
-            // Page Information
-            // =====================================
-
-            page: {
-
-                url:
-                    data.url || "",
-
-                title:
-                    data.metadata?.title || "",
-
-                description:
-                    data.metadata?.description || "",
-
-                language:
-                    data.metadata?.language || "",
-
-                crawledAt:
-                    new Date().toISOString()
-
-            },
-
-            // =====================================
-            // Website
-            // =====================================
+        return {
 
             website: {
 
+                url:
+                    raw.url,
+
+                title:
+                    raw.metadata?.title || "",
+
+                description:
+                    raw.metadata?.description || "",
+
+                keywords:
+                    raw.metadata?.keywords || ""
+
+            },
+
+            classification: {
+
                 type:
-                    websiteType.type,
+                    raw.analysis?.pageType || "unknown",
 
                 confidence:
-                    websiteType.confidence
+                    raw.analysis?.confidence || 0
 
             },
-
-            // =====================================
-            // Company
-            // =====================================
 
             company:
+                raw.company || {},
 
-                data.company || {},
-
-            // =====================================
-            // Products
-            // =====================================
-
-            products:
-
-                data.commerce || {},
-
-            // =====================================
-            // FAQ
-            // =====================================
+            commerce:
+                raw.commerce || {},
 
             faq:
+                raw.faq || [],
 
-                data.faq || [],
+            articles:
+                raw.article || [],
 
-            // =====================================
-            // Tables
-            // =====================================
+            tables:
+                raw.tableData || [],
 
-            tables,
-
-            // =====================================
-            // Documents
-            // =====================================
-
-            documents,
-
-            // =====================================
-            // Resources
-            // =====================================
-
-            resources: {
-
-                images
-
-            },
-
-            // =====================================
-            // Links
-            // =====================================
+            grids:
+                raw.gridData || [],
 
             links:
+                raw.links || [],
 
-                data.links || [],
+            resources:
+                raw.resources || {},
 
-            // =====================================
-            // Analysis
-            // =====================================
+            extractionStrategy:
+                raw.extractionStrategy || {},
 
-            analysis:
-
-                data.analysis || {},
-
-            // =====================================
-            // Pagination
-            // =====================================
-
-            pagination:
-
-                data.pagination || {},
-
-            // =====================================
-            // Text
-            // =====================================
-
-            text:
-
-                data.text || "",
-
-            // =====================================
-            // Metadata
-            // =====================================
-
-            metadata:
-
-                data.metadata || {},
-
-            // =====================================
-            // Statistics
-            // =====================================
-
-            statistics: {
-
-                totalLinks:
-                    data.links?.length || 0,
-
-                totalDocuments:
-                    documents.length,
-
-                totalImages:
-                    images.length,
-
-                totalFAQs:
-                    data.faq?.length || 0,
-
-                totalTables:
-                    tables.totalTables,
-
-                usefulTables:
-                    tables.usefulTables
-
-            },
-
-            generatedAt:
-
+            extractedAt:
                 new Date().toISOString()
 
         };
-
-        return SchemaValidator
-            .validate(knowledge)
-            .knowledge;
-
-    }
-
-    static buildTables(tables = []) {
-
-        if (!tables.length) {
-
-            return {
-
-                totalTables: 0,
-
-                usefulTables: 0,
-
-                datasets: []
-
-            };
-
-        }
-
-        return TableDatasetBuilder.build(tables);
-
-    }
-
-    static extractDocuments(links = []) {
-
-        const extensions = [
-
-            ".pdf",
-            ".doc",
-            ".docx",
-            ".xls",
-            ".xlsx",
-            ".ppt",
-            ".pptx",
-            ".csv",
-            ".zip"
-
-        ];
-
-        return links.filter(link => {
-
-            const url =
-                link.href?.toLowerCase();
-
-            return url &&
-                extensions.some(ext =>
-                    url.endsWith(ext)
-                );
-
-        });
-
-    }
-
-    static extractImages(data = {}) {
-
-        const images = [];
-
-        if (Array.isArray(data.commerce?.images)) {
-
-            images.push(
-                ...data.commerce.images
-            );
-
-        }
-
-        if (Array.isArray(data.html?.images)) {
-
-            images.push(
-                ...data.html.images
-            );
-
-        }
-
-        return [...new Set(images)];
 
     }
 

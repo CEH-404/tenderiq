@@ -1,173 +1,106 @@
-import ResourceRouter from "./ResourceRouter.js";
-
-import ResourceType from "./ResourceType.js";
-
-import HTMLPipeline from "../pipelines/HTMLPipeline.js";
-import PDFPipeline from "../pipelines/PDFPipeline.js";
-import ImagePipeline from "../pipelines/ImagePipeline.js";
-import DocumentPipeline from "../pipelines/DocumentPipeline.js";
-import VideoPipeline from "../pipelines/VideoPipeline.js";
-import JSONPipeline from "../pipelines/JSONPipeline.js";
-import XMLPipeline from "../pipelines/XMLPipeline.js";
-import DownloadPipeline from "../pipelines/DownloadPipeline.js";
-
-import Crawler from "../scraper/Crawler.js";
-
-import JSONExporter from "../exporters/JSONExporter.js";
-
-import TableDataExporter from "../exporters/TableDataExporter.js";
+import ScraperEngine from "./ScraperEngine.js";
 
 class Framework {
 
     constructor() {
 
-        this.htmlPipeline = new HTMLPipeline();
-        this.pdfPipeline = new  PDFPipeline();
-        this.imagePipeline = new ImagePipeline();
-        this.documentPipeline = new DocumentPipeline();
-        this.videoPipeline = new VideoPipeline();
-        this.jsonPipeline = new JSONPipeline();
-        this.xmlPipeline = new  XMLPipeline();
-        this.downloadPipeline = new DownloadPipeline();
+        this.engine =
+            new ScraperEngine();
 
-        this.crawler = new 
-        Crawler(this);
+        this.initialized =
+            false;
 
-        this.jsonExporter = new JSONExporter();
-
-        this.tableDataExporter = new TableDataExporter();
     }
 
     async initialize() {
 
-        await this.htmlPipeline.initialize();
-        await this.pdfPipeline.initialize();
-        await this.imagePipeline.initialize();
-        await this.documentPipeline.initialize();
-        await this.videoPipeline.initialize();
-        await this.jsonPipeline.initialize();
-        await this.xmlPipeline.initialize();
-        await this.downloadPipeline.initialize();
+        if (this.initialized) {
+
+            return;
+
+        }
+
+        await this.engine.initialize();
+
+        this.initialized = true;
+
+    }
+
+    async crawl(url, options = {}) {
+
+        await this.initialize();
+
+        return await this.engine.scrape(
+
+            url,
+
+            options
+
+        );
 
     }
 
     async scrape(url, options = {}) {
 
-        const resource =
+        await this.initialize();
 
-            await ResourceRouter.route(url);
+        return await this.engine.scrape(
 
-        switch (resource.type) {
+            url,
 
-            case ResourceType.HTML:
+            options
 
-                return await this.htmlPipeline.execute(url, options);
-
-            case ResourceType.PDF:
-
-                return {
-
-                    type: "pdf",
-
-                    url,
-
-                    message:
-                        "PDF Pipeline Coming Soon"
-
-                };
-
-            case ResourceType.IMAGE:
-
-                return {
-
-                    type: "image",
-
-                    url,
-
-                    message:
-                        "Image Pipeline Coming Soon"
-
-                };
-
-            case ResourceType.VIDEO:
-
-                return {
-
-                    type: "video",
-
-                    url,
-
-                    message:
-                        "Video Pipeline Coming Soon"
-
-                };
-
-            case ResourceType.DOCUMENT:
-
-                return {
-
-                    type: "document",
-
-                    url,
-
-                    message:
-                        "Document Pipeline Coming Soon"
-
-                };
-
-            default:
-
-                throw new Error(
-
-                    `Unsupported Resource: ${resource.type}`
-
-                );
-
-        }
+        );
 
     }
 
-    async crawl(options) {
+    async extract(url, options = {}) {
 
-        if (options.maxPages !== undefined) {
-            this.crawler.maxPages = options.maxPages;
-        }
-
-        if (options.maxDepth !== undefined) {
-            this.crawler.maxDepth = options.maxDepth;
-        }
+        await this.initialize();
 
         const result =
-            await this.crawler.crawl(options.url, {
-                timeout: options.timeout
-            });
 
-        const jsonExport = await this.jsonExporter.export(result);
+            await this.engine.scrape(
 
-        // Export only table data
-        await this.tableDataExporter.export(
-            result.knowledge
-        );
+                url,
 
-        return {
-            ...result,
-            export: {
-                jsonFilename: jsonExport.filename
-            }
-        };
+                options
+
+            );
+
+        return result.raw;
+
+    }
+
+    async knowledge(url, options = {}) {
+
+        await this.initialize();
+
+        const result =
+
+            await this.engine.scrape(
+
+                url,
+
+                options
+
+            );
+
+        return result.knowledge;
 
     }
 
     async shutdown() {
 
-        await this.htmlPipeline.shutdown();
-        await this.pdfPipeline.shutdown();
-        await this.imagePipeline.shutdown();
-        await this.documentPipeline.shutdown();
-        await this.videoPipeline.shutdown();
-        await this.jsonPipeline.shutdown();
-        await this.xmlPipeline.shutdown();
-        await this.downloadPipeline.shutdown();
+        if (!this.initialized) {
+
+            return;
+
+        }
+
+        await this.engine.shutdown();
+
+        this.initialized = false;
 
     }
 

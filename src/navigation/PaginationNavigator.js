@@ -39,30 +39,84 @@ class PaginationNavigator {
 
     async aspNet(pageId) {
 
-    const page = this.pageManager.get(pageId);
+        const page = this.pageManager.get(pageId);
 
-    const nextBtn = page.locator(".rgPageNext");
+        //--------------------------------------------------
+        // Find a usable ASP.NET next-page control
+        //--------------------------------------------------
 
-    const before = await page.locator(".rgCurrentPage span").textContent();
+        const nextLocator = page.locator(`
+            a[title="Next"],
+            a[aria-label="Next"],
+            a[id*="Next"],
+            a[href*="Page$Next"],
+            input[value="Next"],
+            .rgPageNext,
+            .PagerNext
+        `).first();
 
-    console.log("Current Page:", before);
+        if (!(await nextLocator.count())) {
 
-    await nextBtn.click();
+            logger.info("No ASP.NET next button found.");
 
-    await page.waitForLoadState("networkidle");
-    await page.waitForTimeout(1500);
+            return false;
 
-    const after = await page.locator(".rgCurrentPage span").textContent();
+        }
 
-    if (before === after) {
-        console.log("No more pages");
-        return false;
+        //--------------------------------------------------
+        // Save current HTML
+        //--------------------------------------------------
+
+        const beforeHtml =
+            await page.locator("body").innerHTML();
+
+        logger.info("Moving to next ASP.NET page...");
+
+        //--------------------------------------------------
+        // Click
+        //--------------------------------------------------
+
+        await nextLocator.click();
+
+        //--------------------------------------------------
+        // Wait until DOM actually changes
+        //--------------------------------------------------
+
+        try {
+
+            await page.waitForFunction(
+
+                previous =>
+
+                    document.body.innerHTML !== previous,
+
+                beforeHtml,
+
+                {
+                    timeout: 30000
+                }
+
+            );
+
+        }
+
+        catch {
+
+            logger.info("Page content did not change.");
+
+            return false;
+
+        }
+
+        //--------------------------------------------------
+
+        await page.waitForTimeout(1500);
+
+        logger.success("Pagination successful.");
+
+        return true;
+
     }
-
-    logger.info(`Moved ${before} -> ${after}`);
-
-    return true;
-}
 
     async nextButton(pageId, pagination) {
 

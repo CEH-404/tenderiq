@@ -1,276 +1,96 @@
+import logger from "../logger/logger.js";
+
 class FAQExtractor {
 
-    async extract(page) {
+    constructor(pageManager) {
+        this.pageManager = pageManager;
+    }
 
-        return await page.evaluate(() => {
+    async extract(pageId, strategy = null) {
 
-            const faqs = [];
+        if (strategy && strategy.faq === false) {
+            return [];
+        }
 
-            // ----------------------------------
-            // Method 1: <details><summary>
-            // ----------------------------------
+        logger.info("Extracting FAQs...");
 
-            document
-                .querySelectorAll("details")
-                .forEach(item => {
+        const page = this.pageManager.get(pageId);
 
-                    const question =
-                        item.querySelector("summary")
-                            ?.innerText
-                            ?.trim();
+        if (!page) {
+            throw new Error(`Page not found: ${pageId}`);
+        }
 
-                    const answer =
-                        item.innerText
-                            .replace(question || "", "")
-                            .trim();
+        const faqs = await page.evaluate(() => {
 
-                    if (question) {
+            const results = [];
 
-                        faqs.push({
+            // <details>
+            document.querySelectorAll("details").forEach(item => {
 
-                            question,
+                const question =
+                    item.querySelector("summary")?.innerText.trim() || "";
 
-                            answer,
+                const answer =
+                    item.innerText.replace(question, "").trim();
 
-                            source: "details"
+                if (question && answer) {
 
-                        });
-
-                    }
-
-                });
-
-            // ----------------------------------
-            // Method 2: Accordion FAQ
-            // ----------------------------------
-
-            const accordionSelectors = [
-
-                ".faq-item",
-                ".accordion-item",
-                ".faq",
-                ".question"
-
-            ];
-
-            accordionSelectors.forEach(selector => {
-
-                document.querySelectorAll(selector)
-                    .forEach(item => {
-
-                        const question =
-
-                            item.querySelector(
-
-                                "h2,h3,h4,h5,.question,.title,button"
-
-                            )?.innerText?.trim();
-
-                        const answer =
-
-                            item.querySelector(
-
-                                ".answer,.content,p,div"
-
-                            )?.innerText?.trim();
-
-                        if (
-
-                            question &&
-
-                            answer
-
-                        ) {
-
-                            faqs.push({
-
-                                question,
-
-                                answer,
-
-                                source: "accordion"
-
-                            });
-
-                        }
-
-                    });
-
-            });
-
-            // ----------------------------------
-            // Method 3: FAQPage JSON-LD
-            // ----------------------------------
-
-            document
-
-                .querySelectorAll(
-
-                    'script[type="application/ld+json"]'
-
-                )
-
-                .forEach(script => {
-
-                    try {
-
-                        const json =
-
-                            JSON.parse(script.innerText);
-
-                        const schemas =
-
-                            Array.isArray(json)
-
-                                ? json
-
-                                : [json];
-
-                        schemas.forEach(schema => {
-
-                            if (
-
-                                schema["@type"] ===
-
-                                "FAQPage"
-
-                            ) {
-
-                                (
-
-                                    schema.mainEntity || []
-
-                                )
-
-                                    .forEach(item => {
-
-                                        faqs.push({
-
-                                            question:
-
-                                                item.name,
-
-                                            answer:
-
-                                                item.acceptedAnswer?.text ||
-
-                                                "",
-
-                                            source:
-
-                                                "jsonld"
-
-                                        });
-
-                                    });
-
-                            }
-
-                        });
-
-                    }
-
-                    catch {
-
-                    }
-
-                });
-
-            // ----------------------------------
-            // Method 4: Microdata
-            // ----------------------------------
-
-            document
-
-                .querySelectorAll(
-
-                    '[itemtype*="Question"]'
-
-                )
-
-                .forEach(item => {
-
-                    const question =
-
-                        item.querySelector(
-
-                            '[itemprop="name"]'
-
-                        )?.innerText?.trim();
-
-                    const answer =
-
-                        item.querySelector(
-
-                            '[itemprop="text"]'
-
-                        )?.innerText?.trim();
-
-                    if (
-
-                        question &&
-
+                    results.push({
+                        question,
                         answer
-
-                    ) {
-
-                        faqs.push({
-
-                            question,
-
-                            answer,
-
-                            source: "microdata"
-
-                        });
-
-                    }
-
-                });
-
-            // ----------------------------------
-            // Remove Duplicates
-            // ----------------------------------
-
-            const unique = [];
-
-            const seen = new Set();
-
-            faqs.forEach(item => {
-
-                const key =
-
-                    item.question +
-
-                    item.answer;
-
-                if (
-
-                    !seen.has(key)
-
-                ) {
-
-                    seen.add(key);
-
-                    unique.push(item);
+                    });
 
                 }
 
             });
 
-            return {
+            // FAQ Sections
+            document.querySelectorAll(".faq,.faqs,[class*=faq]").forEach(section => {
 
-                totalFAQs:
+                const questions = section.querySelectorAll("h1,h2,h3,h4,h5,strong");
 
-                    unique.length,
+                questions.forEach(q => {
 
-                faqs:
+                    const question = q.innerText.trim();
 
-                    unique
+                    let answer = "";
 
-            };
+                    let node = q.nextElementSibling;
+
+                    while (
+
+                        node &&
+                        !/^H[1-6]$/.test(node.tagName)
+
+                    ) {
+
+                        answer += node.innerText.trim() + "\n";
+                        node = node.nextElementSibling;
+
+                    }
+
+                    if (question && answer.trim()) {
+
+                        results.push({
+
+                            question,
+                            answer: answer.trim()
+
+                        });
+
+                    }
+
+                });
+
+            });
+
+            return results;
 
         });
+
+        logger.success(`${faqs.length} FAQ(s) extracted.`);
+
+        return faqs;
 
     }
 

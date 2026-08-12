@@ -1,0 +1,56 @@
+{
+  "metadata": {
+    "cleanerVersion": "3.0.0",
+    "processedAt": "2026-08-06T11:44:10.834Z",
+    "statistics": {
+      "rawTables": 96,
+      "rawRows": 3584,
+      "tablesRemoved": 40,
+      "duplicatesRemoved": 2104,
+      "emptyRowsRemoved": 140,
+      "invalidRecordsRemoved": 152,
+      "finalRecords": 686,
+      "efficiency": "19.1%",
+      "errorCount": 0
+    }
+  },
+  "errors": [],
+  "tenders": [
+    {
+      "procurementTitle": "Tender Notice",
+      "procurementName": "Purchase of Uniforms of Special Students",
+      "type": "Goods",
+      "publishDate": "2026-08-06",
+      "closeDate": "2026-08-24",
+      "department": "Govt. Boys Secondary School of Special Education for Hearing Impaired Khanewal",
+      "pageUrl": "https://eproc.punjab.gov.pk/activetenders.aspx",
+      "pageTitle": "PPRA SERVICES PORTAL :: Active Procurement"
+    },
+    {
+      "procurementTitle": "Sales/Auction/Disposal",
+      "procurementName": "Auction Canteen",
+      "type": "Services",
+      "publishDate": "2026-08-06",
+      "closeDate": "2026-08-22",
+      "department": "Workers Welfare School Boys, Chawinda, Sialkot",
+      "pageUrl": "https://eproc.punjab.gov.pk/activetenders.aspx",
+      "pageTitle": "PPRA SERVICES PORTAL :: Active Procurement"
+    },
+    
+    {
+      "procurementTitle": "Tender Notice",
+      "procurementName": "PROCUREMENT OF EQUIPMENT FOR THE IMPLEMENTATION OF THE BLACK SOLDIER FLY COMPOSTING PILOT PROJECT AT LWMC",
+      "type": "Goods",
+      "publishDate": "2026-07-19",
+      "closeDate": "2026-08-05",
+      "department": "Lahore Waste Management Company",
+      "pageUrl": "https://eproc.punjab.gov.pk/ActiveTendersDetail.aspx?id=253117",
+      "pageTitle": "PPRA SERVICES PORTAL :: Active Procurement",
+      "detailUrl": "https://eproc.punjab.gov.pk/ActiveTendersDetail.aspx?id=253117",
+      "documents": [
+        "https://eproc.punjab.gov.pk/Tenders/50485054/4855/1907202611165583873880253117.pdf",
+        "https://eproc.punjab.gov.pk/BiddingDocuments/50485054/4855/1907202611165510344328253117.pdf"
+      ]
+    }
+  ]
+}

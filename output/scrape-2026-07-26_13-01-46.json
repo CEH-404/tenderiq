@@ -1,0 +1,513 @@
+{
+  "page": {
+    "url": "https://royalblue-eel-331988.hostingersite.com/shop/",
+    "type": "product",
+    "confidence": 90
+  },
+  "metadata": {
+    "title": "Shop - Pasrur Mobile",
+    "url": "https://royalblue-eel-331988.hostingersite.com/shop/",
+    "description": "",
+    "keywords": "",
+    "author": "",
+    "language": "en-US",
+    "canonical": "https://royalblue-eel-331988.hostingersite.com/shop/",
+    "robots": "max-image-preview:large",
+    "generator": "All in One SEO (AIOSEO) 4.9.7.2",
+    "favicon": "",
+    "openGraph": {
+      "title": "Shop - Pasrur Mobile",
+      "description": "",
+      "image": "",
+      "url": "https://royalblue-eel-331988.hostingersite.com/shop/",
+      "type": "website"
+    },
+    "twitter": {
+      "card": "summary_large_image",
+      "title": "Shop - Pasrur Mobile",
+      "description": "",
+      "image": ""
+    }
+  },
+  "company": null,
+  "commerce": [
+    {
+      "title": "BlueBeat Speaker",
+      "description": "",
+      "price": "₨ 945",
+      "image": "https://images.unsplash.com/photo-1544796030-73c64312d6cf?q=85&w=300&h=300&fit=crop",
+      "url": "https://royalblue-eel-331988.hostingersite.com/product/bluebeat-speaker/",
+      "availability": "",
+      "addToCart": true
+    },
+    {
+      "title": "BlueWave Headphones",
+      "description": "",
+      "price": "₨ 975",
+      "image": "https://images.unsplash.com/photo-1673105665361-79b1ef1c4b69?q=85&w=300&h=300&fit=crop",
+      "url": "https://royalblue-eel-331988.hostingersite.com/product/bluewave-headphones/",
+      "availability": "",
+      "addToCart": true
+    },
+    {
+      "title": "Braided USB-C Cable",
+      "description": "",
+      "price": "₨ 915",
+      "image": "https://images.unsplash.com/photo-1614399943062-2c108254f65b?q=85&w=300&h=300&fit=crop",
+      "url": "https://royalblue-eel-331988.hostingersite.com/product/braided-usb-c-cable/",
+      "availability": "",
+      "addToCart": true
+    },
+    {
+      "title": "Fast Charger Pro",
+      "description": "",
+      "price": "₨ 930",
+      "image": "https://images.unsplash.com/photo-1593941707882-a5bba14938c7?q=85&w=300&h=300&fit=crop",
+      "url": "https://royalblue-eel-331988.hostingersite.com/product/fast-charger-pro/",
+      "availability": "",
+      "addToCart": true
+    },
+    {
+      "title": "Navy Blue Case",
+      "description": "",
+      "price": "₨ 925",
+      "image": "https://images.unsplash.com/photo-1578840602674-bd891cb7ea5b?q=85&w=300&h=300&fit=crop",
+      "url": "https://royalblue-eel-331988.hostingersite.com/product/navy-blue-case/",
+      "availability": "",
+      "addToCart": true
+    },
+    {
+      "title": "Shop",
+      "description": "Pasrur Mobile",
+      "price": "₨ 945",
+      "image": "https://images.unsplash.com/photo-1544796030-73c64312d6cf?q=85&w=300&h=300&fit=crop",
+      "url": "https://royalblue-eel-331988.hostingersite.com/shop/#wp--skip-link--target",
+      "availability": "",
+      "addToCart": true
+    },
+    {
+      "title": "BlueBeat Speaker",
+      "description": "",
+      "price": "₨ 945",
+      "image": "https://images.unsplash.com/photo-1544796030-73c64312d6cf?q=85&w=300&h=300&fit=crop",
+      "url": "https://royalblue-eel-331988.hostingersite.com/product/bluebeat-speaker/",
+      "availability": "",
+      "addToCart": true
+    },
+    {
+      "title": "BlueBeat Speaker",
+      "description": "",
+      "price": "₨ 945",
+      "image": "https://images.unsplash.com/photo-1544796030-73c64312d6cf?q=85&w=300&h=300&fit=crop",
+      "url": "https://royalblue-eel-331988.hostingersite.com/product/bluebeat-speaker/",
+      "availability": "",
+      "addToCart": true
+    },
+    {
+      "title": "",
+      "description": "",
+      "price": "",
+      "image": "https://images.unsplash.com/photo-1544796030-73c64312d6cf?q=85&w=300&h=300&fit=crop",
+      "url": "https://royalblue-eel-331988.hostingersite.com/product/bluebeat-speaker/",
+      "availability": "",
+      "addToCart": false
+    },
+    {
+      "title": "",
+      "description": "",
+      "price": "₨ 945",
+      "image": "",
+      "url": "",
+      "availability": "",
+      "addToCart": false
+    },
+    {
+      "title": "",
+      "description": "",
+      "price": "₨ 945",
+      "image": "",
+      "url": "",
+      "availability": "",
+      "addToCart": false
+    },
+    {
+      "title": "",
+      "description": "",
+      "price": "",
+      "image": "https://images.unsplash.com/photo-1673105665361-79b1ef1c4b69?q=85&w=300&h=300&fit=crop",
+      "url": "https://royalblue-eel-331988.hostingersite.com/product/bluewave-headphones/",
+      "availability": "",
+      "addToCart": false
+    },
+    {
+      "title": "",
+      "description": "",
+      "price": "₨ 975",
+      "image": "",
+      "url": "",
+      "availability": "",
+      "addToCart": false
+    },
+    {
+      "title": "",
+      "description": "",
+      "price": "₨ 975",
+      "image": "",
+      "url": "",
+      "availability": "",
+      "addToCart": false
+    },
+    {
+      "title": "",
+      "description": "",
+      "price": "",
+      "image": "https://images.unsplash.com/photo-1614399943062-2c108254f65b?q=85&w=300&h=300&fit=crop",
+      "url": "https://royalblue-eel-331988.hostingersite.com/product/braided-usb-c-cable/",
+      "availability": "",
+      "addToCart": false
+    },
+    {
+      "title": "",
+      "description": "",
+      "price": "₨ 915",
+      "image": "",
+      "url": "",
+      "availability": "",
+      "addToCart": false
+    },
+    {
+      "title": "",
+      "description": "",
+      "price": "₨ 915",
+      "image": "",
+      "url": "",
+      "availability": "",
+      "addToCart": false
+    },
+    {
+      "title": "",
+      "description": "",
+      "price": "",
+      "image": "https://images.unsplash.com/photo-1593941707882-a5bba14938c7?q=85&w=300&h=300&fit=crop",
+      "url": "https://royalblue-eel-331988.hostingersite.com/product/fast-charger-pro/",
+      "availability": "",
+      "addToCart": false
+    },
+    {
+      "title": "",
+      "description": "",
+      "price": "₨ 930",
+      "image": "",
+      "url": "",
+      "availability": "",
+      "addToCart": false
+    },
+    {
+      "title": "",
+      "description": "",
+      "price": "₨ 930",
+      "image": "",
+      "url": "",
+      "availability": "",
+      "addToCart": false
+    },
+    {
+      "title": "",
+      "description": "",
+      "price": "",
+      "image": "https://images.unsplash.com/photo-1578840602674-bd891cb7ea5b?q=85&w=300&h=300&fit=crop",
+      "url": "https://royalblue-eel-331988.hostingersite.com/product/navy-blue-case/",
+      "availability": "",
+      "addToCart": false
+    },
+    {
+      "title": "",
+      "description": "",
+      "price": "₨ 925",
+      "image": "",
+      "url": "",
+      "availability": "",
+      "addToCart": false
+    },
+    {
+      "title": "",
+      "description": "",
+      "price": "₨ 925",
+      "image": "",
+      "url": "",
+      "availability": "",
+      "addToCart": false
+    },
+    {
+      "title": "Products in cart",
+      "description": "",
+      "price": "",
+      "image": "",
+      "url": "",
+      "availability": "",
+      "addToCart": false
+    }
+  ],
+  "faq": [],
+  "tables": [],
+  "tableData": [],
+  "grids": [],
+  "gridData": [],
+  "links": [
+    {
+      "text": "Skip to content",
+      "href": "https://royalblue-eel-331988.hostingersite.com/shop/#wp--skip-link--target",
+      "title": "",
+      "target": "_self",
+      "rel": "",
+      "internal": true,
+      "external": false,
+      "hostname": "royalblue-eel-331988.hostingersite.com",
+      "pathname": "/shop/"
+    },
+    {
+      "text": "Pasrur Mobile",
+      "href": "https://royalblue-eel-331988.hostingersite.com/",
+      "title": "",
+      "target": "_self",
+      "rel": "home",
+      "internal": true,
+      "external": false,
+      "hostname": "royalblue-eel-331988.hostingersite.com",
+      "pathname": "/"
+    },
+    {
+      "text": "Shop",
+      "href": "https://royalblue-eel-331988.hostingersite.com/shop/",
+      "title": "",
+      "target": "_self",
+      "rel": "",
+      "internal": true,
+      "external": false,
+      "hostname": "royalblue-eel-331988.hostingersite.com",
+      "pathname": "/shop/"
+    },
+    {
+      "text": "Offers",
+      "href": "https://royalblue-eel-331988.hostingersite.com/offers/",
+      "title": "",
+      "target": "_self",
+      "rel": "",
+      "internal": true,
+      "external": false,
+      "hostname": "royalblue-eel-331988.hostingersite.com",
+      "pathname": "/offers/"
+    },
+    {
+      "text": "Privacy Policy",
+      "href": "https://royalblue-eel-331988.hostingersite.com/privacy-policy-2/",
+      "title": "",
+      "target": "_self",
+      "rel": "",
+      "internal": true,
+      "external": false,
+      "hostname": "royalblue-eel-331988.hostingersite.com",
+      "pathname": "/privacy-policy-2/"
+    },
+    {
+      "text": "",
+      "href": "https://royalblue-eel-331988.hostingersite.com/my-account/",
+      "title": "",
+      "target": "_self",
+      "rel": "",
+      "internal": true,
+      "external": false,
+      "hostname": "royalblue-eel-331988.hostingersite.com",
+      "pathname": "/my-account/"
+    },
+    {
+      "text": "",
+      "href": "https://royalblue-eel-331988.hostingersite.com/product/bluebeat-speaker/",
+      "title": "",
+      "target": "_self",
+      "rel": "",
+      "internal": true,
+      "external": false,
+      "hostname": "royalblue-eel-331988.hostingersite.com",
+      "pathname": "/product/bluebeat-speaker/"
+    },
+    {
+      "text": "View cart",
+      "href": "https://royalblue-eel-331988.hostingersite.com/cart/",
+      "title": "View cart",
+      "target": "_self",
+      "rel": "",
+      "internal": true,
+      "external": false,
+      "hostname": "royalblue-eel-331988.hostingersite.com",
+      "pathname": "/cart/"
+    },
+    {
+      "text": "",
+      "href": "https://royalblue-eel-331988.hostingersite.com/product/bluewave-headphones/",
+      "title": "",
+      "target": "_self",
+      "rel": "",
+      "internal": true,
+      "external": false,
+      "hostname": "royalblue-eel-331988.hostingersite.com",
+      "pathname": "/product/bluewave-headphones/"
+    },
+    {
+      "text": "",
+      "href": "https://royalblue-eel-331988.hostingersite.com/product/braided-usb-c-cable/",
+      "title": "",
+      "target": "_self",
+      "rel": "",
+      "internal": true,
+      "external": false,
+      "hostname": "royalblue-eel-331988.hostingersite.com",
+      "pathname": "/product/braided-usb-c-cable/"
+    },
+    {
+      "text": "",
+      "href": "https://royalblue-eel-331988.hostingersite.com/product/fast-charger-pro/",
+      "title": "",
+      "target": "_self",
+      "rel": "",
+      "internal": true,
+      "external": false,
+      "hostname": "royalblue-eel-331988.hostingersite.com",
+      "pathname": "/product/fast-charger-pro/"
+    },
+    {
+      "text": "",
+      "href": "https://royalblue-eel-331988.hostingersite.com/product/navy-blue-case/",
+      "title": "",
+      "target": "_self",
+      "rel": "",
+      "internal": true,
+      "external": false,
+      "hostname": "royalblue-eel-331988.hostingersite.com",
+      "pathname": "/product/navy-blue-case/"
+    },
+    {
+      "text": "Facebook",
+      "href": "https://facebook.com/",
+      "title": "",
+      "target": "_self",
+      "rel": "",
+      "internal": false,
+      "external": true,
+      "hostname": "facebook.com",
+      "pathname": "/"
+    },
+    {
+      "text": "Instagram",
+      "href": "https://instagram.com/",
+      "title": "",
+      "target": "_self",
+      "rel": "",
+      "internal": false,
+      "external": true,
+      "hostname": "instagram.com",
+      "pathname": "/"
+    },
+    {
+      "text": "X",
+      "href": "https://twitter.com/",
+      "title": "",
+      "target": "_self",
+      "rel": "",
+      "internal": false,
+      "external": true,
+      "hostname": "twitter.com",
+      "pathname": "/"
+    },
+    {
+      "text": "TikTok",
+      "href": "https://tiktok.com/",
+      "title": "",
+      "target": "_self",
+      "rel": "",
+      "internal": false,
+      "external": true,
+      "hostname": "tiktok.com",
+      "pathname": "/"
+    },
+    {
+      "text": "Go to checkout",
+      "href": "https://royalblue-eel-331988.hostingersite.com/checkout/",
+      "title": "",
+      "target": "_self",
+      "rel": "",
+      "internal": true,
+      "external": false,
+      "hostname": "royalblue-eel-331988.hostingersite.com",
+      "pathname": "/checkout/"
+    }
+  ],
+  "resources": {
+    "scripts": [
+      "https://royalblue-eel-331988.hostingersite.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1",
+      "https://royalblue-eel-331988.hostingersite.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1",
+      "https://royalblue-eel-331988.hostingersite.com/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js?ver=2.7.0-wc.10.7.0",
+      "https://royalblue-eel-331988.hostingersite.com/wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min.js?ver=2.1.4-wc.10.7.0",
+      "https://royalblue-eel-331988.hostingersite.com/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js?ver=10.7.0",
+      "https://royalblue-eel-331988.hostingersite.com/wp-content/plugins/woocommerce/assets/client/blocks/woocommerce/customer-account.js?ver=26a08616b40d080c558d",
+      "https://royalblue-eel-331988.hostingersite.com/wp-content/plugins/woocommerce/assets/client/blocks/woocommerce/mini-cart.js?ver=fa7daa902c442e77479d",
+      "https://royalblue-eel-331988.hostingersite.com/wp-content/plugins/woocommerce/assets/client/blocks/woocommerce/product-button.js?ver=6004c571a02b426f9d2a",
+      "https://royalblue-eel-331988.hostingersite.com/wp-content/plugins/woocommerce/assets/client/blocks/woocommerce/product-collection.js?ver=97305999e725c86f6b8c",
+      "https://royalblue-eel-331988.hostingersite.com/wp-includes/js/wp-emoji-release.min.js?ver=6.9.5",
+      "https://royalblue-eel-331988.hostingersite.com/wp-includes/js/dist/script-modules/block-library/navigation/view.min.js?ver=b0f909c3ec791c383210",
+      "https://royalblue-eel-331988.hostingersite.com/wp-content/plugins/hostinger-reach/frontend/dist/blocks/subscription-view.js?ver=1779142050",
+      "https://royalblue-eel-331988.hostingersite.com/wp-includes/js/dist/hooks.min.js?ver=dd5603f07f9220ed27f1",
+      "https://royalblue-eel-331988.hostingersite.com/wp-includes/js/dist/i18n.min.js?ver=c26c3dc7bed366793375",
+      "https://royalblue-eel-331988.hostingersite.com/wp-content/themes/hostinger-ai-theme/assets/js/front-scripts.min.js?ver=2.0.14",
+      "https://royalblue-eel-331988.hostingersite.com/wp-content/plugins/woocommerce/assets/js/sourcebuster/sourcebuster.min.js?ver=10.7.0",
+      "https://royalblue-eel-331988.hostingersite.com/wp-content/plugins/woocommerce/assets/js/frontend/order-attribution.min.js?ver=10.7.0"
+    ],
+    "styles": [
+      "https://royalblue-eel-331988.hostingersite.com/wp-includes/blocks/navigation/style.min.css?ver=6.9.5",
+      "https://royalblue-eel-331988.hostingersite.com/wp-content/plugins/woocommerce/assets/client/blocks/wc-blocks.css?ver=wc-10.7.0",
+      "https://royalblue-eel-331988.hostingersite.com/wp-content/plugins/woocommerce/assets/client/blocks/mini-cart-contents.css?ver=wc-10.7.0",
+      "https://royalblue-eel-331988.hostingersite.com/wp-content/plugins/woocommerce/assets/client/blocks/packages-style.css?ver=wc-10.7.0",
+      "https://royalblue-eel-331988.hostingersite.com/wp-content/plugins/woocommerce/assets/client/blocks/mini-cart.css?ver=wc-10.7.0",
+      "https://royalblue-eel-331988.hostingersite.com/wp-content/plugins/woocommerce/assets/client/blocks/breadcrumbs.css?ver=wc-10.7.0",
+      "https://royalblue-eel-331988.hostingersite.com/wp-content/plugins/woocommerce/assets/client/blocks/store-notices.css?ver=wc-10.7.0",
+      "https://royalblue-eel-331988.hostingersite.com/wp-content/plugins/woocommerce/assets/client/blocks/product-results-count.css?ver=wc-10.7.0",
+      "https://royalblue-eel-331988.hostingersite.com/wp-content/plugins/woocommerce/assets/client/blocks/catalog-sorting.css?ver=wc-10.7.0",
+      "https://royalblue-eel-331988.hostingersite.com/wp-content/plugins/woocommerce/assets/client/blocks/product-image.css?ver=wc-10.7.0",
+      "https://royalblue-eel-331988.hostingersite.com/wp-content/plugins/woocommerce/assets/css/woocommerce-blocktheme.css?ver=10.7.0",
+      "https://royalblue-eel-331988.hostingersite.com/wp-content/plugins/woocommerce/assets/css/woocommerce-layout.css?ver=10.7.0",
+      "https://royalblue-eel-331988.hostingersite.com/wp-content/plugins/woocommerce/assets/css/woocommerce-smallscreen.css?ver=10.7.0",
+      "https://royalblue-eel-331988.hostingersite.com/wp-content/plugins/woocommerce/assets/css/woocommerce.css?ver=10.7.0",
+      "https://royalblue-eel-331988.hostingersite.com/wp-content/plugins/hostinger-reach/frontend/dist/blocks/subscription.css?ver=1779142050",
+      "https://royalblue-eel-331988.hostingersite.com/wp-content/themes/hostinger-ai-theme/assets/css/style.min.css?ver=2.0.14"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1544796030-73c64312d6cf?q=85&w=300&h=300&fit=crop",
+      "https://images.unsplash.com/photo-1673105665361-79b1ef1c4b69?q=85&w=300&h=300&fit=crop",
+      "https://images.unsplash.com/photo-1614399943062-2c108254f65b?q=85&w=300&h=300&fit=crop",
+      "https://images.unsplash.com/photo-1593941707882-a5bba14938c7?q=85&w=300&h=300&fit=crop",
+      "https://images.unsplash.com/photo-1578840602674-bd891cb7ea5b?q=85&w=300&h=300&fit=crop"
+    ],
+    "videos": [],
+    "audios": [],
+    "pdfs": [],
+    "documents": [],
+    "counts": {
+      "scripts": 17,
+      "styles": 16,
+      "images": 5,
+      "videos": 0,
+      "audios": 0,
+      "pdfs": 0,
+      "documents": 0
+    }
+  },
+  "extraction": {},
+  "summary": {
+    "links": 17,
+    "tables": 0,
+    "grids": 0,
+    "faq": 0,
+    "hasCommerce": true,
+    "hasCompany": false
+  }
+}

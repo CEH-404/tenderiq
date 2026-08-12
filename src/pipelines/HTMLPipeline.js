@@ -10,29 +10,27 @@ import MetadataExtractor from "../extractors/MetadataExtractor.js";
 import TableExtractor from "../extractors/TableExtractor.js";
 import GridExtractor from "../extractors/GridExtractor.js";
 
-import PageAnalyzer from "../analyzers/PageAnalyzer.js";
-
-import logger from "../logger/logger.js";
-
-import PaginationAnalyzer from "../analyzers/PaginationAnalyzer.js";
-
-import PaginationNavigator from "../navigation/PaginationNavigator.js";
-
 import CommerceExtractor from "../extractors/CommerceExtractor.js";
-
 import CompanyExtractor from "../extractors/CompanyExtractor.js";
-
 import FAQExtractor from "../extractors/FAQExtractor.js";
 
 import TableDataExtractor from "../extractors/TableDataExtractor.js";
-
 import GridDataExtractor from "../extractors/GridDataExtractor.js";
+
+import PageAnalyzer from "../analyzers/PageAnalyzer.js";
+import ResourceAnalyzer from "../analyzers/ResourceAnalyzer.js";
+import ExtractionAnalyzer from "../analyzers/ExtractionAnalyzer.js";
+import PaginationAnalyzer from "../analyzers/PaginationAnalyzer.js";
+
+import PaginationNavigator from "../navigation/PaginationNavigator.js";
 
 import KnowledgeGraphBuilder from "../builders/KnowledgeGraphBuilder.js";
 
 import TableClassifier from "../intelligence/TableClassifier.js";
 
 import ExcelExporter from "../exporters/ExcelExporter.js";
+
+import logger from "../logger/logger.js";
 
 class HTMLPipeline {
 
@@ -59,6 +57,8 @@ class HTMLPipeline {
         this.gridExtractor = null;
 
         this.pageAnalyzer = null;
+        this.resourceAnalyzer = null;
+        this.extractionAnalyzer = null;
 
         this.initialized = false;
 
@@ -119,7 +119,10 @@ class HTMLPipeline {
 
         this.pageAnalyzer =
             new PageAnalyzer(this.pageManager);
-
+        this.resourceAnalyzer =
+             new ResourceAnalyzer(this.pageManager);
+        this.extractionAnalyzer =
+             new ExtractionAnalyzer();
         this.paginationAnalyzer =
             new PaginationAnalyzer(this.pageManager);
 
@@ -185,27 +188,39 @@ class HTMLPipeline {
 
         await page.waitForTimeout(5000);
 
+        const analysis = 
+            await this.pageAnalyzer.analyze(pageId);
+
+        const resources =
+            await this.resourceAnalyzer.analyze(pageId);
+
+        const extractionStrategy =
+            this.extractionAnalyzer.analyze(
+                analysis,
+                resources
+            );
+
         let tableRows = [];
 
         const pagination =
             await this.paginationAnalyzer.analyze(pageId);
 
         do {
+            const hasTables =
+                extractionStrategy.tables;
 
-            await page.waitForSelector("table");
+            if (hasTables) {
 
-            const rows =
-                await this.tableExtractor.extract(page);
-            console.log("Current URL:", page.url());
-            console.log("Rows on this page:", rows.length);
+                const rows =
+                    await this.tableExtractor.extract(pageId);
 
-            tableRows.push(...rows);
-            
-            console.log("Total Rows:", tableRows.length);
+                logger.info(`Current URL: ${page.url()}`);
+                logger.info(`Rows on this page: ${rows.length}`);
 
-            console.log(
-                `Collected ${tableRows.length} rows`
-            );
+                tableRows.push(...tableResult.tables);
+
+                logger.info(`Total Rows: ${tableRows.length}`);
+            }
 
         } while (
             await this.paginationNavigator.next(
@@ -215,26 +230,56 @@ class HTMLPipeline {
         );
 
         const tables = tableRows;
-        const grid = await this.gridExtractor.extract(pageId);
-        const gridData = await this.gridDataExtractor.extract(page);
 
-        const analysis = await this.pageAnalyzer.analyze(pageId);
+        const grid =
+            extractionStrategy.grids
+                ? await this.gridExtractor.extract(
+                    pageId,
+                    extractionStrategy
+                )
+                : [];
+
+        const gridData =
+            extractionStrategy.grids
+                ? await this.gridDataExtractor.extract(page)
+                : [];
 
         const commerce =
-            await this.commerceExtractor.extract(page);
+            extractionStrategy.commerce
+                ? await this.commerceExtractor.extract(
+                    page,
+                    extractionStrategy
+                )
+                : null;
 
         const company =
-            await this.companyExtractor.extract(page);
+            extractionStrategy.company
+                ? await this.companyExtractor.extract(
+                    page,
+                    extractionStrategy
+                )
+                : null;
 
         const faq =
-            await this.faqExtractor.extract(page);
+            extractionStrategy.faq
+                ? await this.faqExtractor.extract(
+                    page,
+                    extractionStrategy
+                )
+                : null;
 
         const tableData =
-            await this.tableDataExtractor.extract(page);
+            extractionStrategy.tables
+                ? await this.tableDataExtractor.extract(
+                    page
+                )
+                : [];
 
         const rawData = {
             url,
             analysis,
+            resources,
+            extractionStrategy,
             pagination,
             html,
             text,

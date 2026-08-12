@@ -1,6 +1,5 @@
 class URLNormalizer {
 
-
     static normalize(url, baseUrl = null) {
 
         try {
@@ -9,8 +8,7 @@ class URLNormalizer {
                 ? new URL(url, baseUrl)
                 : new URL(url);
 
-
-            // Allow only web pages
+            // Allow only HTTP/HTTPS
             if (
                 parsed.protocol !== "http:" &&
                 parsed.protocol !== "https:"
@@ -18,25 +16,31 @@ class URLNormalizer {
                 return null;
             }
 
+            // Normalize hostname
+            parsed.hostname =
+                parsed.hostname.toLowerCase();
 
-            // Remove hash
+            // Remove default ports
+            if (
+                (parsed.protocol === "http:" && parsed.port === "80") ||
+                (parsed.protocol === "https:" && parsed.port === "443")
+            ) {
+                parsed.port = "";
+            }
+
+            // Remove fragment
             parsed.hash = "";
-
 
             // Remove trailing slash
             if (
                 parsed.pathname.length > 1 &&
                 parsed.pathname.endsWith("/")
             ) {
-
                 parsed.pathname =
                     parsed.pathname.slice(0, -1);
-
             }
 
-
-            // Remove tracking parameters
-
+            // Remove common tracking parameters
             const trackingParams = [
 
                 "utm_source",
@@ -44,11 +48,19 @@ class URLNormalizer {
                 "utm_campaign",
                 "utm_term",
                 "utm_content",
+
                 "fbclid",
-                "gclid"
+                "gclid",
+                "msclkid",
+                "yclid",
+
+                "mc_cid",
+                "mc_eid",
+
+                "ref",
+                "source"
 
             ];
-
 
             trackingParams.forEach(param => {
 
@@ -56,10 +68,7 @@ class URLNormalizer {
 
             });
 
-
-
             return parsed.toString();
-
 
         }
 
@@ -71,8 +80,6 @@ class URLNormalizer {
 
     }
 
-
-
     static removeDuplicates(urls = []) {
 
         return [
@@ -83,21 +90,15 @@ class URLNormalizer {
 
     }
 
-
-
-
     static isInternal(url, baseUrl) {
-
 
         try {
 
             const target =
                 new URL(url);
 
-
             const base =
                 new URL(baseUrl);
-
 
             return (
 
@@ -109,7 +110,6 @@ class URLNormalizer {
 
             );
 
-
         }
 
         catch {
@@ -120,15 +120,10 @@ class URLNormalizer {
 
     }
 
-
-
-
     static hasBlockedProtocol(url) {
-
 
         const lower =
             url.toLowerCase();
-
 
         return (
 
@@ -146,174 +141,165 @@ class URLNormalizer {
 
     }
 
-
-
-
-
     static hasBlockedExtension(url) {
 
+        try {
 
-        const extensions = [
+            const pathname =
+                new URL(url).pathname
+                    .toLowerCase();
 
-            ".jpg",
-            ".jpeg",
-            ".png",
-            ".gif",
-            ".svg",
-            ".webp",
+            const extensions = [
 
-            ".mp4",
-            ".mp3",
-            ".avi",
+                ".jpg",
+                ".jpeg",
+                ".png",
+                ".gif",
+                ".svg",
+                ".webp",
+                ".ico",
 
-            ".pdf",
-            ".doc",
-            ".docx",
+                ".css",
+                ".js",
+                ".map",
 
-            ".zip",
-            ".rar",
-            ".exe"
+                ".woff",
+                ".woff2",
+                ".ttf",
+                ".eot",
 
-        ];
+                ".pdf",
+                ".doc",
+                ".docx",
+                ".xls",
+                ".xlsx",
+                ".ppt",
+                ".pptx",
+                ".csv",
 
+                ".zip",
+                ".rar",
+                ".7z",
+                ".tar",
+                ".gz",
 
-        const lower =
-            url.toLowerCase();
+                ".mp3",
+                ".mp4",
+                ".avi",
+                ".mov",
+                ".wmv",
+                ".webm",
+                ".mkv",
 
+                ".exe",
+                ".bin",
+                ".apk",
+                ".dmg",
+                ".iso"
 
+            ];
 
-        return extensions.some(ext =>
-            lower.endsWith(ext)
-        );
+            return extensions.some(ext =>
+                pathname.endsWith(ext)
+            );
+
+        }
+
+        catch {
+
+            return false;
+
+        }
 
     }
-
-
-
 
     static isBlockedPath(url) {
 
+        try {
 
-        const blockedPaths = [
+            const pathname =
+                new URL(url)
+                    .pathname
+                    .toLowerCase();
 
+            const blockedPaths = [
 
-            "/cart",
-            "/checkout",
+                "/cart",
+                "/checkout",
 
-            "/login",
-            "/logout",
+                "/login",
+                "/logout",
+                "/signin",
+                "/signup",
+                "/register",
 
-            "/signin",
-            "/signup",
-            "/register",
+                "/account",
+                "/wishlist",
 
-            "/account",
+                "/privacy",
+                "/terms",
+                "/cookie",
 
-            "/wishlist",
+                "/wp-admin",
+                "/admin",
 
-            "/privacy",
-            "/terms",
+                "/search",
+                "/compare",
 
-            "/cookie",
+                "/feed",
+                "/rss",
 
-            "/wp-admin",
+                "/api",
+                "/graphql",
+                "/ajax",
 
-            "/admin",
+                "/assets",
+                "/static"
 
-            "/search",
+            ];
 
-            "/compare"
+            return blockedPaths.some(path =>
 
+                pathname === path ||
 
-        ];
+                pathname.startsWith(
+                    path + "/"
+                )
 
+            );
 
+        }
 
-        const pathname =
-            new URL(url).pathname
-                .toLowerCase();
+        catch {
 
+            return false;
 
-
-        return blockedPaths.some(path =>
-
-            pathname === path ||
-
-            pathname.startsWith(
-                path + "/"
-            )
-
-        );
+        }
 
     }
 
-
-
-
     static isAllowed(url, baseUrl) {
 
-
-        if (!url) {
-
+        if (!url)
             return false;
 
-        }
-
-
-
-        if (
-            this.hasBlockedProtocol(url)
-        ) {
-
+        if (this.hasBlockedProtocol(url))
             return false;
 
-        }
-
-
-
-        if (
-            !this.isInternal(
-                url,
-                baseUrl
-            )
-        ) {
-
+        if (!this.isInternal(url, baseUrl))
             return false;
 
-        }
-
-
-
-        if (
-            this.hasBlockedExtension(url)
-        ) {
-
+        if (this.hasBlockedExtension(url))
             return false;
 
-        }
-
-
-
-        if (
-            this.isBlockedPath(url)
-        ) {
-
+        if (this.isBlockedPath(url))
             return false;
-
-        }
-
-
 
         return true;
 
     }
 
-
-
-
-
     static filter(urls, baseUrl) {
-
 
         return this.removeDuplicates(
 
@@ -330,60 +316,25 @@ class URLNormalizer {
 
     }
 
-
-
-
-
     static getType(url) {
 
-
-        const lower =
-            url.toLowerCase();
-
-
-
-        if (
-            this.isProduct(url)
-        ) {
-
+        if (this.isProduct(url))
             return "product";
 
-        }
-
-
-        if (
-            this.isCategory(url)
-        ) {
-
+        if (this.isCategory(url))
             return "category";
 
-        }
-
-
-        if (
-            this.isPagination(url)
-        ) {
-
+        if (this.isPagination(url))
             return "pagination";
-
-        }
-
 
         return "page";
 
     }
 
-
-
-
-
     static isProduct(url) {
-
 
         const lower =
             url.toLowerCase();
-
-
 
         return (
 
@@ -399,16 +350,10 @@ class URLNormalizer {
 
     }
 
-
-
-
     static isCategory(url) {
-
 
         const lower =
             url.toLowerCase();
-
-
 
         return (
 
@@ -424,29 +369,22 @@ class URLNormalizer {
 
     }
 
-
-
-
-
     static isPagination(url) {
 
+        const lower =
+            url.toLowerCase();
 
         return (
 
-            url.includes("?page=") ||
+            lower.includes("?page=") ||
 
-            url.includes("&page=")
+            lower.includes("&page=")
 
         );
 
     }
 
-
-
-
-
     static analyze(url, baseUrl) {
-
 
         const normalized =
             this.normalize(
@@ -454,21 +392,17 @@ class URLNormalizer {
                 baseUrl
             );
 
-
-
         if (!normalized) {
 
             return {
 
-                valid:false,
-                url:null,
-                reason:"invalid"
+                valid: false,
+                url: null,
+                reason: "invalid"
 
             };
 
         }
-
-
 
         if (
             !this.isAllowed(
@@ -477,74 +411,57 @@ class URLNormalizer {
             )
         ) {
 
-
             return {
 
-                valid:false,
-                url:normalized,
-                reason:"blocked"
+                valid: false,
+                url: normalized,
+                reason: "blocked"
 
             };
 
-
         }
-
-
 
         return {
 
+            valid: true,
 
-            valid:true,
-
-            url:normalized,
+            url: normalized,
 
             type:
                 this.getType(
                     normalized
                 ),
 
-
             priority:
 
                 this.isProduct(normalized)
-                ? 90
+                    ? 90
 
-                :
+                    : this.isCategory(normalized)
+                        ? 80
 
-                this.isCategory(normalized)
-                ? 80
-
-                :
-
-                50
-
+                        : 50
 
         };
 
-
     }
-
-
-
-
 
     static clean(urls, baseUrl) {
 
+        const normalized =
 
-        const normalized = urls
+            urls
 
-            .map(url =>
+                .map(url =>
 
-                this.normalize(
-                    url,
-                    baseUrl
+                    this.normalize(
+                        url,
+                        baseUrl
+                    )
+
                 )
 
-            )
-
-            .filter(Boolean);
-
-
+                .filter(Boolean);
 
         return this.filter(
 
@@ -556,8 +473,570 @@ class URLNormalizer {
 
     }
 
-
 }
 
-
 export default URLNormalizer;
+
+// class URLNormalizer {
+
+
+//     static normalize(url, baseUrl = null) {
+
+//         try {
+
+//             const parsed = baseUrl
+//                 ? new URL(url, baseUrl)
+//                 : new URL(url);
+
+
+//             // Allow only web pages
+//             if (
+//                 parsed.protocol !== "http:" &&
+//                 parsed.protocol !== "https:"
+//             ) {
+//                 return null;
+//             }
+
+
+//             // Remove hash
+//             parsed.hash = "";
+
+
+//             // Remove trailing slash
+//             if (
+//                 parsed.pathname.length > 1 &&
+//                 parsed.pathname.endsWith("/")
+//             ) {
+
+//                 parsed.pathname =
+//                     parsed.pathname.slice(0, -1);
+
+//             }
+
+
+//             // Remove tracking parameters
+
+//             const trackingParams = [
+
+//                 "utm_source",
+//                 "utm_medium",
+//                 "utm_campaign",
+//                 "utm_term",
+//                 "utm_content",
+//                 "fbclid",
+//                 "gclid"
+
+//             ];
+
+
+//             trackingParams.forEach(param => {
+
+//                 parsed.searchParams.delete(param);
+
+//             });
+
+
+
+//             return parsed.toString();
+
+
+//         }
+
+//         catch {
+
+//             return null;
+
+//         }
+
+//     }
+
+
+
+//     static removeDuplicates(urls = []) {
+
+//         return [
+//             ...new Set(
+//                 urls.filter(Boolean)
+//             )
+//         ];
+
+//     }
+
+
+
+
+//     static isInternal(url, baseUrl) {
+
+
+//         try {
+
+//             const target =
+//                 new URL(url);
+
+
+//             const base =
+//                 new URL(baseUrl);
+
+
+//             return (
+
+//                 target.hostname === base.hostname ||
+
+//                 target.hostname.endsWith(
+//                     "." + base.hostname
+//                 )
+
+//             );
+
+
+//         }
+
+//         catch {
+
+//             return false;
+
+//         }
+
+//     }
+
+
+
+
+//     static hasBlockedProtocol(url) {
+
+
+//         const lower =
+//             url.toLowerCase();
+
+
+//         return (
+
+//             lower.startsWith("mailto:") ||
+
+//             lower.startsWith("tel:") ||
+
+//             lower.startsWith("javascript:") ||
+
+//             lower.startsWith("data:") ||
+
+//             lower.startsWith("blob:")
+
+//         );
+
+//     }
+
+
+
+
+
+//     static hasBlockedExtension(url) {
+
+
+//         const extensions = [
+
+//             ".jpg",
+//             ".jpeg",
+//             ".png",
+//             ".gif",
+//             ".svg",
+//             ".webp",
+
+//             ".mp4",
+//             ".mp3",
+//             ".avi",
+
+//             ".pdf",
+//             ".doc",
+//             ".docx",
+
+//             ".zip",
+//             ".rar",
+//             ".exe"
+
+//         ];
+
+
+//         const lower =
+//             url.toLowerCase();
+
+
+
+//         return extensions.some(ext =>
+//             lower.endsWith(ext)
+//         );
+
+//     }
+
+
+
+
+//     static isBlockedPath(url) {
+
+
+//         const blockedPaths = [
+
+
+//             "/cart",
+//             "/checkout",
+
+//             "/login",
+//             "/logout",
+
+//             "/signin",
+//             "/signup",
+//             "/register",
+
+//             "/account",
+
+//             "/wishlist",
+
+//             "/privacy",
+//             "/terms",
+
+//             "/cookie",
+
+//             "/wp-admin",
+
+//             "/admin",
+
+//             "/search",
+
+//             "/compare"
+
+
+//         ];
+
+
+
+//         const pathname =
+//             new URL(url).pathname
+//                 .toLowerCase();
+
+
+
+//         return blockedPaths.some(path =>
+
+//             pathname === path ||
+
+//             pathname.startsWith(
+//                 path + "/"
+//             )
+
+//         );
+
+//     }
+
+
+
+
+//     static isAllowed(url, baseUrl) {
+
+
+//         if (!url) {
+
+//             return false;
+
+//         }
+
+
+
+//         if (
+//             this.hasBlockedProtocol(url)
+//         ) {
+
+//             return false;
+
+//         }
+
+
+
+//         if (
+//             !this.isInternal(
+//                 url,
+//                 baseUrl
+//             )
+//         ) {
+
+//             return false;
+
+//         }
+
+
+
+//         if (
+//             this.hasBlockedExtension(url)
+//         ) {
+
+//             return false;
+
+//         }
+
+
+
+//         if (
+//             this.isBlockedPath(url)
+//         ) {
+
+//             return false;
+
+//         }
+
+
+
+//         return true;
+
+//     }
+
+
+
+
+
+//     static filter(urls, baseUrl) {
+
+
+//         return this.removeDuplicates(
+
+//             urls.filter(url =>
+
+//                 this.isAllowed(
+//                     url,
+//                     baseUrl
+//                 )
+
+//             )
+
+//         );
+
+//     }
+
+
+
+
+
+//     static getType(url) {
+
+
+//         const lower =
+//             url.toLowerCase();
+
+
+
+//         if (
+//             this.isProduct(url)
+//         ) {
+
+//             return "product";
+
+//         }
+
+
+//         if (
+//             this.isCategory(url)
+//         ) {
+
+//             return "category";
+
+//         }
+
+
+//         if (
+//             this.isPagination(url)
+//         ) {
+
+//             return "pagination";
+
+//         }
+
+
+//         return "page";
+
+//     }
+
+
+
+
+
+//     static isProduct(url) {
+
+
+//         const lower =
+//             url.toLowerCase();
+
+
+
+//         return (
+
+//             lower.includes("/product") ||
+
+//             lower.includes("/products/") ||
+
+//             lower.includes("/item") ||
+
+//             lower.includes("/shop/")
+
+//         );
+
+//     }
+
+
+
+
+//     static isCategory(url) {
+
+
+//         const lower =
+//             url.toLowerCase();
+
+
+
+//         return (
+
+//             lower.includes("/category") ||
+
+//             lower.includes("/collection") ||
+
+//             lower.includes("/collections") ||
+
+//             lower.includes("/catalog")
+
+//         );
+
+//     }
+
+
+
+
+
+//     static isPagination(url) {
+
+
+//         return (
+
+//             url.includes("?page=") ||
+
+//             url.includes("&page=")
+
+//         );
+
+//     }
+
+
+
+
+
+//     static analyze(url, baseUrl) {
+
+
+//         const normalized =
+//             this.normalize(
+//                 url,
+//                 baseUrl
+//             );
+
+
+
+//         if (!normalized) {
+
+//             return {
+
+//                 valid:false,
+//                 url:null,
+//                 reason:"invalid"
+
+//             };
+
+//         }
+
+
+
+//         if (
+//             !this.isAllowed(
+//                 normalized,
+//                 baseUrl
+//             )
+//         ) {
+
+
+//             return {
+
+//                 valid:false,
+//                 url:normalized,
+//                 reason:"blocked"
+
+//             };
+
+
+//         }
+
+
+
+//         return {
+
+
+//             valid:true,
+
+//             url:normalized,
+
+//             type:
+//                 this.getType(
+//                     normalized
+//                 ),
+
+
+//             priority:
+
+//                 this.isProduct(normalized)
+//                 ? 90
+
+//                 :
+
+//                 this.isCategory(normalized)
+//                 ? 80
+
+//                 :
+
+//                 50
+
+
+//         };
+
+
+//     }
+
+
+
+
+
+//     static clean(urls, baseUrl) {
+
+
+//         const normalized = urls
+
+//             .map(url =>
+
+//                 this.normalize(
+//                     url,
+//                     baseUrl
+//                 )
+
+//             )
+
+//             .filter(Boolean);
+
+
+
+//         return this.filter(
+
+//             normalized,
+
+//             baseUrl
+
+//         );
+
+//     }
+
+
+// }
+
+
+// export default URLNormalizer;

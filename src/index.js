@@ -1,6 +1,18 @@
 import Framework from "./core/Framework.js";
 
-const url = process.argv[2];
+
+
+console.log(
+    "Scraper Arguments:",
+    process.argv
+);
+
+
+
+const url =
+    process.argv[2]?.trim();
+
+
 
 if (!url) {
 
@@ -12,23 +24,149 @@ if (!url) {
 
 }
 
-const maxDepth = Number(process.argv[3] || process.env.MAX_DEPTH || 3);
-const maxPages = Number(process.argv[4] || process.env.MAX_PAGES || 100);
-const timeout = Number(process.argv[5] || process.env.TIMEOUT || 30000);
 
-const framework = new Framework();
 
-await framework.initialize();
+try {
 
-const result = await framework.crawl({
-    url,
-    maxDepth,
-    maxPages,
-    timeout
-});
 
-console.dir(result, {
-    depth: null
-});
+    new URL(url);
 
-await framework.shutdown();
+
+}
+catch(error){
+
+
+    console.error(
+        "Invalid URL:",
+        url
+    );
+
+    process.exit(1);
+
+
+}
+
+
+
+const maxDepth =
+    Number(
+        process.argv[3]
+        ||
+        process.env.MAX_DEPTH
+        ||
+        3
+    );
+
+
+
+const maxPages =
+    Number(
+        process.argv[4]
+        ||
+        process.env.MAX_PAGES
+        ||
+        100
+    );
+
+
+
+const timeout =
+    Number(
+        process.argv[5]
+        ||
+        process.env.TIMEOUT
+        ||
+        30000
+    );
+
+
+
+
+const framework =
+    new Framework();
+
+
+
+try {
+
+
+    console.log(
+        "Initializing scraper framework..."
+    );
+
+
+    await framework.initialize();
+
+
+
+    console.log(
+        "Starting crawl:",
+        {
+            url,
+            maxDepth,
+            maxPages,
+            timeout
+        }
+    );
+
+
+
+    const result =
+        await framework.crawl({
+
+            url,
+
+            maxDepth,
+
+            maxPages,
+
+            timeout
+
+        });
+
+
+
+    console.dir(
+        result,
+        {
+            depth:null
+        }
+    );
+
+
+
+}
+catch(error){
+
+
+    console.error(
+        "Scraper execution failed:"
+    );
+
+
+    console.error(
+        error.stack || error.message
+    );
+
+
+    process.exitCode = 1;
+
+
+}
+finally {
+
+
+    console.log(
+        "Shutting down framework..."
+    );
+
+
+    await framework.shutdown();
+
+
+    console.log(
+        "Scraper shutdown completed."
+    );
+
+
+}

@@ -1,203 +1,91 @@
-import ExcelJS from "exceljs";
-import fs from "fs";
+import fs from "fs/promises";
 import path from "path";
 
-export default class ExcelExporter {
+import logger from "../logger/logger.js";
+import JSONCleaner from "../services/JSONCleaner.js";
 
-    async export(rows, outputPath) {
+/**
+ * CleanJSONExporter
+ * ------------------------------------------------------
+ * Cleans the raw scraper JSON and exports a NEW file
+ * every run (never overwrites previous exports).
+ * ------------------------------------------------------
+ */
 
-        // Create output directory if it doesn't exist
-        const outputDir = path.dirname(outputPath);
+class CleanJSONExporter {
 
-        if (!fs.existsSync(outputDir)) {
-            fs.mkdirSync(outputDir, { recursive: true });
-        }
+    constructor(
+        outputDirectory = "./output/clean",
+        cleanerConfig = {}
+    ) {
 
-        const workbook = new ExcelJS.Workbook();
+        this.outputDirectory = outputDirectory;
 
-        workbook.creator = "Enterprise Browser Framework";
-        workbook.created = new Date();
-
-        const sheet = workbook.addWorksheet("Procurement");
-
-        sheet.columns = [
-            { header: "Procurement Title", key: "title", width: 22 },
-            { header: "Procurement Name", key: "procurementName", width: 55 },
-            { header: "Type", key: "type", width: 15 },
-            { header: "Publish Date", key: "publishDate", width: 18 },
-            { header: "Close Date", key: "closeDate", width: 18 },
-            { header: "Department", key: "department", width: 45 },
-            { header: "Tender Notice", key: "tenderNotice", width: 18 },
-            { header: "Bidding Document", key: "biddingDocument", width: 20 }
-        ];
-
-        // Header Style
-        const header = sheet.getRow(1);
-
-        header.height = 25;
-
-        header.font = {
-            bold: true,
-            color: { argb: "FFFFFFFF" },
-            size: 12
-        };
-
-        header.alignment = {
-            horizontal: "center",
-            vertical: "middle"
-        };
-
-        header.fill = {
-            type: "pattern",
-            pattern: "solid",
-            fgColor: { argb: "4472C4" }
-        };
-
-        header.eachCell(cell => {
-            cell.border = {
-                top: { style: "thin" },
-                left: { style: "thin" },
-                bottom: { style: "thin" },
-                right: { style: "thin" }
-            };
+        this.cleaner = new JSONCleaner({
+            logger,
+            ...cleanerConfig
         });
 
-        // Freeze Header
-        sheet.views = [
+    }
+
+    async export(extractionData = {}) {
+
+        const cleanJSON =
+            this.cleaner.clean(extractionData);
+
+        await fs.mkdir(
+            this.outputDirectory,
             {
-                state: "frozen",
-                ySplit: 1
+                recursive: true
             }
-        ];
+        );
 
-        // Filter
-        sheet.autoFilter = {
-            from: "A1",
-            to: "H1"
+        const now = new Date();
+
+        const filename =
+            `clean-tenders-${
+                now.getFullYear()
+            }-${
+                String(now.getMonth() + 1).padStart(2, "0")
+            }-${
+                String(now.getDate()).padStart(2, "0")
+            }_${
+                String(now.getHours()).padStart(2, "0")
+            }-${
+                String(now.getMinutes()).padStart(2, "0")
+            }-${
+                String(now.getSeconds()).padStart(2, "0")
+            }.json`;
+
+        const filePath = path.join(
+            this.outputDirectory,
+            filename
+        );
+
+        await fs.writeFile(
+            filePath,
+            JSON.stringify(cleanJSON, null, 2),
+            "utf8"
+        );
+
+        logger.success(
+            `Clean JSON exported successfully: ${filePath}`
+        );
+
+        return {
+
+            success: true,
+
+            filePath,
+
+            filename,
+
+            report: this.cleaner.getReport()
+
         };
-
-        // Sort by Type (A-Z) and keep empty values at the bottom
-rows.sort((a, b) => {
-
-    const typeA = (a.type || "").trim().toLowerCase();
-    const typeB = (b.type || "").trim().toLowerCase();
-
-    // Empty values always go last
-    if (typeA === "" && typeB !== "") return 1;
-    if (typeA !== "" && typeB === "") return -1;
-    if (typeA === "" && typeB === "") return 0;
-
-    // Alphabetical A-Z
-    return typeA.localeCompare(typeB);
-
-});
-
-// Add Data
-rows.forEach(item => {
-
-            const row = sheet.addRow({
-                title: item.title,
-                procurementName: item.procurementName,
-                type: item.type,
-                publishDate: item.publishDate,
-                closeDate: item.closeDate,
-                department: item.department
-            });
-
-            // Tender Notice hyperlink
-            row.getCell(7).value = item.tenderNotice
-                ? {
-                    text: "🔗 Open",
-                    hyperlink: item.tenderNotice
-                }
-                : "";
-
-            // Bidding Document hyperlink
-            row.getCell(8).value = item.biddingDocument
-                ? {
-                    text: "📄 Download",
-                    hyperlink: item.biddingDocument
-                }
-                : "";
-
-        });
-
-        // Style all rows
-        sheet.eachRow((row, rowNumber) => {
-
-            if (rowNumber === 1) return;
-
-            row.height = 22;
-
-            row.eachCell(cell => {
-
-                cell.alignment = {
-                    vertical: "middle",
-                    horizontal: "left",
-                    wrapText: true
-                };
-
-                cell.border = {
-                    top: { style: "thin" },
-                    left: { style: "thin" },
-                    bottom: { style: "thin" },
-                    right: { style: "thin" }
-                };
-
-            });
-
-        });
-
-        // Alternate row colors
-        sheet.eachRow((row, rowNumber) => {
-
-            if (rowNumber === 1) return;
-
-            if (rowNumber % 2 === 0) {
-
-                row.eachCell(cell => {
-
-                    cell.fill = {
-                        type: "pattern",
-                        pattern: "solid",
-                        fgColor: { argb: "FFF8F8F8" }
-                    };
-
-                });
-
-            }
-
-        });
-
-        // Hyperlink style
-        for (let i = 2; i <= sheet.rowCount; i++) {
-
-            [7, 8].forEach(col => {
-
-                const cell = sheet.getRow(i).getCell(col);
-
-                if (cell.value) {
-
-                    cell.font = {
-                        color: { argb: "FF0563C1" },
-                        underline: true
-                    };
-
-                    cell.alignment = {
-                        horizontal: "center",
-                        vertical: "middle"
-                    };
-
-                }
-
-            });
-
-        }
-
-        await workbook.xlsx.writeFile(outputPath);
-
-        console.log(`Excel exported successfully: ${outputPath}`);
 
     }
 
 }
+
+export default CleanJSONExporter;
