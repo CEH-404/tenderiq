@@ -1,0 +1,12 @@
+node_modules/
+.env
+.env.*
+!.env.example
+
+output/
+outputs/
+logs/
+downloads/
+test-results/
+
+*.log
