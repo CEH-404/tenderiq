@@ -30,7 +30,7 @@ import TableClassifier from "../intelligence/TableClassifier.js";
 
 import ExcelExporter from "../exporters/ExcelExporter.js";
 
-import logger from "../logger/logger.js";
+import logger from "../logger/Logger.js";
 
 class HTMLPipeline {
 

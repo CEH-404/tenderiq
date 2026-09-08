@@ -12,7 +12,7 @@ import ExcelExporter from "../exporters/ExcelExporter.js";
 
 import ExtractionExportService from "../services/ExtractionExportService.js";
 
-import logger from "../logger/logger.js";
+import logger from "../logger/Logger.js";
 
 import SiteCrawler from "../scraper/SiteCrawler.js";
 

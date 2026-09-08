@@ -15,7 +15,7 @@ import FAQExtractor from "../extractors/FAQExtractor.js";
 
 import TenderPipeline from "../pipelines/TenderPipeline.js";
 
-import logger from "../logger/logger.js";
+import logger from "../logger/Logger.js";
 
 class ExtractionManager {
 

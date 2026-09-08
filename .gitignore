@@ -10,3 +10,5 @@ downloads/
 test-results/
 
 *.log
+.vercel
+.env*

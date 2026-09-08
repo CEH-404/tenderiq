@@ -1,6 +1,6 @@
 import fs from "fs/promises";
 
-import logger from "../logger/logger.js";
+import logger from "../logger/Logger.js";
 
 import TenderAIPipeline from "../pipelines/TenderAIPipeline.js";
 import AITenderExportService from "../exporters/AITenderExportService.js";

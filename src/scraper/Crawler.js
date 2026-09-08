@@ -1,5 +1,5 @@
 import Framework from "../core/Framework.js";
-import logger from "../logger/logger.js";
+import logger from "../logger/Logger.js";
 
 class Crawler {
 

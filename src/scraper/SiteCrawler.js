@@ -1,4 +1,4 @@
-﻿import logger from "../logger/logger.js";
+﻿import logger from "../logger/Logger.js";
 
 import PaginationAnalyzer from "../analyzers/PaginationAnalyzer.js";
 import PaginationNavigator from "../navigation/PaginationNavigator.js";

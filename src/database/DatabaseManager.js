@@ -1,6 +1,6 @@
-import mysql from "mysql2/promise";
+import { Pool } from "pg";
 
-import logger from "../logger/logger.js";
+import logger from "../logger/Logger.js";
 
 class DatabaseManager {
 
@@ -8,26 +8,13 @@ class DatabaseManager {
 
         this.config = {
 
-            host:
-                process.env.DB_HOST,
+            connectionString: process.env.DATABASE_URL,
 
-            port:
-                process.env.DB_PORT || 3306,
+            max: 10,
 
-            user:
-                process.env.DB_USER,
+            idleTimeoutMillis: 30000,
 
-            password:
-                process.env.DB_PASSWORD,
-
-            database:
-                process.env.DB_NAME,
-
-            waitForConnections: true,
-
-            connectionLimit: 10,
-
-            queueLimit: 0,
+            connectionTimeoutMillis: 15000,
 
             ...config
 
@@ -45,12 +32,30 @@ class DatabaseManager {
 
         }
 
-        this.pool =
-            mysql.createPool(this.config);
+        this.pool = new Pool(this.config);
 
-        logger.success(
-            "Database connected."
-        );
+        this.pool.on("connect", () => {
+
+            logger.success("Database connected.");
+
+        });
+
+        this.pool.on("error", (err) => {
+
+            // Log pool-level errors (e.g., connection failures) server-side
+            // without exposing credentials to clients
+            logger.error("Database pool error: ", { 
+                message: err.message,
+                code: err.code 
+            });
+
+        });
+
+        this.pool.on("remove", () => {
+
+            logger.success("Database connection released.");
+
+        });
 
         return this.pool;
 
@@ -68,9 +73,7 @@ class DatabaseManager {
 
         this.pool = null;
 
-        logger.success(
-            "Database disconnected."
-        );
+        logger.success("Database disconnected.");
 
     }
 
@@ -82,13 +85,32 @@ class DatabaseManager {
 
         }
 
-        const [rows] =
-            await this.pool.execute(
-                sql,
-                params
-            );
+        const client = await this.pool.connect();
 
-        return rows;
+        try {
+
+            const result = await client.query(sql, params);
+
+            return result.rows;
+
+        } catch (error) {
+
+            // Log detailed database error server-side without exposing secrets
+            logger.error("Database query error: ", { 
+                message: error.message,
+                code: error.code,
+                // Only include detail/hint if they don't contain sensitive info
+                detail: error.detail && !error.detail.includes(process.env.DATABASE_URL ? 'postgresql' : 'unknown'),
+                hint: error.hint 
+            });
+
+            throw error;
+
+        } finally {
+
+            client.release();
+
+        }
 
     }
 
@@ -100,33 +122,27 @@ class DatabaseManager {
 
         }
 
-        const connection =
-            await this.pool.getConnection();
+        const client = await this.pool.connect();
 
         try {
 
-            await connection.beginTransaction();
+            await client.query("BEGIN");
 
-            const result =
-                await callback(connection);
+            const result = await callback(client);
 
-            await connection.commit();
+            await client.query("COMMIT");
 
             return result;
 
-        }
+        } catch (error) {
 
-        catch (error) {
-
-            await connection.rollback();
+            await client.query("ROLLBACK");
 
             throw error;
 
-        }
+        } finally {
 
-        finally {
-
-            connection.release();
+            client.release();
 
         }
 

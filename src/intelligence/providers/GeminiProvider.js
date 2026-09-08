@@ -1,6 +1,6 @@
 import { GoogleGenAI } from "@google/genai";
 
-import logger from "../../logger/logger.js";
+import logger from "../../logger/Logger.js";
 import GeminiJSONProcessor from "../../services/GeminiJSONProcessor.js";
 
 /**

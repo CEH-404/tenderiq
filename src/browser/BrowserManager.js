@@ -1,6 +1,6 @@
 import { chromium, firefox, webkit } from "playwright";
 import env from "../config/env.js";
-import logger from "../logger/logger.js";
+import logger from "../logger/Logger.js";
 
 class BrowserManager {
     constructor() {

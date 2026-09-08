@@ -1,4 +1,4 @@
-import logger from "../logger/logger.js";
+import logger from "../logger/Logger.js";
 
 class MetaExtractor {
 
@@ -101,7 +101,7 @@ class MetaExtractor {
 
 }
 
-export default MetaExtractor;import logger from "../logger/logger.js";
+export default MetaExtractor;
 
 class MetaExtractor {
 

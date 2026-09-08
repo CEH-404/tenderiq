@@ -2,7 +2,7 @@ import dotenv from "dotenv";
 
 import GeminiProvider from "../intelligence/providers/GeminiProvider.js";
 import GeminiModelRouter from "../intelligence/providers/GeminiModelRouter.js";
-import logger from "../logger/logger.js";
+import logger from "../logger/Logger.js";
 
 dotenv.config();
 

@@ -1,4 +1,4 @@
-import logger from "../logger/logger.js";
+import logger from "../logger/Logger.js";
 
 import geminiProvider, { geminiConfig } from "../config/gemini.config.js";
 import TenderAIFormatter from "../intelligence/TenderAIFormatter.js";
@@ -47,13 +47,14 @@ const PIPELINE_VERSION = "4.0.0";
 
 // ============================================================
 // TEMPORARY AI TEST CODE — PROCESS ONLY N TENDERS
-// TODO: Remove this constant and the corresponding block in execute()
-// below, and restore the original production line, after testing is
-// complete.
-// Set to a falsy value (0, null, undefined) to disable the limit
-// without removing the code.
+// AI_TEST_LIMIT controls how many tenders to process in testing.
+// AI_TEST_LIMIT = 0 (or falsy) means process all tenders (unlimited).
+// AI_TEST_LIMIT = positive integer processes only that many tenders.
+// Value comes from environment variable GEMINI_TEST_LIMIT.
 // ============================================================
-const AI_TEST_LIMIT = 50;
+const AI_TEST_LIMIT = Number(process.env.GEMINI_TEST_LIMIT || 0);
+// When AI_TEST_LIMIT is 0 or falsy, process all tenders.
+// When AI_TEST_LIMIT is a positive number, process only that many.
 // ============================================================
 // END TEMPORARY AI TEST CODE
 // ============================================================
@@ -137,31 +138,23 @@ class TenderAIPipeline {
             );
 
             // ============================================================
-            // TEMPORARY AI TEST CODE — PROCESS ONLY AI_TEST_LIMIT TENDERS
-            // TODO: Remove this temporary block and restore the original
-            // production line immediately below (currently commented out)
-            // after testing is complete.
-            // ============================================================
+            // Process only AI_TEST_LIMIT tenders if a positive limit is set.
+// AI_TEST_LIMIT = 0 (default from env) means process all tenders.
+if (AI_TEST_LIMIT > 0 && cleanJson.tenders.length > AI_TEST_LIMIT) {
 
-            if (AI_TEST_LIMIT && cleanJson.tenders.length > AI_TEST_LIMIT) {
+    logger.warning(
+        `AI TEST MODE: Processing ${AI_TEST_LIMIT} of ${cleanJson.tenders.length} tenders`
+    );
 
-                logger.warning(
-                    `AI TEST MODE: Processing ${AI_TEST_LIMIT} of ${cleanJson.tenders.length} tenders`
-                );
+    cleanJson = {
 
-                cleanJson = {
+        ...cleanJson,
 
-                    ...cleanJson,
+        tenders: cleanJson.tenders.slice(0, AI_TEST_LIMIT)
 
-                    tenders: cleanJson.tenders.slice(0, AI_TEST_LIMIT)
+    };
 
-                };
-
-            }
-
-            // ============================================================
-            // END TEMPORARY AI TEST CODE
-            // ============================================================
+}
 
             // Original production line — temporarily disabled while the
             // AI_TEST_LIMIT block above is active. Restore this line (and

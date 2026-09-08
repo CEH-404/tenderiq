@@ -1,4 +1,4 @@
-import logger from "../logger/logger.js";
+import logger from "../logger/Logger.js";
 
 class PageAnalyzer {
 
@@ -929,7 +929,7 @@ class PageAnalyzer {
 
 export default PageAnalyzer;
 
-// import logger from "../logger/logger.js";
+// import logger from "../logger/Logger.js";
 
 // class PageAnalyzer {
 

@@ -1,5 +1,5 @@
 import fs from "fs/promises";
-import logger from "../logger/logger.js";
+import logger from "../logger/Logger.js";
 
 class HTMLExtractor {
 

@@ -1,6 +1,6 @@
 import CleanJSONExporter from "../exporters/CleanJSONExporter.js";
 
-import logger from "../logger/logger.js";
+import logger from "../logger/Logger.js";
 
 class ExtractionExportService {
 

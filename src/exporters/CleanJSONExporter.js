@@ -1,7 +1,7 @@
 import fs from "fs/promises";
 import path from "path";
 
-import logger from "../logger/logger.js";
+import logger from "../logger/Logger.js";
 import JSONCleaner from "../services/JSONCleaner.js";
 
 /**
