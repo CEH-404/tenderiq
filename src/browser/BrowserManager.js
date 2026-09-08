@@ -1,6 +1,7 @@
 import { chromium, firefox, webkit } from "playwright";
 import env from "../config/env.js";
 import logger from "../logger/Logger.js";
+import sparticuzChromium from "@sparticuz/chromium";
 
 class BrowserManager {
     constructor() {
@@ -17,12 +18,25 @@ class BrowserManager {
 
             logger.info(`Launching ${env.browser} browser...`);
 
+            const isLocal = process.env.IS_LOCAL === "true";
+
             switch (env.browser.toLowerCase())  {
-                case "chromium":
-                    this.browser = await chromium.launch({
-                        headless: env.headless
-                    });
+                case "chromium": {
+                    if (isLocal) {
+                        // LOCAL DEVELOPMENT: Use Playwright-installed Chromium
+                        this.browser = await chromium.launch({
+                            headless: env.headless
+                        });
+                    } else {
+                        // VERCEL/SERVERLESS: Use @sparticuz Chromium binary
+                        this.browser = await chromium.launch({
+                            args: await sparticuzChromium.args,
+                            executablePath: await sparticuzChromium.executablePath(),
+                            headless: env.headless
+                        });
+                    }
                     break;
+                }
 
                 case "firefox":
                     this.browser = await firefox.launch({
