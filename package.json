@@ -10,8 +10,7 @@
     "scrape:cli": "node src/index.js",
     "worker": "node src/worker.js",
     "lint": "eslint .",
-    "format": "prettier --write .",
-    "postinstall": "npx playwright install"
+    "format": "prettier --write ."
   },
   "keywords": [
     "playwright",
