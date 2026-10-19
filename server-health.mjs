@@ -10,6 +10,13 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+// Root endpoint — required for Railway health check
+app.get("/", (req, res) => {
+
+    res.status(200).json({ status: "ok" });
+
+});
+
 // Health check endpoint ONLY — absolutely no scraper, Chromium, AI, or database
 app.get("/health", (req, res) => {
 
