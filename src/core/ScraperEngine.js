@@ -380,7 +380,9 @@ try {
         cleanJSONExport?.data
     ) {
 
-        const aiJson =
+logger.info("AI_PIPELINE_STARTED");
+
+    const aiJson =
             await this.tenderAIPipeline.execute(
                 cleanJSONExport.data
             );
@@ -417,6 +419,10 @@ catch (error) {
             const duration =
                 Date.now() - startTime;
 
+
+
+            logger.info("SCRAPER_ENGINE_RETURN");
+        logger.info(`PAGES_LENGTH=${pages.length}`);
 
 
             return {

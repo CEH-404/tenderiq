@@ -209,10 +209,16 @@ class SiteCrawler {
 
 
 
+                logger.info("EXTRACTION_STARTED");
+
                 const data =
                     await this.extractionManager.extract(
                         pageId
                     );
+
+                logger.info("EXTRACTION_COMPLETED");
+                logger.info(`EXTRACTION_TYPE=${typeof data}`);
+                logger.info(`EXTRACTION_NULL=${data === null}`);
 
 
 
@@ -237,10 +243,16 @@ class SiteCrawler {
 
 
 
+                logger.info("PAGE_PUSH");
+                logger.info(`PAGES_LENGTH_BEFORE=${pages.length}`);
+
                 pages.push(
-                    data
+data
                 );
 
+
+                logger.info("PAGE_PUSH_COMPLETE");
+                logger.info(`PAGES_LENGTH_AFTER=${pages.length}`);
 
 
                 if (
@@ -431,6 +443,10 @@ class SiteCrawler {
 
         );
 
+
+
+        logger.info("SITECRAWLER_RETURN");
+        logger.info(`FINAL_PAGES_LENGTH=${pages.length}`);
 
 
         return pages;

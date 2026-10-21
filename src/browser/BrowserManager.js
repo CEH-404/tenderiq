@@ -24,16 +24,22 @@ class BrowserManager {
                 case "chromium": {
                     if (isLocal) {
                         // LOCAL DEVELOPMENT: Use Playwright-installed Chromium
+                        logger.info("CHROMIUM_MODE=local");
+                        logger.info("CHROMIUM_LAUNCH_STARTED");
                         this.browser = await chromium.launch({
                             headless: env.headless
                         });
+                        logger.info("CHROMIUM_LAUNCH_COMPLETED");
                     } else {
                         // VERCEL/SERVERLESS: Use @sparticuz Chromium binary
+                        logger.info("CHROMIUM_MODE=sparticuz");
+                        logger.info("CHROMIUM_LAUNCH_STARTED");
                         this.browser = await chromium.launch({
                             args: await sparticuzChromium.args,
                             executablePath: await sparticuzChromium.executablePath(),
                             headless: env.headless
                         });
+                        logger.info("CHROMIUM_LAUNCH_COMPLETED");
                     }
                     break;
                 }

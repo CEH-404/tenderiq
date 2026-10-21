@@ -21,6 +21,8 @@ class NavigationManager {
 
         logger.info(`Navigating to ${url}`);
 
+        logger.info("NAVIGATION_STARTED");
+
                 const response = await page.goto(url, {
                     waitUntil: options.waitUntil || "domcontentloaded",
                     timeout: options.timeout || 30000
@@ -43,9 +45,49 @@ class NavigationManager {
 
                 await page.waitForTimeout(2000);
 
-        logger.success(`Navigation Complete`);
+        logger.info("NAVIGATION_GOTO_RETURNED");
 
-        return response;
+                let httpStatus = null;
+                let finalUrl = null;
+                let pageTitle = null;
+                let challengeDetected = false;
+
+                try {
+                    httpStatus = response.status();
+                    finalUrl = response.url();
+                    pageTitle = await page.title();
+
+                    logger.info(`HTTP_STATUS=${httpStatus || null}`);
+                    if (finalUrl) {
+                        logger.info(`FINAL_URL=${finalUrl}`);
+                    }
+                    if (pageTitle) {
+                        logger.info(`PAGE_TITLE=${pageTitle}`);
+                    }
+
+                    const challengeText = pageTitle || '';
+                    challengeDetected =
+                        challengeText.includes('checking your browser') ||
+                        challengeText.includes('just a moment') ||
+                        challengeText.includes('verify you are human') ||
+                        challengeText.includes('attention required') ||
+                        challengeText.includes('cf-browser-verification') ||
+                        challengeText.includes('challenge');
+
+                    logger.info(`CHALLENGE_DETECTED=${challengeDetected}`);
+                } catch (err) {
+                    logger.info('NAVIGATION_FAILED');
+                    logger.info(`ERROR_NAME=${err.name}`);
+                    logger.info(`ERROR_MESSAGE=${err.message}`);
+                    logger.info(`TIMEOUT=${options.timeout || 30000}`);
+                    if (finalUrl) {
+                        logger.info(`FINAL_URL=${finalUrl}`);
+                    }
+                }
+
+                logger.success(`Navigation Complete`);
+
+                return response;
 
     }
 
